@@ -1,0 +1,26 @@
+{
+  "name": "tecnogroup",
+  "version": "1.0.0",
+  "description": "Tecno Group:\r Ofrecera una variedad de productos de tecnologia y gaming apuntando a todas las edades que se quieran adaptar a las nuevas tecnologias.",
+  "main": "app.js",
+  "scripts": {
+    "test": "nodemon src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucianotimo/grupo_5_TecnoGroup.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucianotimo/grupo_5_TecnoGroup/issues"
+  },
+  "homepage": "https://github.com/lucianotimo/grupo_5_TecnoGroup#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  },
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
