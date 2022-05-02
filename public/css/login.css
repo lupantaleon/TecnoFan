@@ -1,6 +1,5 @@
 *{
-    box-sizing: border-box;
-    
+    /* box-sizing: border-box; */
 }
 
 body{
@@ -8,53 +7,10 @@ body{
     margin: 0 auto;
 }
 
-.logo {
-    width: 50%;
+header{
+  display: flex;
+  justify-content: center;
 }
-
-/* border-style: dotted;
-border-color: #222222; */
-
-.main-header {
-    background-color: #EAC926;
-    padding: 20px;
-    position: fixed;
-    top: 0;
-    z-index: 100;
-    width: 100%;
-}
-
-
-
-
-
-.copy-header {
-    font-weight: 400;
-    text-align: center;
-}
-
-.main-navbar {
-   display: none;
-}
-
-.main-navbar ul{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.main-navbar a{
-    text-decoration: none;
-    color: #222222;
-    display: inline-block;
-    padding: 5px;
-    font-size: 17px;
-}
-
-
-
-
-
 
 
 /* Bordered form */
@@ -74,7 +30,7 @@ form {
   
   /* Set a style for all buttons */
   button {
-    background-color: #04AA6D;
+    background-color: #FF1617;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -92,7 +48,7 @@ form {
   .cancelbtn {
     width: auto;
     padding: 10px 18px;
-    background-color: #f44336;
+    background-color: #FF1617;
   }
   
   /* Center the avatar image inside this container */
@@ -151,6 +107,7 @@ form {
     margin: 5px auto; /* 15% from the top and centered */
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 500px;
   }
   
   /* The Close Button */
@@ -198,53 +155,10 @@ form {
         justify-content: space-between;
 
     }
-    .copy-header{
-        max-width: 350px;
-        text-align: right;
-    }
-    .hamburguer-button
-    {
-        display: none;
-    }
-    .main-navbar{
-        display: flex;
-        justify-content: space-between;
-    }
-    .main-navbar ul{
-        display: flex;
-    }
-    .main-navbar li{
-        margin: 0 1px;
-    }
-    
-}
+
 
 /* DESKTOP */
 
 @media (min-width: 1200px) {
-    .logo{
-        width: 250px;
-    }
-    .main-header-top-bar, .main-navbar{
-        max-width: 1200px;
-        margin: auto;
-    }
-    .main-header-top-bar{
-        align-items: center;
-    }
-    .copy-header{
-        margin: 0;
-        max-width: none;
-        font-size: 22px;
-        font-weight: 400;
-    }
-    .main-navbar{
-        margin-top: 30px;
-    }
-    .main-navbar li{
-        margin: 0 10px;
-    }
-    .main-navbar a{
-        font-size: 19px;
-    }
+    
 }
