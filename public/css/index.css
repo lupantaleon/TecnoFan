@@ -11,12 +11,14 @@ body {
 }
 
 .main-header {
-    background-color: #EAC926;
+    background-color: black;
     padding: 20px;
     top: 0;
     z-index: 100;
     width: 100%;
+    color: white;
 }
+
 
 
 
@@ -57,7 +59,7 @@ body {
 
 .main-navbar a {
     text-decoration: none;
-    color: #222222;
+    color: white;
     display: inline-block;
     padding: 5px;
     font-size: 17px;
@@ -292,12 +294,13 @@ header div {
 
 
 footer {
-    background-color: whitesmoke;
+    background-color: rgb(64, 56, 56);
     font-family: 'Roboto', sans-serif;
     text-align: center;
     padding-bottom: 10px;
     padding-left: 4em;
     padding-right: 4em;
+    color: white;
 
 }
 
