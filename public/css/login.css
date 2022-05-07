@@ -1,148 +1,352 @@
-*{
-    /* box-sizing: border-box; */
+* {
+  /* margin: 0px; */
+  /* padding: 0px; */
+  box-sizing: border-box;
 }
 
-body{
-    font-family: 'Roboto', sans-serif;
-    margin: 0 auto;
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #ebebeb;
+  margin: 0 auto;
 }
 
-header{
+.main-header {
+  background-color: #EAC926;
+  padding: 20px;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+}
+
+
+
+
+
+.logo {
+  width: 200px;
+  /* animation: aumentar 1s ease-in-out 2 alternate; */
+}
+
+
+/* @keyframes aumentar {
+  from{ 
+      transform: scale(1);
+  }
+  to {
+      transform: scale(1.5);
+  }
+} */
+
+
+
+.copy-header {
+  font-weight: 400;
+  text-align: center;
+  width: 100%;
+}
+
+.main-navbar {
+  display: none;
+}
+
+.main-navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-navbar a {
+  text-decoration: none;
+  color: #222222;
+  display: inline-block;
+  padding: 5px;
+  font-size: 17px;
+}
+
+
+div.last-visit,
+div.offers {
   display: flex;
+  flex-wrap: wrap;
+}
+
+.price {
+  font-size: 18px;
+  width: 30%;
+}
+
+.discount {
+  width: 70%;
+
+}
+
+.discount,
+.description {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+h3,
+.description {
+  color: #666;
+}
+
+.description {
+  display: block;
+  margin-top: 20px;
+}
+
+section.banner img {
+  width: 100%;
+
+}
+
+main {
+  width: 90%;
+  margin: 0 auto;
+}
+
+main section article {
+  background-color: #fff;
+  margin: 10px 0px;
+}
+
+main section article img {
+  width: 100%;
+}
+
+main section article i,
+.discount {
+  color: #39b54a;
+}
+
+main section article i {
+  display: block;
+  font-size: 16px;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #39b54a;
+  background-color: #FFF;
+  border-radius: 50%;
+  position: absolute;
+  right: 20px;
+  top: -15px;
+}
+
+
+main section h3 {
+  margin: 20px 0px;
+}
+
+article div.main-article {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  border-top: 1px solid #ebebeb;
+  position: relative;
+  padding: 15px;
+}
+
+header div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MOBILE */
+@media (min-width: 361px) {
+  .fa-solid {
+      color: blue;
+      padding: 10px 0px;
+  }
+
+  header div img {
+      width: 50%;
+  }
+
+  /* HEADER */
+  body nav.navigation {
+      display: flex;
+  }
+
+
+  .form {
+      border: rgb(132, 0, 255);
+      border-style: dashed;
+      border-radius: 2px;
+      border-width: 2px;
+
+  }
+
+  .compra {
+      border: rgb(255, 0, 149);
+      border-style: dashed;
+      border-radius: 2px;
+      border-width: 2px;
+
+  }
+
+
+
+
+  /* NAVIGATION */
+
+  body nav ul.navleft {
+      width: 50%;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+
+  }
+
+  body nav ul.navleft li {
+      padding: 15px 15px;
+  }
+
+  body nav ul.navright {
+      width: 50%;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+  }
+
+  body nav ul.navright li {
+
+      padding: 15px 15px;
+  }
+
+
+
+
+  div.burger-menu {
+      display: none;
+  }
+
+
+
+
+  main section article {
+      box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  }
+
+
+
+  main section div.products {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+  }
+
+  main section div.products article {
+      width: 45%;
+  }
+
+  .price,
+  .discount {
+      width: 50%;
+  }
+}
+
+
+
+
+footer {
+  background-color: whitesmoke;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  padding-bottom: 10px;
+  padding-left: 4em;
+  padding-right: 4em;
+
+}
+
+.iconos {
+  width: 2em;
+  margin-bottom: 10px;
+}
+
+
+.search {
+  display: flex;
+  height: 30px;
+  margin-top: 30px;
   justify-content: center;
 }
 
 
-/* Bordered form */
-form {
-    border: 3px solid #f1f1f1;
-  }
-  
-  /* Full-width inputs */
-  input[type=text], input[type=password] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-  }
-  
-  /* Set a style for all buttons */
-  button {
-    background-color: #FF1617;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-  }
-  
-  /* Add a hover effect for buttons */
-  button:hover {
-    opacity: 0.8;
-  }
-  
-  /* Extra style for the cancel button (red) */
-  .cancelbtn {
-    width: auto;
-    padding: 10px 18px;
-    background-color: #FF1617;
-  }
-  
-  /* Center the avatar image inside this container */
-  .imgcontainer {
-    text-align: center;
-    margin: 24px 0 12px 0;
-  }
-  
-  /* Avatar image */
-  img.avatar {
-    width: 40%;
-    border-radius: 50%;
-  }
-  
-  /* Add padding to containers */
-  .container {
-    padding: 16px;
-  }
-  
-  /* The "Forgot password" text */
-  span.psw {
-    float: right;
-    padding-top: 16px;
-  }
-  
-  /* Change styles for span and cancel button on extra small screens */
-  @media screen and (max-width: 300px) {
-    span.psw {
-      display: block;
-      float: none;
-    }
-    .cancelbtn {
-      width: 100%;
-    }
-  }
+
+/* BURGUER */
+
+.hamburguer-button {
+  background-color: #03264c;
+  color: #ffffff;
+  display: block;
+  max-width: 50px;
+  padding: 15px 0;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 18px;
+  margin: auto;
+}
+
+/* FIN BURGUER */
 
 
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    padding-top: 60px;
-  }
-  
-  /* Modal Content/Box */
-  .modal-content {
-    background-color: #fefefe;
-    margin: 5px auto; /* 15% from the top and centered */
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-    max-width: 500px;
-  }
-  
-  /* The Close Button */
-  .close {
-    /* Position it in the top right corner outside of the modal */
-    position: absolute;
-    right: 25px;
-    top: 0;
-    color: #000;
-    font-size: 35px;
-    font-weight: bold;
-  }
-  
-  /* Close button on hover */
-  .close:hover,
-  .close:focus {
-    color: red;
-    cursor: pointer;
-  }
-  
-  /* Add Zoom Animation */
-  .animate {
-    -webkit-animation: animatezoom 0.6s;
-    animation: animatezoom 0.6s
-  }
-  
-  @-webkit-keyframes animatezoom {
-    from {-webkit-transform: scale(0)}
-    to {-webkit-transform: scale(1)}
-  }
-  
-  @keyframes animatezoom {
-    from {transform: scale(0)}
-    to {transform: scale(1)}
-  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -150,15 +354,308 @@ form {
 /* TABLET */
 
 @media (min-width: 768px) {
-    .main-header-top-bar{
-        display: flex;
-        justify-content: space-between;
 
-    }
+  header div {
+      flex-wrap: inherit;
+  }
+
+  .navbar {
+      display: none;
+  }
+
+  .main-header {
+
+      /* position: sticky; */
+  }
+
+  main section article .description {
+      display: block;
+      opacity: 0;
+  }
+
+  .main-header-top-bar {
+      justify-content: space-between;
+      flex-direction: initial;
+  }
+
+  .copy-header {
+      max-width: fit-content;
+      text-align: center;
+      width: 33%;
+  }
+
+  .hamburguer-button {
+      display: none;
+  }
+
+  .main-navbar {
+      display: flex;
+      justify-content: space-between;
+  }
+
+  .main-navbar ul {
+      display: flex;
+  }
+
+  .main-navbar li {
+      margin: 0 1px;
+  }
+
+  main section div.products article {
+      width: 23%;
+  }
+
+  main section article:hover .description {
+      opacity: 1;
+      transition: 300ms;
+  }
+
+
+
+  main section article:hover .fas {
+      transform: rotate(-90deg);
+      transition: 300ms;
+  }
+
+  main section article {
+      box-shadow: 0px 0px 0px rgb(255, 255, 255);
+  }
+
+
+  main section article:hover {
+      box-shadow: 0px 0px 10px rgb(100, 100, 100);
+
+      transition: 300ms;
+  }
+
+  footer {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+  }
+
+  footer div {
+      display: flex;
+      flex-direction: column;
+      padding-top: 10px;
+  }
+
+  .iconos {
+      display: flex;
+      justify-content: center;
+      align-self: center;
+  }
+
+  .card1 {
+      width: 30%;
+  }
+
+  .card2 {
+      width: 30%;
+  }
+
+  .card3 {
+      width: 30%;
+  }
+
+  .card4 {
+      width: 100%;
+      display: flex;
+      padding-top: 10px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
 
 
 /* DESKTOP */
-
 @media (min-width: 1200px) {
-    
+
+  .copy-header {
+      text-align: center;
+      width: 50%;
+  }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Bordered form */
+form {
+  border: 3px solid #f1f1f1;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #FF1617;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra style for the cancel button (red) */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #FF1617;
+}
+
+/* Center the avatar image inside this container */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+/* Avatar image */
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+}
+
+/* The "Forgot password" text */
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  .cancelbtn {
+    width: 100%;
+  }
+}
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5px auto; /* 15% from the top and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  max-width: 500px;
+}
+
+/* The Close Button */
+.close {
+  /* Position it in the top right corner outside of the modal */
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+/* Close button on hover */
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)}
+  to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+  from {transform: scale(0)}
+  to {transform: scale(1)}
 }

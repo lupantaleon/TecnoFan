@@ -5,17 +5,129 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="/css/register.css">
+
+    <title>Tecnogroup</title>
+
 </head>
 
+
 <body>
-    <ul>
-        <li><a href="/index">Index</a></li>
-        <li><a href="/login">Login</a></li>
-        <li><a href="/productCart">Product Cart</a></li>
-        <li><a href="/productDetail">Product Detail</a></li>
-        
-    </ul>
+    <header class="main-header">
+        <div class="main-header-top-bar">
+            <img src="img/logo.jpg" alt="" class="logo">
+
+            <h2 class="copy-header">
+                <i class="fas fa-hand-holding-usd"></i>
+                Compra en cuotas y sin tarjeta de credito
+            </h2>
+        </div>
+
+        <a href="#" class="hamburguer-button">
+            <i class="fas fa-bars"></i>
+        </a>
+
+        <nav class="main-navbar">
+            <ul class="left-navbar">
+                <li><a href="/index">Ofertas</a></li>
+                <li><a href="#">Tiendas Oficiales</a></li>
+                <li><a href="#">Vender</a></li>
+                <li><a href="#">Ayuda</a></li>
+            </ul>
+
+            <ul class="right-navbar">
+                <li><a href="/register">Creá tu cuenta <i class="far fa-credit-card"></i></a></li>
+                <li><a href="/login">Ingresá <i class="fas fa-sign-in-alt	"></i></a></li>
+                <li><a href="/productCart">Mis compras <i class="fa fa-shopping-basket"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- Formulario -->
+    <form action="/index" method="get" class="create-form">
+        <div class="control-formulario">
+            <input type="text" name="name" placeholder="Nombre y Apellido" class="control">
+        </div>
+        <div class="control-formulario">
+            <input type="text" name="user" placeholder="Nombre de usuario" class="control">
+        </div>
+        <div class="control-formulario">
+            <input type="email" name="email" placeholder="E-mail" class="control">
+        </div>
+
+       
+        <div class="control-formulario">
+        <label for="birth_date"><b>Fecha de nacimiento</b></label>
+        </div>
+
+        <div class="control-formulario">
+        <input type="date" name="birth_date" id="birth_date">
+        </div>
+
+        <div class="control-formulario">
+        <input type="text" name="addres" placeholder="Domicilio">
+        </div>
+
+        <h4>Perfil del usuario</h4>
+        <div class="profile">
+            <input type="radio" name="profile" value="buy" id="buy">
+            <label for="buy">Comprador</label>
+            <input type="radio" name="profile" value="sell" id="sell">
+            <label for="sell">Vendedor</label>
+        </div>
+
+        <h4>Intereses</h4>
+        <div class="interests">
+            <div>
+                <input type="checkbox" name="interests" value="a" id="a">
+                <label for="a">Electro</label>
+            </div>
+            <div>
+                <input type="checkbox" name="interests" value="b" id="b">
+                <label for="b">Moda</label>
+            </div>
+            <div>
+                <input type="checkbox" name="interests" value="c" id="c">
+                <label for="c">Hogar</label>
+            </div>
+            <div>
+                <input type="checkbox" name="interests" value="d" id="d">
+                <label for="d">Juguetería</label>
+            </div>
+            <div>
+                <input type="checkbox" name="interests" value="e" id="e">
+                <label for="e">Vida sana</label>
+            </div>
+        </div>
+
+        <h4>Elegí tu foto de usuario</h4>
+        <input type="file" name="avatar">
+        <br>
+        <br>
+        <input type="password" name="pass" placeholder="Elegí tu contraseña">
+        <input type="password" name="pass_confirm" placeholder="Confirmá tu contraseña">
+        <br>
+        <br>
+        <input type="submit" value="Enviar" >
+        <input type="reset" value="Borrar">
+        <br>
+        <br>
+
+
+
+
+
+
+    </form>
+
 </body>
 
 </html>
