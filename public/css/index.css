@@ -61,7 +61,7 @@ body {
     text-decoration: none;
     color: white;
     display: inline-block;
-    padding: 5px;
+    padding: 5px 10px;
     font-size: 17px;
 }
 
@@ -197,7 +197,7 @@ header div {
 /* MOBILE */
 @media (min-width: 361px) {
     .fa-solid {
-        color: blue;
+        color: whitesmoke;
         padding: 10px 0px;
     }
 

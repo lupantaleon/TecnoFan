@@ -11,7 +11,7 @@ body {
 }
 
 .main-header {
-    background-color: #EAC926;
+    background-color: black;
     padding: 20px;
     top: 0;
     z-index: 100;
@@ -57,9 +57,9 @@ body {
 
 .main-navbar a {
     text-decoration: none;
-    color: #222222;
+    color: white;
     display: inline-block;
-    padding: 5px;
+    padding: 5px 10px;
     font-size: 17px;
 }
 
