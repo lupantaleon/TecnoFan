@@ -16,28 +16,14 @@ body {
     top: 0;
     z-index: 100;
     width: 100%;
+    color: white;
 }
-
-
-
-
 
 .logo {
-    width: 200px;
-    /* animation: aumentar 1s ease-in-out 2 alternate; */
+  height: 100px;
+  width: 150px;
+  object-fit: cover;
 }
-
-
-/* @keyframes aumentar {
-    from{ 
-        transform: scale(1);
-    }
-    to {
-        transform: scale(1.5);
-    }
-} */
-
-
 
 .copy-header {
     font-weight: 400;
@@ -63,139 +49,49 @@ body {
     font-size: 17px;
 }
 
-
-div.last-visit,
-div.offers {
-    display: flex;
-    flex-wrap: wrap;
+.product-detail {
+  display: flex;
 }
 
-.price {
-    font-size: 18px;
-    width: 30%;
+.product-detail .product-photos {
+  width: 50%;
+  padding: 3%;
 }
 
-.discount {
-    width: 70%;
-
+.product-detail .product-photos .primary-photo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5%;
 }
 
-.discount,
-.description {
-    font-size: 16px;
-    font-weight: normal;
+.product-detail .product-photos .primary-photo img {
+  width: 80%;
 }
 
-h3,
-.description {
-    color: #666;
+.product-detail .product-photos .secondary-photos {
+  display: flex;
+  height: 110px;
+  overflow: hidden;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
-
-.description {
-    display: block;
-    margin-top: 20px;
+.product-detail .product-photos .secondary-photos .thumbnail {
+  margin: 3px;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
 }
-
-section.banner img {
-    width: 100%;
-
+.product-detail .product-photos .secondary-photos img {
+  width: 100px;
 }
-
-main {
-    width: 90%;
-    margin: 0 auto;
+.product-detail .product-info {
+  width: 50%;
 }
-
-main section article {
-    background-color: #fff;
-    margin: 10px 0px;
-}
-
-main section article img {
-    width: 100%;
-}
-
-main section article i,
-.discount {
-    color: #39b54a;
-}
-
-main section article i {
-    display: block;
-    font-size: 16px;
-    padding: 5px;
-    width: 30px;
-    height: 30px;
-    border: 1px solid #39b54a;
-    background-color: #FFF;
-    border-radius: 50%;
-    position: absolute;
-    right: 20px;
-    top: -15px;
-}
-
-
-main section h3 {
-    margin: 20px 0px;
-}
-
-article div.main-article {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    border-top: 1px solid #ebebeb;
-    position: relative;
-    padding: 15px;
-}
-
-header div {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* MOBILE */
 @media (min-width: 361px) {
     .fa-solid {
-        color: blue;
+        color: whitesmoke;
         padding: 10px 0px;
     }
 
@@ -292,12 +188,13 @@ header div {
 
 
 footer {
-    background-color: whitesmoke;
+    background-color: rgb(64, 56, 56);
     font-family: 'Roboto', sans-serif;
     text-align: center;
     padding-bottom: 10px;
     padding-left: 4em;
     padding-right: 4em;
+    color: white;
 
 }
 
@@ -466,17 +363,6 @@ footer {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
 /* DESKTOP */
 @media (min-width: 1200px) {
 
@@ -484,7 +370,4 @@ footer {
         text-align: center;
         width: 50%;
     }
-
-
-
 }
