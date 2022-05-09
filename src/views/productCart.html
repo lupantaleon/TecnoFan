@@ -12,7 +12,7 @@
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
 
-    <link rel="stylesheet" href="/css/register.css">
+    <link rel="stylesheet" href="/css/productcart.css">
 
     <title>Tecnogroup</title>
 
@@ -20,19 +20,19 @@
 
 
 <body>
-    <header class="main-header">
+    <!-- <header class="main-header">
         <div class="main-header-top-bar">
             <img src="img/logo.jpg" alt="" class="logo">
 
-            <!-- <h2 class="copy-header">
+            <h2 class="copy-header">
                 <i class="fas fa-hand-holding-usd"></i>
                 Compra en cuotas y sin tarjeta de credito
-            </h2> -->
+            </h2>
         </div>
 
-        <!-- <a href="#" class="hamburguer-button">
+        <a href="#" class="hamburguer-button">
             <i class="fas fa-bars"></i>
-        </a> -->
+        </a>
 
         <nav class="main-navbar">
             <ul class="left-navbar">
@@ -48,9 +48,147 @@
                 <li><a href="/productCart">Mis compras <i class="fa fa-shopping-basket"></i></a></li>
             </ul>
         </nav>
-    </header>
+    </header> -->
+     <!--Carrito-->
+     <section>
+        <div class="cart">
+            <div class="cart-titles">
+                <div>
+                    <h1><i class="fa fa-shopping-cart"></i> MI CARRITO DE COMPRAS</h1>
+                </div>
+                <!-- div class="cart-categories">
+                    <h3>PRODUCTO</h3>
+                    <h3>CANTIDAD</h3>
+                    <h3>PRECIO UNITARIO</h3>
+                    <h3>SUBTOTAL</h3>
+                    <h3></h3>
+                </div> -->
+            </div>
+            
+            <div class="cart-buy">
+                <div class="products">
+                    <div class="box">
+                        <img src="img/producto1.jpeg" alt="Smatwatch Umidigi Urun Gps 02" class="product-img">
+                        <div class="content">
+                            <h3>Smartwatch Umidigi</h3>
+                            <h4>Precio Unitario: $9,000.00</h4>
+                            <h4>Subtotal: $-</h4>
+                            <p class="cart-unit">Cantidad: <input type="number" value="1"></p>
+                            <p class="cart-trash">
+                                <i class="fa fa-trash"></i>
+                                <span class="cart-remove">Quitar</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <img src="img/producto2.jpeg" alt="AURICULARES JBL TUNE T510 BT" class="product-img">
+                        <div class="content">
+                            <h3>Auriculares JBL TUNE T510 BT</h3>
+                            <h4>Precio Unitario: $6,590.00</h4>
+                            <h4>Subtotal: $-</h4>
+                            <p class="cart-unit">Cantidad: <input type="number" value="3"></p>
+                            <p class="cart-trash">
+                                <i class="fa fa-trash"></i>
+                                <span class="cart-remove">Quitar</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <img src="img/producto3.jpeg" alt="TABLET LENOVO TB-X306F 10.1' 64 GB GRIS" class="product-img">
+                        <div class="content">
+                            <h3>Tablet Lenovo TB-X306F 10.1' 64 GB GRIS</h3>
+                            <h4>Precio Unitario: $32,000.00</h4>
+                            <h4>Subtotal: $-</h4>
+                            <p class="cart-unit">Cantidad: <input type="number" value="1"></p>
+                            <p class="cart-trash">
+                                <i class="fa fa-trash"></i>
+                                <span class="cart-remove">Quitar</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <img src="img/producto4.jpeg" alt="Mouse Gamer Redragon DAGGER2 M715RGB" class="product-img">
+                        <div class="content">
+                            <h3>Mouse Redragon DAGGER2 M715RGB</h3>
+                            <h4>Precio Unitario: $3,799.00</h4>
+                            <h4>Subtotal: $-</h4>
+                            <p class="cart-unit">Cantidad: <input type="number" value="2"></p>
+                            <p class="cart-trash">
+                                <i class="fa fa-trash"></i>
+                                <span class="cart-remove">Quitar</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="cart-resume">
+                    <div>
+                    <button class="cart-ship-button"><i class="fas fa-truck"></i>  AÑADIR ENVÍO</button>
+                    </div>
+                    <h3>DETALLE COMPRAS</h3>
+                    <div class="cart-total">
+                        <h4>PRODUCTOS</h4>
+                        <h4>$VALOR</h4>
+                    </div>
+                    <div class="cart-ship">
+                        <h4>ENVÍO</h4>
+                        <h4>$VALOR</h4>
+                    </div>
+                    <div class="cart-ship-total">
+                        <h2>TOTAL</h2>
+                        <h2>$VALOR</h2>
+                    </div>
+                    <div class="cart-final-buttons">
+                        <button><i class="fa fa-shopping-cart"></i> COMPRAR</button><br>
+                        <button><a href="/"><i class="fa fa-arrow-circle-left"></i> VER MÁS</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
 
+        <div class="card1">
+        <!-- <img class="iconos" src="/images/tarj.jpeg"> -->
+    
+        <!-- <i class="fa-solid fa-credit-card" </i> -->
+        <p><i class="fa-solid fa-credit-card"></i><br>
+            <b>Pagá con tarjeta o en efectivo</b>
+            <br>
+            Con Mercado liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en
+            puntos de pago. ¡Y siempre es seguro!
+        </p>
+        </div>
+        <br>
+        <div class="card2">
+        <!-- <img class="iconos" src="/images/free.jpeg"> -->
+        <p>
+            <i class="fa-solid fa-gift"></i><br>
+            <b>Envío gratis desde $ 2.500</b>
+            <br>
+            Solo por estar registrad@ en Mercado liebre tenés envíos gratis en miles de
+            productos. Es un beneficio de Mercado Puntos.
+        </p>
+        </div>
+        <br>
+        <div class="card3">
+        <!-- <img class="iconos" src="/images/seg.jpeg">
+            -->
+        <p>
+            <i class="fa-solid fa-user-shield"></i>
+            <br>
+            <b>Seguridad, de principio a fin</b>
+            <br>
+            ¿No te gusta? ¡Devolvelo! En Mercado liebre, no hay nada que no puedas hacer,
+            porque estás siempre protegid@.
+        </p>
+        </div>
+        <br>
+        <p class="card4"><b>Copyright © 2022 Tecnogroup S.R.L.</b>
+        </p>
+    
+    
+    </footer>
     
 </body>
 
