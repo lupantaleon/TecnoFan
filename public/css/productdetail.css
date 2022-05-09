@@ -88,6 +88,52 @@ body {
   width: 50%;
 }
 
+
+.description {
+justify-content: flex-start;
+    align-items: baseline;
+    flex-direction: column;
+    margin-top: 20px;
+    }
+
+.price {
+    font-size: 18px;
+    width: 30%;
+    color: rgb(68, 128, 0);
+
+}
+.parrafo {
+align-items: center;
+  display: flex;
+  justify-content: center;
+  color: #333;
+
+}
+
+
+a:hover {
+  background-color: black;
+}
+.discount {
+    width: 70%;
+    color: red;
+
+}
+
+
+.boton-personalizado{
+text-decoration:none;
+font-weight:600;
+font-size:20px;
+color:#ffffff;
+padding-top:15px;
+padding-bottom:15px;
+padding-left:150px;
+padding-right:150px;
+background-color:red }
+
+
+
 /* MOBILE */
 @media (min-width: 361px) {
     .fa-solid {
