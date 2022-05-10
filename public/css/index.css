@@ -438,11 +438,11 @@ footer {
         justify-content: space-evenly;
     }
 
-    footer div {
+    /* footer div {
         display: flex;
         flex-direction: column;
         padding-top: 10px;
-    }
+    } */
 
     .iconos {
         display: flex;

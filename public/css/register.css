@@ -155,7 +155,131 @@ header div {
     justify-content: space-evenly;
 }
 
+.control{
+    border: none;
+    border-radius: 5px;
+    width: 60%;
+}
 
+#birth_date{
+    width: 60%;
+    padding: 8px 8px;
+    border: none;
+    border-radius: 5px;
+    color: gray;
+    position: relative;
+    left: -8px;
+}
+
+/* .crontol-formulario.control{
+    border: none;
+    border-radius: 50%;
+}
+ */
+.contenedor-general{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* .Domicilio{
+    width: 60%;
+    padding: 8px 8px;
+    border: none;
+    border-radius: 5px;
+} */
+
+.fa-solid{
+    position: relative;
+    right: 18px;
+}
+
+/* Perfil de usuario */
+
+.profile{
+    color: grey;
+}
+.profile label{
+    margin-right: 20px;
+    margin-left: 20px;
+}
+/* Intereses */
+
+.interests{
+   /*  display: flex;
+    text-align: center;
+    justify-content: center; */
+    color: gray;
+}
+.interests:hover{
+    color: blue;
+    transition: all 1000ms;
+}
+
+.interes-diseño{
+    margin-top: 10px;
+    margin-bottom: 10px
+}
+
+/* password */
+
+.password{
+    border: solid black 3px;
+}
+
+.Enviar{
+    height: 30px;
+}
+.Borrar{
+    height: 30px;
+}
+/* .Enviar:hover{
+    background-color: green;
+    transition: all 1000ms;
+    color: white;
+    height: 30px;
+}
+.Borrar:hover{
+    background-color: red;
+    transition: all 1000ms;
+    color: white;
+    height: 30px;
+} */
+
+/* media */
+ @media (min-width: 767px){
+    .fa-solid:hover{
+        color: greenyellow;
+        transition: all 1000ms;
+    }
+    .profile:hover{
+        color:  blue;
+        transition: all 1000ms;
+    }
+    .interests{
+         display: flex;
+         text-align: center;
+         justify-content: center;
+         color: gray;
+     }
+     .interests label{
+         margin-right: 30px;
+         margin-left: 30px;
+     }
+
+     /* button */
+     .Enviar:hover{
+        background-color: green;
+        transition: all 1000ms;
+        color: white;
+    }
+    .Borrar:hover{
+        background-color: red;
+        transition: all 1000ms;
+        color: white;
+    }
+} 
 
 
 

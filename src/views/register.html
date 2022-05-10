@@ -11,8 +11,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/4226102d17.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="/css/register.css">
+
 
     <title>Tecnogroup</title>
 
@@ -22,7 +24,7 @@
 <body>
     <header class="main-header">
         <div class="main-header-top-bar">
-            <img src="img/logo.jpg" alt="" class="logo">
+            <a href="/"><img src="img/logo.jpg" alt="" class="logo"></a>
 
             <!-- <h2 class="copy-header">
                 <i class="fas fa-hand-holding-usd"></i>
@@ -52,81 +54,125 @@
 
 
     <!-- Formulario -->
+    <div class="contenedor-general">
     <form action="/index" method="get" class="create-form">
         <div class="control-formulario">
-            <input type="text" name="name" placeholder="Nombre y Apellido" class="control">
+            <input type="text" name="name" placeholder="Nombre y Apellido" class="control" ><i class="fa-solid fa-user"></i>
         </div>
         <div class="control-formulario">
-            <input type="text" name="user" placeholder="Nombre de usuario" class="control">
+            <input type="text" name="user" placeholder="Nombre de usuario" class="control"><i class="fa-solid fa-user"></i>
         </div>
         <div class="control-formulario">
-            <input type="email" name="email" placeholder="E-mail" class="control">
+            <input type="email" name="email" placeholder="E-mail" class="control"><i class="fa-solid fa-envelope"></i>
         </div>
 
        
         <div class="control-formulario">
-        <label for="birth_date"><b>Fecha de nacimiento</b></label>
+        <div class="fecha-de-nacimiento">    
+        <label for="birth_date" aria-placeholder="Fecha de nacimiento"><h4>Fecha de nacimiento :</h4> </label>
         </div>
 
         <div class="control-formulario">
-        <input type="date" name="birth_date" id="birth_date">
+        <input type="date" name="birth_date" id="birth_date" class="control">
         </div>
 
         <div class="control-formulario">
-        <input type="text" name="addres" placeholder="Domicilio">
+        <input type="text" name="addres" placeholder="Domicilio" class="control"><i class="fa-solid fa-map-location-dot"></i>
         </div>
-
-        <h4>Perfil del usuario</h4>
+        
+        <div class="control-formulario">
+        <input type="tel" name="telefono" placeholder="Telefono" class="control"><i class="fa-solid fa-mobile-screen"></i>
+        </div>
+        <!-- <h4>Perfil del usuario</h4>
         <div class="profile">
             <input type="radio" name="profile" value="buy" id="buy">
             <label for="buy">Comprador</label>
             <input type="radio" name="profile" value="sell" id="sell">
             <label for="sell">Vendedor</label>
-        </div>
+        </div> -->
 
-        <h4>Intereses</h4>
+        <h4>Intereses :</h4>
         <div class="interests">
             <div>
-                <input type="checkbox" name="interests" value="a" id="a">
-                <label for="a">Electro</label>
+                <input type="checkbox" name="interests" value="a" id="a" class="interes-diseño">
+                <label for="a">Gaming</label>
             </div>
             <div>
-                <input type="checkbox" name="interests" value="b" id="b">
-                <label for="b">Moda</label>
+                <input type="checkbox" name="interests" value="b" id="b"class="interes-diseño">
+                <label for="b">Celulares</label>
             </div>
             <div>
-                <input type="checkbox" name="interests" value="c" id="c">
-                <label for="c">Hogar</label>
+                <input type="checkbox" name="interests" value="c" id="c"class="interes-diseño">
+                <label for="c">Computadoras</label>
             </div>
             <div>
-                <input type="checkbox" name="interests" value="d" id="d">
-                <label for="d">Juguetería</label>
+                <input type="checkbox" name="interests" value="d" id="d"class="interes-diseño">
+                <label for="d">Auriculares</label>
             </div>
             <div>
-                <input type="checkbox" name="interests" value="e" id="e">
-                <label for="e">Vida sana</label>
+                <input type="checkbox" name="interests" value="e" id="e"class="interes-diseño">
+                <label for="e">Relojes smartwatch</label>
             </div>
         </div>
 
-        <h4>Elegí tu foto de usuario</h4>
+        <h4>Elegí tu foto de usuario :</h4>
         <input type="file" name="avatar">
         <br>
         <br>
-        <input type="password" name="pass" placeholder="Elegí tu contraseña">
-        <input type="password" name="pass_confirm" placeholder="Confirmá tu contraseña">
+        <input type="password" name="pass" placeholder="Elegí tu contraseña" class="password">
+        <input type="password" name="pass_confirm" placeholder="Confirmá tu contraseña" class="password">
         <br>
         <br>
-        <input type="submit" value="Enviar" >
-        <input type="reset" value="Borrar">
+        <button type="submit" value="Enviar" class="Enviar">Enviar</button> 
+        <button type="reset" value="Borrar" class="Borrar">Borrar</button>
         <br>
         <br>
-
-
-
-
-
-
     </form>
+</div>
+    <footer id="footer">
+
+        <div class="card1">
+          <!-- <img class="iconos" src="/images/tarj.jpeg"> -->
+      
+          <!-- <i class="fa-solid fa-credit-card" </i> -->
+          <p><i class="fa-solid fa-credit-card"></i><br>
+            <b>Pagá con tarjeta o en efectivo</b>
+            <br>
+            Con Mercado liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en
+            puntos de pago. ¡Y siempre es seguro!
+          </p>
+        </div>
+        <br>
+        <div class="card2">
+          <!-- <img class="iconos" src="/images/free.jpeg"> -->
+          <p>
+            <i class="fa-solid fa-gift"></i><br>
+            <b>Envío gratis desde $ 2.500</b>
+            <br>
+            Solo por estar registrad@ en Mercado liebre tenés envíos gratis en miles de
+            productos. Es un beneficio de Mercado Puntos.
+          </p>
+        </div>
+        <br>
+        <div class="card3">
+          <!-- <img class="iconos" src="/images/seg.jpeg">
+               -->
+          <p>
+            <i class="fa-solid fa-user-shield"></i>
+            <br>
+            <b>Seguridad, de principio a fin</b>
+            <br>
+            ¿No te gusta? ¡Devolvelo! En Mercado liebre, no hay nada que no puedas hacer,
+            porque estás siempre protegid@.
+          </p>
+        </div>
+        <br>
+        <p class="card4"><b>Copyright © 2022 Tecnogroup S.R.L.</b>
+        </p>
+      
+      
+      </footer>
+      <!-- </div> --
 
 </body>
 
