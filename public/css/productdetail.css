@@ -51,6 +51,7 @@ body {
 
 .product-detail {
   display: flex;
+  padding: 20px;
 }
 
 .product-detail .product-photos {
@@ -120,19 +121,26 @@ a:hover {
 
 }
 
+.cart-link {
+  min-width: 75%;
+}
 
-.boton-personalizado{
-text-decoration:none;
-font-weight:600;
-font-size:20px;
-color:#ffffff;
-padding-top:15px;
-padding-bottom:15px;
-padding-left:150px;
-padding-right:150px;
-background-color:red }
+.boton-personalizado {
+  width: 100%;
+  text-decoration:none;
+  font-weight:600;
+  font-size:20px;
+  color:#ffffff;
+  padding-top:15px;
+  padding-bottom:15px;
+  background-color:red;
+  border: none;
+}
 
-
+.button-row {
+  display: flex;
+  justify-content: center;
+}
 
 /* MOBILE */
 @media (min-width: 361px) {
@@ -275,29 +283,9 @@ footer {
 
 /* FIN BURGUER */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* TABLET */
 
 @media (min-width: 768px) {
-
     header div {
         flex-wrap: inherit;
     }
@@ -412,4 +400,20 @@ footer {
         text-align: center;
         width: 50%;
     }
+}
+
+/* TABLET & MOBILE */
+@media (max-width: 800px) {
+  .product-detail {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .product-detail .product-photos {
+    width: 100%;
+  }
+
+  .product-detail .product-info {
+    width: 100%;
+  }
 }
