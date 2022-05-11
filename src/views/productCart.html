@@ -20,35 +20,34 @@
 
 
 <body>
-    <!-- <header class="main-header">
+    <header class="main-header">
         <div class="main-header-top-bar">
-            <img src="img/logo.jpg" alt="" class="logo">
-
-            <h2 class="copy-header">
-                <i class="fas fa-hand-holding-usd"></i>
-                Compra en cuotas y sin tarjeta de credito
-            </h2>
+            <a href="/"><div class="logocontainer">
+            <img src="img/logo.jpg" alt class="logo">
+          </div></a>
+      
+          <div class="box-search">
+            <div class="container-1">
+                <!-- <span class="icon"><i class="fa fa-search"></i></span> -->
+                <input type="search" id="search" placeholder="Search..." />
+            </div>
+          </div>
         </div>
-
-        <a href="#" class="hamburguer-button">
-            <i class="fas fa-bars"></i>
-        </a>
-
         <nav class="main-navbar">
-            <ul class="left-navbar">
-                <li><a href="/index">Ofertas</a></li>
-                <li><a href="#">Tiendas Oficiales</a></li>
-                <li><a href="#">Vender</a></li>
-                <li><a href="#">Ayuda</a></li>
-            </ul>
-
-            <ul class="right-navbar">
-                <li><a href="/register">Creá tu cuenta <i class="far fa-credit-card"></i></a></li>
-                <li><a href="/login">Ingresá <i class="fas fa-sign-in-alt	"></i></a></li>
-                <li><a href="/productCart">Mis compras <i class="fa fa-shopping-basket"></i></a></li>
-            </ul>
+          <ul class="left-navbar">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Novedades</a></li>
+            <li><a href="#">Lo mas visto</a></li>
+            <li><a href="#">Ayuda</a></li>
+          </ul>
+      
+          <ul class="right-navbar">
+            <li><a href="/productCart">Carrito <i class="fa fa-shopping-basket"></i></a></li>
+            <li><a href="/login">Login <i class="fas fa-sign-in-alt	"></i></a></li>
+            <li><a href="/register">Registro <i class="far fa-credit-card"></i></a></li>
+          </ul>
         </nav>
-    </header> -->
+      </header>
      <!--Carrito-->
      <section>
         <div class="cart">
@@ -72,8 +71,11 @@
                         <div class="content">
                             <h3>Smartwatch Umidigi</h3>
                             <h4>Precio Unitario: $9,000.00</h4>
-                            <h4>Subtotal: $-</h4>
+                            <div class="cart-subtotal">
+                                <h4>Subtotal: $-</h4>
+                            </div>
                             <p class="cart-unit">Cantidad: <input type="number" value="1"></p>
+                            <p class="cart-unit-mob"><input type="number" value="1"></p>
                             <p class="cart-trash">
                                 <i class="fa fa-trash"></i>
                                 <span class="cart-remove">Quitar</span>
@@ -85,8 +87,11 @@
                         <div class="content">
                             <h3>Auriculares JBL TUNE T510 BT</h3>
                             <h4>Precio Unitario: $6,590.00</h4>
-                            <h4>Subtotal: $-</h4>
+                            <div class="cart-subtotal">
+                                <h4 class="">Subtotal: $-</h4>
+                            </div>
                             <p class="cart-unit">Cantidad: <input type="number" value="3"></p>
+                            <p class="cart-unit-mob"><input type="number" value="3"></p>
                             <p class="cart-trash">
                                 <i class="fa fa-trash"></i>
                                 <span class="cart-remove">Quitar</span>
@@ -98,8 +103,11 @@
                         <div class="content">
                             <h3>Tablet Lenovo TB-X306F 10.1' 64 GB GRIS</h3>
                             <h4>Precio Unitario: $32,000.00</h4>
-                            <h4>Subtotal: $-</h4>
+                            <div class="cart-subtotal">
+                                <h4>Subtotal: $-</h4>
+                            </div>
                             <p class="cart-unit">Cantidad: <input type="number" value="1"></p>
+                            <p class="cart-unit-mob"><input type="number" value="1"></p>
                             <p class="cart-trash">
                                 <i class="fa fa-trash"></i>
                                 <span class="cart-remove">Quitar</span>
@@ -111,8 +119,11 @@
                         <div class="content">
                             <h3>Mouse Redragon DAGGER2 M715RGB</h3>
                             <h4>Precio Unitario: $3,799.00</h4>
-                            <h4>Subtotal: $-</h4>
+                            <div class="cart-subtotal">
+                                <h4>Subtotal: $-</h4>
+                            </div>
                             <p class="cart-unit">Cantidad: <input type="number" value="2"></p>
+                            <p class="cart-unit-mob"><input type="number" value="2"></p>
                             <p class="cart-trash">
                                 <i class="fa fa-trash"></i>
                                 <span class="cart-remove">Quitar</span>
