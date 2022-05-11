@@ -14,6 +14,9 @@
   <link rel="stylesheet" href="css/index.css">
   <script src="https://kit.fontawesome.com/4226102d17.js" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/4226102d17.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/estilos.css">
+
+
 </head>
 
 
@@ -23,10 +26,12 @@
       <img src="img/logo.jpg" alt class="logo">
     </div>
 
-    <form action="/index" class="search">
-      <input type="text" placeholder="Buscar productos, marcas..." name="search">
-      <button type="submit"><i class="fa fa-search"></i></button>
-    </form>
+    <div class="box">
+      <div class="container-1">
+          <!-- <span class="icon"><i class="fa fa-search"></i></span> -->
+          <input type="search" id="search" placeholder="Search..." />
+      </div>
+    </div>
 
 
     <!-- <h2 class="copy-header">
@@ -44,124 +49,77 @@
 
   <nav class="main-navbar">
     <ul class="left-navbar">
-      <li><a href="#">Ofertas</a></li>
-      <li><a href="#">Tiendas Oficiales</a></li>
-      <li><a href="#">Vender</a></li>
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Novedades</a></li>
+      <li><a href="#">Lo mas visto</a></li>
       <li><a href="#">Ayuda</a></li>
     </ul>
 
     <ul class="right-navbar">
-      <li><a href="/register">Creá tu cuenta <i class="far fa-credit-card"></i></a></li>
-      <li><a href="/login">Ingresá <i class="fas fa-sign-in-alt	"></i></a></li>
-      <li><a href="/productCart">Mis compras <i class="fa fa-shopping-basket"></i></a></li>
+      <li><a href="/productCart">Carrito <i class="fa fa-shopping-basket"></i></a></li>
+      <li><a href="/login">Login <i class="fas fa-sign-in-alt	"></i></a></li>
+      <li><a href="/register">Registro <i class="far fa-credit-card"></i></a></li>
     </ul>
   </nav>
 </header>
 
 <body>
 
-
-  <!-- <section class="banner">
-    <img src="images/img-home-banner.jpg" alt="Banner de ofertas">
-  </section> -->
-  <main>
-    <section class="last-visit">
-      <h3>Basado en tu última visita</h3>
-      <div class="products">
-        <article>
-          <!-- <img src="images/img-cafetera-moulinex.jpg" alt="Cafetera" class="product_img"> -->
-          <a href="/productDetail">
-            <div class="main-article">
-              <i class="fa-solid fa-cart-shopping"></i>
-              <p class="price">PRECIO</p>
-              <p class="discount">DESCUENTO</p>
-              <h4 class="description">PRODUCTO</h4>
-            </div>
-          </a>
-        </article>
-        <article>
-          <!-- <img src="images/img-macbook-pro-2019.jpg" alt="MacBook" class="product_img"> -->
-          <a href="/productDetail">
-            <div class="main-article">
-              <i class="fas fa-truck"></i>
-              <p class="price">PRECIO</p>
-              <p class="discount">DESCUENTO</p>
-              <h4 class="description">PRODUCTO</h4>
-            </div>
-          </a>
-        </article>
-        <article>
-          <!-- <img src="images/img-samsung-galaxy-s10.jpg" alt="Teléfono Móvil Samsung Galaxy" class="product_img"> -->
-          <a href="/productDetail">
-            <div class="main-article">
-              <i class="fas fa-truck"></i>
-              <p class="price">PRECIO</p>
-              <p class="discount">DESCUENTO</p>
-              <h4 class="description">PRODUCTO</h4>
-            </div>
-          </a>
-        </article>
-        <article>
-          <!-- <img src="images/img-tv-samsung-smart.jpg" alt="SmartTv Samsung" class="product_img"> -->
-          <a href="/productDetail">
-            <div class="main-article">
-              <i class="fas fa-truck"></i>
-              <p class="price">PRECIO</p>
-              <p class="discount">DESCUENTO</p>
-              <h4 class="description">PRODUCTO</h4>
-            </div>
-        </article></a>
+  <div class="wrap">
+    <h1>Ofertas</h1>
+    <div class="store-wrapper">
+      <div class="category_list">
+        <a href="#" class="category_item" category="all">Todo</a>
+        <a href="#" class="category_item" category="ordenadores">Smartwatch</a>
+        <a href="#" class="category_item" category="laptops">Laptops</a>
+        <a href="#" class="category_item" category="smartphones">Smartphones</a>
+        <a href="#" class="category_item" category="monitores">Monitores</a>
+        <a href="#" class="category_item" category="audifonos">Auriculares</a>
       </div>
-    </section>
-    <section class="offers">
-      <h3>Ofertas</h3>
-      <div class="products">
-        <article>
-          <!-- <img src="images/img-cafetera-moulinex.jpg" alt="Cafetera" class="product_img"> -->
-          <a href="/productDetail">
-            <div class="main-article">
-              <i class="fas fa-truck"></i>
-              <p class="price">PRECIO</p>
-              <p class="discount">DESCUENTO</p>
-              <h4 class="description">PRODUCTO</h4>
-            </div>
-          </a>
-        </article>
-        <article>
-          <!-- <img src="images/img-macbook-pro-2019.jpg" alt="MacBook" class="product_img"> -->
-          <a href="/productDetail">
-            <div class="main-article">
-              <i class="fas fa-truck"></i>
-              <p class="price">PRECIO</p>
-              <p class="discount">DESCUENTO</p>
-              <h4 class="description">PRODUCTO</h4>
-            </div>
-          </a>
-        </article>
-        <article>
-          <!-- <img src="images/img-samsung-galaxy-s10.jpg" alt="Teléfono Móvil Samsung Galaxy" class="product_img"> -->
-          <a href="/productDetail">
-            <div class="main-article">
-              <i class="fas fa-truck"></i>
-              <p class="price">PRECIO</p>
-              <p class="discount">DESCUENTO</p>
-              <h4 class="description">PRODUCTO</h4>
-            </div>
-          </a>
-        </article>
-        <article>
-          <!-- <img src="images/img-tv-samsung-smart.jpg" alt="SmartTv Samsung" class="product_img"> -->
-          <a href="/productDetail">
-            <div class="main-article">
-              <i class="fas fa-truck"></i>
-              <p class="price">PRECIO</p>
-              <p class="discount">DESCUENTO</p>
-              <h4 class="description">PRODUCTO</h4>
-            </div>
-        </article>
-      </div></a>
-    </section>
-  </main>
+      <section class="products-list">
+        <div class="product-item" category="smartwatch">
+          <img src="img/producto1.jpeg" alt="">
+          <a href="/productdetail">Smartwatch Umidigi</a>
+          <a href="/productdetail">Precio $xxx</a>
+        </div>
+        <div href="/productdetail" class="product-item" category="mouse">
+          <img src="img/producto4.jpeg" alt="">
+          <a href="/productdetail">Mouse Redragon</a>
+          <a href="/productdetail">Precio $xxx</a>
+        </div>
+        <div class="product-item" category="smartphones">
+          <img src="img/samsung_galaxy.jpg" alt="">
+          <a href="/productdetail">Samsung Galaxy</a>
+          <a href="/productdetail">Precio $xxx</a>
+        </div>
+        <div class="product-item" category="auriculares">
+          <img src="img/producto2.jpeg" alt="">
+          <a href="/productdetail">Auriculares JBL TUNE</a>
+          <a href="/productdetail">Precio $xxx</a>
+        </div>
+        <div class="product-item" category="tablets">
+          <img src="img/producto3.jpeg" alt="">
+          <a href="/productdetail">Tablet Lenovo TB-X306F</a>
+          <a href="/productdetail">Precio $xxx</a>
+        </div>
+        <div class="product-item" category="ordenadores">
+          <img src="img/pc_lenovo.jpg" alt="">
+          <a href="/productdetail">PC Lenovo</a>
+          <a href="/productdetail">Precio $xxx</a>
+        </div>
+        <div class="product-item" category="monitores">
+          <img src="img/monitor_asus.jpg" alt="">
+          <a href="/productdetail">Monitor Asus</a>
+          <a href="/productdetail">Precio $xxx</a>
+        </div>
+        <div class="product-item" category="auriculares">
+          <img src="img/auris1.png" alt="">
+          <a href="/productdetail">Audifonos Corsair</a>
+          <a href="/productdetail">Precio $xxx</a>
+        </div>
+      </section>
+    </div>
+  </div>
 
 </body>
 
@@ -172,20 +130,20 @@
     <!-- <img class="iconos" src="/images/tarj.jpeg"> -->
 
     <!-- <i class="fa-solid fa-credit-card" </i> -->
-    <p><i class="fa-solid fa-credit-card"></i><br>
-      <b>Datos de contacto</b>
+    <p><i class="fa-solid fa-map-pin"></i><br>
+      <b>Donde nos ubicas</b>
       <br>
-      Contactate con nosotros por cualquier duda, estamos a tu disposición!
+      Calle 8 M9 C18, 1102 Buenos Aires
     </p>
   </div>
   <br>
   <div class="card2">
     <!-- <img class="iconos" src="/images/free.jpeg"> -->
     <p>
-      <i class="fa-solid fa-gift"></i><br>
-      <b> Envios a todo el país desde $8.500</b>
+      <i class="fa-solid fa-headset"></i><br>
+      <b>Contactate con nosotros</b>
       <br>
-      Tenemos Tecnofans en todo el pais, de punta a punta, y vos podes ser
+      Las 24 hs
     </p>
   </div>
   <br>
