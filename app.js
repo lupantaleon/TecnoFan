@@ -9,7 +9,7 @@ app.listen(3002, () => {
 });
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/src/views/index.html');
+    res.sendFile(__dirname + '/src/views/index2.html');
 });
 
 app.get('/index', (req, res) => {
