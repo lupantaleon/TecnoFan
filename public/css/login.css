@@ -18,7 +18,11 @@ body {
   width: 100%;
 }
 
-
+.divclass {
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+}
 
 
 
@@ -195,33 +199,33 @@ header div {
 /* MOBILE */
 @media (min-width: 361px) {
   .fa-solid {
-      color: blue;
-      padding: 10px 0px;
+    color: blue;
+    padding: 10px 0px;
   }
 
   header div img {
-      width: 50%;
+    width: 50%;
   }
 
   /* HEADER */
   body nav.navigation {
-      display: flex;
+    display: flex;
   }
 
 
   .form {
-      border: rgb(132, 0, 255);
-      border-style: dashed;
-      border-radius: 2px;
-      border-width: 2px;
-
+    border: rgb(132, 0, 255);
+    border-style: dashed;
+    border-radius: 2px;
+    border-width: 2px;
+    
   }
 
   .compra {
-      border: rgb(255, 0, 149);
-      border-style: dashed;
-      border-radius: 2px;
-      border-width: 2px;
+    border: rgb(255, 0, 149);
+    border-style: dashed;
+    border-radius: 2px;
+    border-width: 2px;
 
   }
 
@@ -231,60 +235,60 @@ header div {
   /* NAVIGATION */
 
   body nav ul.navleft {
-      width: 50%;
-      display: flex;
-      flex-direction: row;
-      align-items: flex-end;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
 
   }
 
   body nav ul.navleft li {
-      padding: 15px 15px;
+    padding: 15px 15px;
   }
 
   body nav ul.navright {
-      width: 50%;
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-end;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
   }
 
   body nav ul.navright li {
 
-      padding: 15px 15px;
+    padding: 15px 15px;
   }
 
 
 
 
   div.burger-menu {
-      display: none;
+    display: none;
   }
 
 
 
 
   main section article {
-      box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
   }
 
 
 
   main section div.products {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
   }
 
   main section div.products article {
-      width: 45%;
+    width: 45%;
   }
 
   .price,
   .discount {
-      width: 50%;
+    width: 50%;
   }
 }
 
@@ -356,110 +360,110 @@ footer {
 @media (min-width: 768px) {
 
   header div {
-      flex-wrap: inherit;
+    flex-wrap: inherit;
   }
 
   .navbar {
-      display: none;
+    display: none;
   }
 
 
 
   main section article .description {
-      display: block;
-      opacity: 0;
+    display: block;
+    opacity: 0;
   }
 
   .main-header-top-bar {
-      justify-content: space-between;
-      flex-direction: initial;
+    justify-content: space-between;
+    flex-direction: initial;
   }
 
   .copy-header {
-      max-width: fit-content;
-      text-align: center;
-      width: 33%;
+    max-width: fit-content;
+    text-align: center;
+    width: 33%;
   }
 
   .hamburguer-button {
-      display: none;
+    display: none;
   }
 
   .main-navbar {
-      display: flex;
-      justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
   }
 
   .main-navbar ul {
-      display: flex;
+    display: flex;
   }
 
   .main-navbar li {
-      margin: 0 1px;
+    margin: 0 1px;
   }
 
   main section div.products article {
-      width: 23%;
+    width: 23%;
   }
 
   main section article:hover .description {
-      opacity: 1;
-      transition: 300ms;
+    opacity: 1;
+    transition: 300ms;
   }
 
 
 
   main section article:hover .fas {
-      transform: rotate(-90deg);
-      transition: 300ms;
+    transform: rotate(-90deg);
+    transition: 300ms;
   }
 
   main section article {
-      box-shadow: 0px 0px 0px rgb(255, 255, 255);
+    box-shadow: 0px 0px 0px rgb(255, 255, 255);
   }
 
 
   main section article:hover {
-      box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
 
-      transition: 300ms;
+    transition: 300ms;
   }
 
   footer {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-evenly;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
 
   footer div {
-      display: flex;
-      flex-direction: column;
-      padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
   }
 
   .iconos {
-      display: flex;
-      justify-content: center;
-      align-self: center;
+    display: flex;
+    justify-content: center;
+    align-self: center;
   }
 
   .card1 {
-      width: 30%;
+    width: 30%;
   }
 
   .card2 {
-      width: 30%;
+    width: 30%;
   }
 
   .card3 {
-      width: 30%;
+    width: 30%;
   }
 
   .card4 {
-      width: 100%;
-      display: flex;
-      padding-top: 10px;
+    width: 100%;
+    display: flex;
+    padding-top: 10px;
   }
 }
 
@@ -478,8 +482,8 @@ footer {
 @media (min-width: 1200px) {
 
   .copy-header {
-      text-align: center;
-      width: 50%;
+    text-align: center;
+    width: 50%;
   }
 
 
@@ -529,10 +533,12 @@ footer {
 /* Bordered form */
 form {
   border: 3px solid #f1f1f1;
+  width: 70%;
 }
 
 /* Full-width inputs */
-input[type=text], input[type=password] {
+input[type=text],
+input[type=password] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -593,6 +599,7 @@ span.psw {
     display: block;
     float: none;
   }
+
   .cancelbtn {
     width: 100%;
   }
@@ -601,25 +608,35 @@ span.psw {
 
 /* The Modal (background) */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
   padding-top: 60px;
 }
 
 /* Modal Content/Box */
 .modal-content {
   background-color: #fefefe;
-  margin: 5px auto; /* 15% from the top and centered */
+  margin: 5px auto;
+  /* 15% from the top and centered */
   border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  width: 80%;
+  /* Could be more or less, depending on screen size */
   max-width: 500px;
 }
 
@@ -648,11 +665,21 @@ span.psw {
 }
 
 @-webkit-keyframes animatezoom {
-  from {-webkit-transform: scale(0)}
-  to {-webkit-transform: scale(1)}
+  from {
+    -webkit-transform: scale(0)
+  }
+
+  to {
+    -webkit-transform: scale(1)
+  }
 }
 
 @keyframes animatezoom {
-  from {transform: scale(0)}
-  to {transform: scale(1)}
+  from {
+    transform: scale(0)
+  }
+
+  to {
+    transform: scale(1)
+  }
 }
