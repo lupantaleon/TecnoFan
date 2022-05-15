@@ -49,8 +49,14 @@ body {
   width: 100%;
 }
 
-.main-navbar {
+/* .main-navbar {
   display: none;
+} */
+
+.main-navbar {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
 }
 
 .main-navbar ul {
@@ -231,8 +237,9 @@ header div {
 
 
 
-
   /* NAVIGATION */
+
+
 
   body nav ul.navleft {
     width: 50%;
@@ -257,9 +264,6 @@ header div {
 
     padding: 15px 15px;
   }
-
-
-
 
   div.burger-menu {
     display: none;
@@ -393,6 +397,8 @@ footer {
     display: flex;
     justify-content: space-between;
   }
+
+  
 
   .main-navbar ul {
     display: flex;

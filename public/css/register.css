@@ -45,9 +45,15 @@ body {
     width: 100%;
 }
 
-.main-navbar {
+/* .main-navbar {
     display: none;
 }
+ */
+ .main-navbar {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
 
 .main-navbar ul {
     list-style: none;
@@ -248,6 +254,8 @@ header div {
 } */
 
 /* media */
+
+
  @media (min-width: 767px){
     .fa-solid:hover{
         color: greenyellow;
@@ -279,6 +287,13 @@ header div {
         transition: all 1000ms;
         color: white;
     }
+    /* Main-navbar */
+
+    .main-navbar {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
 } 
 
 

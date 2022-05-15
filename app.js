@@ -12,9 +12,9 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/src/views/index.html');
 });
 
-app.get('/index', (req, res) => {
+/* app.get('/index', (req, res) => {
     res.sendFile(path.join(__dirname, '/src/views/index.html'));
-});
+}); */
 
 
 app.get('/login', (req, res) => {
