@@ -58,9 +58,15 @@ body {
     width: 100%;
 }
 
-.main-navbar {
+/* .main-navbar {
     display: none;
-}
+} */
+
+.main-navbar {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
 
 .main-navbar ul {
     list-style: none;
@@ -452,6 +458,7 @@ header div {
 
 
     /* NAVIGATION */
+
 
     body nav ul.navleft {
         width: 50%;
