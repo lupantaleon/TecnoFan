@@ -196,10 +196,10 @@ header div {
     border-radius: 5px;
 } */
 
-.fa-solid{
+/* .fa-solid{
     position: relative;
     right: 18px;
-}
+} */
 
 /* Perfil de usuario */
 
@@ -257,10 +257,10 @@ header div {
 
 
  @media (min-width: 767px){
-    .fa-solid:hover{
+    /* .fa-solid:hover{
         color: greenyellow;
         transition: all 1000ms;
-    }
+    } */
     .profile:hover{
         color:  blue;
         transition: all 1000ms;
@@ -334,7 +334,7 @@ header div {
 /* MOBILE */
 @media (min-width: 361px) {
     .fa-solid {
-        color: blue;
+        color: whitesmoke;
         padding: 10px 0px;
     }
 
@@ -431,12 +431,13 @@ header div {
 
 
 footer {
-    background-color: whitesmoke;
+    background-color: rgb(64, 56, 56);
     font-family: 'Roboto', sans-serif;
     text-align: center;
     padding-bottom: 10px;
     padding-left: 4em;
     padding-right: 4em;
+    color: white;
 
 }
 
