@@ -1,58 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
+<%- include('./partials/head') %>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-
-    <link rel="stylesheet" href="/css/login.css">
-
-    <title>Proyecto - NodeJS</title>
-
-</head>
+  
 
 
 <body>
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v13.0" nonce="LVG3xZ5p"></script>
 
-    
-    <header class="main-header">
-        <div class="main-header-top-bar">
-            <a href="/"><img src="img/logo.jpg" alt="" class="logo"></a>
-            <!-- <h2 class="copy-header">
-                <i class="fas fa-hand-holding-usd"></i>
-                Compra en cuotas y sin tarjeta de credito
-            </h2> -->
-        </div>
+    <%- include('./partials/header') %>
 
-        <!-- <a href="#" class="hamburguer-button">
-            <i class="fas fa-bars"></i>
-        </a> -->
-
-        <nav class="main-navbar">
-            <ul class="left-navbar">
-              <li><a href="/">Inicio</a></li>
-              <li><a href="#">Novedades</a></li>
-              <li><a href="#">Lo mas visto</a></li>
-              <li><a href="#">Ayuda</a></li>
-            </ul>
-        
-            <ul class="right-navbar">
-              <li><a href="/productCart">Carrito <i class="fa fa-shopping-basket"></i></a></li>
-              <li><a href="/login">Login <i class="fas fa-sign-in-alt	"></i></a></li>
-              <li><a href="/register">Registro <i class="far fa-credit-card"></i></a></li>
-            </ul>
-          </nav>
-    </header>
-<div class="divclass">
+    <div class="divclass">
     <!-- Formulario -->
     <form action="/index" method="get">
         <!-- <div class="imgcontainer">
