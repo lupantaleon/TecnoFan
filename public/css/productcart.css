@@ -399,7 +399,7 @@ header div {
 /* MOBILE */
 @media (min-width: 361px) {
     .fa-solid {
-        color: blue;
+        color: whitesmoke;
         padding: 10px 0px;
     }
 
@@ -522,7 +522,7 @@ header div {
 
 
 footer {
-    background-color: whitesmoke;
+    background-color: rgb(64, 56, 56)
     font-family: 'Roboto', sans-serif;
     text-align: center;
     padding-bottom: 10px;

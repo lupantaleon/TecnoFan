@@ -10,14 +10,6 @@ body {
     margin: 0 auto;
 }
 
-.main-header {
-    background-color: black;
-    padding: 20px;
-    top: 0;
-    z-index: 100;
-    width: 100%;
-    color: white;
-}
 
 
 
@@ -55,37 +47,7 @@ body {
 
 
 
-.copy-header {
-    font-weight: 400;
-    text-align: center;
-    width: 100%;
-}
 
-/* .main-navbar {
-    display: none;
-} */
-
-/* Main-navbar */
-
-.main-navbar {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-    }
-
-.main-navbar ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.main-navbar a {
-    text-decoration: none;
-    color: white;
-    display: inline-block;
-    padding: 5px 10px;
-    font-size: 17px;
-}
 
 
 div.last-visit,
@@ -218,14 +180,9 @@ header div {
 
 /* MOBILE */
 @media (min-width: 361px) {
-    .fa-solid {
-        color: whitesmoke;
-        padding: 10px 0px;
-    }
+    
 
-    header div img {
-        width: 50%;
-    }
+    
 
     /* HEADER */
     body nav.navigation {
@@ -314,7 +271,7 @@ header div {
 
 
 
-
+/* 
 footer {
     background-color: rgb(64, 56, 56);
     font-family: 'Roboto', sans-serif;
@@ -324,50 +281,7 @@ footer {
     padding-right: 4em;
     color: white;
 
-}
-
-.iconos {
-    width: 2em;
-    margin-bottom: 10px;
-}
-
-
-.search {
-    display: flex;
-    height: 30px;
-    margin-top: 30px;
-    justify-content: center;
-}
-
-
-/* BURGUER */
-
-.hamburguer-button {
-    background-color: #03264c;
-    color: #ffffff;
-    display: block;
-    max-width: 50px;
-    padding: 15px 0;
-    border-radius: 8px;
-    text-align: center;
-    font-size: 18px;
-    margin: auto;
-}
-
-/* FIN BURGUER */
-
-
-
-
-
-
-
-
-
-
-
-
-
+} */
 
 
 
@@ -379,13 +293,7 @@ footer {
 
 @media (min-width: 768px) {
 
-    header div {
-        flex-wrap: inherit;
-    }
-
-    .navbar {
-        display: none;
-    }
+   
 
 
 
@@ -394,33 +302,11 @@ footer {
         opacity: 0;
     }
 
-    .main-header-top-bar {
-        justify-content: space-between;
-        flex-direction: initial;
-    }
+    
 
-    .copy-header {
-        max-width: fit-content;
-        text-align: center;
-        width: 33%;
-    }
+    
 
-    .hamburguer-button {
-        display: none;
-    }
-
-    .main-navbar {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .main-navbar ul {
-        display: flex;
-    }
-
-    .main-navbar li {
-        margin: 0 1px;
-    }
+    
 
     main section div.products article {
         width: 23%;
@@ -449,42 +335,7 @@ footer {
         transition: 300ms;
     }
 
-    footer {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-    }
-
-    /* footer div {
-        display: flex;
-        flex-direction: column;
-        padding-top: 10px;
-    } */
-
-    .iconos {
-        display: flex;
-        justify-content: center;
-        align-self: center;
-    }
-
-    .card1 {
-        width: 30%;
-    }
-
-    .card2 {
-        width: 30%;
-    }
-
-    .card3 {
-        width: 30%;
-    }
-
-    .card4 {
-        width: 100%;
-        display: flex;
-        padding-top: 10px;
-    }
+    
 }
 
 
@@ -499,16 +350,7 @@ footer {
 
 
 /* DESKTOP */
-@media (min-width: 1200px) {
 
-    .copy-header {
-        text-align: center;
-        width: 50%;
-    }
-
-
-
-}
 
 
 

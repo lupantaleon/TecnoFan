@@ -1,0 +1,51 @@
+footer {
+    background-color: rgb(64, 56, 56);
+    color: white;
+    text-align: center;
+}
+.fa-solid {
+    color: whitesmoke;
+    padding: 10px 0px;
+}
+
+@media (min-width: 768px) {
+
+footer {
+    background-color: rgb(64, 56, 56);
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-left: 4em;
+    padding-right: 4em;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.iconos {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.card1 {
+    width: 30%;
+}
+
+.card2 {
+    width: 30%;
+}
+
+.card3 {
+    width: 30%;
+}
+
+.card4 {
+    width: 100%;
+    display: flex;
+    padding-top: 10px;
+}
+
+}
