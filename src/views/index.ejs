@@ -2,32 +2,86 @@
 
 
 
-<body>
+  <body>
     <%- include('./partials/header') %>
 
 
 
+      <div class="wrap">
+        <h1>Ofertas</h1>
+        <div class="store-wrapper">
+          <div class="category_list">
+            <a href="#" class="category_item" category="all">Todo</a>
+            <a href="#" class="category_item" category="ordenadores">Smartwatch</a>
+            <a href="#" class="category_item" category="laptops">Laptops</a>
+            <a href="#" class="category_item" category="smartphones">Smartphones</a>
+            <a href="#" class="category_item" category="monitores">Monitores</a>
+            <a href="#" class="category_item" category="audifonos">Auriculares</a>
+          </div>
+          <section class="products-list">
+            <div class="product-item" category="smartwatch">
+              <img src="img/producto1.jpeg" alt="">
+              <a href="/productdetail">Smartwatch Umidigi</a>
+              <a href="/productdetail">Precio $xxx</a>
+            </div>
+            <div href="/productdetail" class="product-item" category="mouse">
+              <img src="img/producto4.jpeg" alt="">
+              <a href="/productdetail">Mouse Redragon</a>
+              <a href="/productdetail">Precio $xxx</a>
+            </div>
+            <div class="product-item" category="smartphones">
+              <img src="img/samsung_galaxy.jpg" alt="">
+              <a href="/productdetail">Samsung Galaxy</a>
+              <a href="/productdetail">Precio $xxx</a>
+            </div>
+            <div class="product-item" category="auriculares">
+              <img src="img/producto2.jpeg" alt="">
+              <a href="/productdetail">Auriculares JBL TUNE</a>
+              <a href="/productdetail">Precio $xxx</a>
+            </div>
+            <div class="product-item" category="tablets">
+              <img src="img/producto3.jpeg" alt="">
+              <a href="/productdetail">Tablet Lenovo TB-X306F</a>
+              <a href="/productdetail">Precio $xxx</a>
+            </div>
+            <div class="product-item" category="ordenadores">
+              <img src="img/pc_lenovo.jpg" alt="">
+              <a href="/productdetail">PC Lenovo</a>
+              <a href="/productdetail">Precio $xxx</a>
+            </div>
+            <div class="product-item" category="monitores">
+              <img src="img/monitor_asus.jpg" alt="">
+              <a href="/productdetail">Monitor Asus</a>
+              <a href="/productdetail">Precio $xxx</a>
+            </div>
+            <div class="product-item" category="auriculares">
+              <img src="img/auris1.png" alt="">
+              <a href="/productdetail">Audifonos Corsair</a>
+              <a href="/productdetail">Precio $xxx</a>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <div class="gallery">
+        <div class="gallery-container">
+          <img class="gallery-item gallery-item-1" src="img/producto1.jpeg" data-index="1">
+          <img class="gallery-item gallery-item-2" src="img/producto2.jpeg" data-index="2">
+          <img class="gallery-item gallery-item-3" src="img/producto3.jpeg" data-index="3">
+          <img class="gallery-item gallery-item-4" src="img/producto4.jpeg" data-index="4">
+          <img class="gallery-item gallery-item-5" src="img/auris1.png" data-index="5">
+        </div>
+        <div class="gallery-controls">
+        </div>
+
+      </div>
+
+      <script src="js/carousel.js"></script>
+  </body>
+
+  <%- include('./partials/footer') %>
 
 
-  <div class="gallery">
-    <div class="gallery-container">
-      <img class="gallery-item gallery-item-1" src="img/producto1.jpeg" data-index="1">
-      <img class="gallery-item gallery-item-2" src="img/producto2.jpeg" data-index="2">
-      <img class="gallery-item gallery-item-3" src="img/producto3.jpeg" data-index="3">
-      <img class="gallery-item gallery-item-4" src="img/producto4.jpeg" data-index="4">
-      <img class="gallery-item gallery-item-5" src="img/auris1.png" data-index="5">
-    </div>
-    <div class="gallery-controls">
-    </div>
-
-  </div>
-
-  <script src="js/carousel.js"></script>
-</body>
-
-<%- include('./partials/footer') %>
 
 
-
-
-</html>
+    </html>
