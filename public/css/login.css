@@ -9,13 +9,7 @@ body {
   margin: 0 auto;
 }
 
-.main-header {
-  background-color: black;
-  padding: 20px;
-  top: 0;
-  z-index: 100;
-  width: 100%;
-}
+
 
 .divclass {
   display: flex;
@@ -25,131 +19,23 @@ body {
 
 
 
-.logo {
-  width: 150px;
-  
-}
 
 
 
 
-div.last-visit,
-div.offers {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.price {
-  font-size: 18px;
-  width: 30%;
-}
-
-.discount {
-  width: 70%;
-
-}
-
-.discount,
-.description {
-  font-size: 16px;
-  font-weight: normal;
-}
-
-h3,
-.description {
-  color: #666;
-}
-
-.description {
-  display: block;
-  margin-top: 20px;
-}
-
-section.banner img {
-  width: 100%;
-
-}
 
 main {
   width: 90%;
   margin: 0 auto;
 }
 
-main section article {
-  background-color: #fff;
-  margin: 10px 0px;
-}
 
-main section article img {
-  width: 100%;
-}
-
-main section article i,
-.discount {
-  color: #39b54a;
-}
-
-main section article i {
-  display: block;
-  font-size: 16px;
-  padding: 5px;
-  width: 30px;
-  height: 30px;
-  border: 1px solid #39b54a;
-  background-color: #FFF;
-  border-radius: 50%;
-  position: absolute;
-  right: 20px;
-  top: -15px;
-}
-
-
-main section h3 {
-  margin: 20px 0px;
-}
-
-article div.main-article {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  border-top: 1px solid #ebebeb;
-  position: relative;
-  padding: 15px;
-}
 
 header div {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -171,80 +57,6 @@ header div {
   }
 
 
-  .form {
-    border: rgb(132, 0, 255);
-    border-style: dashed;
-    border-radius: 2px;
-    border-width: 2px;
-    
-  }
-
-  .compra {
-    border: rgb(255, 0, 149);
-    border-style: dashed;
-    border-radius: 2px;
-    border-width: 2px;
-
-  }
-
-
-
-  /* NAVIGATION */
-
-
-
-  body nav ul.navleft {
-    width: 50%;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-
-  }
-
-  body nav ul.navleft li {
-    padding: 15px 15px;
-  }
-
-  body nav ul.navright {
-    width: 50%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-  }
-
-  body nav ul.navright li {
-
-    padding: 15px 15px;
-  }
-
- 
-
-
-
-
-  main section article {
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-  }
-
-
-
-  main section div.products {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-
-  main section div.products article {
-    width: 45%;
-  }
-
-  .price,
-  .discount {
-    width: 50%;
-  }
-}
 
 
 /* TABLET */
@@ -254,72 +66,15 @@ header div {
   header div {
     flex-wrap: inherit;
   }
-
-
-
-
-  main section article .description {
-    display: block;
-    opacity: 0;
-  }
-
-
-
-
-  main section div.products article {
-    width: 23%;
-  }
-
-  main section article:hover .description {
-    opacity: 1;
-    transition: 300ms;
-  }
-
-
-
-  main section article:hover .fas {
-    transform: rotate(-90deg);
-    transition: 300ms;
-  }
-
-  main section article {
-    box-shadow: 0px 0px 0px rgb(255, 255, 255);
-  }
-
-
-  main section article:hover {
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-
-    transition: 300ms;
-  }
-
-  
+ 
 }
-
-
-
-
-
-
-
-
-
-
 
 
 /* DESKTOP */
 @media (min-width: 1200px) {
 
 
-
-
-
 }
-
-
-
-
-
 
 
 
@@ -475,4 +230,5 @@ span.psw {
   to {
     transform: scale(1)
   }
+}
 }
