@@ -11,6 +11,15 @@ router.get("/login", mainController.login);
 router.get("/productCart", mainController.productCart);
 router.get("/productDetail", mainController.productDetail);
 router.get("/register", mainController.register);
+router.get("/smartwatchs", mainController.smartwatchs);
+router.get("/mouses", mainController.mouses);
+router.get("/smartphones", mainController.smartphones);
+router.get("/auriculares", mainController.auriculares);
+router.get("/tablets", mainController.tablets);
+router.get("/pcs", mainController.pcs);
+router.get("/monitores", mainController.monitores);
+router.get("/audifonos", mainController.audifonos);
+
 
 // Acá exportamos el resultado
 module.exports = router;
