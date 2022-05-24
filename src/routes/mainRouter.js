@@ -19,6 +19,7 @@ router.get("/tablets", mainController.tablets);
 router.get("/pcs", mainController.pcs);
 router.get("/monitores", mainController.monitores);
 router.get("/audifonos", mainController.audifonos);
+router.get("/quienessomos", mainController.quienessomos);
 
 
 // Acá exportamos el resultado
