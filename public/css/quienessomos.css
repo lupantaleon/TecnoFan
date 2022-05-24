@@ -42,7 +42,9 @@ body {
     background-image: url("https://images.pexels.com/photos/1141853/pexels-photo-1141853.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
     transform: rotateY(  0deg) translateZ(430px); }
   .carousel__face:nth-child(2) { 
+
     background-image: url("https://images.pexels.com/photos/1258865/pexels-photo-1258865.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+
       transform: rotateY( 40deg) translateZ(430px); }
   .carousel__face:nth-child(3) {
     background-image: url("https://images.pexels.com/photos/808466/pexels-photo-808466.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
