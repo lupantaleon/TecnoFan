@@ -38,7 +38,9 @@ const controller = {
     audifonos: (req, res) => {
         res.render("audifonos");
     },
-    
+    quienessomos: (req, res) => {
+        res.render("quienessomos");
+    },
 }
 
 module.exports = controller;
