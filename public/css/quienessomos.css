@@ -42,7 +42,7 @@ body {
     background-image: url("https://images.pexels.com/photos/1141853/pexels-photo-1141853.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
     transform: rotateY(  0deg) translateZ(430px); }
   .carousel__face:nth-child(2) { 
-    background-image: url("https://images.pexels.com/photos/1258865/pexels-photo-1258865.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background-image: url("https://www.google.com/search?q=patricia+bullrich&rlz=1C1AVFC_enAR875AR877&sxsrf=ALiCzsZBwzi2u14vCtuhFHNFqxFzyfUbHg:1653358297713&source=lnms&tbm=isch&sa=X&sqi=2&ved=2ahUKEwjE6pXQh_f3AhXXSPEDHf42B5kQ_AUoAXoECAIQAw&biw=1366&bih=635&dpr=1#imgrc=jMVBHbHqDPBxwM");
       transform: rotateY( 40deg) translateZ(430px); }
   .carousel__face:nth-child(3) {
     background-image: url("https://images.pexels.com/photos/808466/pexels-photo-808466.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
