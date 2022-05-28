@@ -5,159 +5,159 @@
   "product-name": "auriculares",
   "price": 100,
   "discount": 50,
-  "category": "....",
-  "description": ".....",
+  "category": "ofertas",
+  "description": "te permiten sumergirte al instante en tu universo sonoro gracias a que se conectan con tu dispositivo en cuanto los sacas del estuche. Dual Connect te permite usar ambos auriculares o solo uno, como prefieras. El increíble sonido de tus artistas favoritos resulta aún más espectacular con JBL Pure Bass. Con hasta 32 horas de batería y un ajuste muy cómodo, puedes disfrutar de tu música día y noche. Elige entre los preciosos colores disponibles para disfrutar de unos auriculares True Wireless que se adaptan a la perfección a tu estilo.",
   "image": "img/ea2.jpg",
-    "color": "...."
+    "color": "verde"
  },
  {
   "id": 2,
-  "product-name": "Auricular",
+   "product-name": "auriculares",
   "price": 100,
   "discount": 50,
-  "category": "....",
-  "description": "....",
-  "image": "img/au7.jpg",
-  "color": "...."
+  "category": "ofertas",
+  "description": "te permiten sumergirte al instante en tu universo sonoro gracias a que se conectan con tu dispositivo en cuanto los sacas del estuche. Dual Connect te permite usar ambos auriculares o solo uno, como prefieras. El increíble sonido de tus artistas favoritos resulta aún más espectacular con JBL Pure Bass. Con hasta 32 horas de batería y un ajuste muy cómodo, puedes disfrutar de tu música día y noche. Elige entre los preciosos colores disponibles para disfrutar de unos auriculares True Wireless que se adaptan a la perfección a tu estilo.",
+  "image": "img/ea2.jpg",
+    "color": "verde"
  },
  {
   "id": 3,
-  "product-name": "Monitor Asus",
+  "product-name": "auriculares",
   "price": 100,
   "discount": 50,
-  "category": "....",
-  "description": "...",
-    "image": "img/mon1.jpg",
-"color": "...."
+  "category": "ofertas",
+  "description": "te permiten sumergirte al instante en tu universo sonoro gracias a que se conectan con tu dispositivo en cuanto los sacas del estuche. Dual Connect te permite usar ambos auriculares o solo uno, como prefieras. El increíble sonido de tus artistas favoritos resulta aún más espectacular con JBL Pure Bass. Con hasta 32 horas de batería y un ajuste muy cómodo, puedes disfrutar de tu música día y noche. Elige entre los preciosos colores disponibles para disfrutar de unos auriculares True Wireless que se adaptan a la perfección a tu estilo.",
+  "image": "img/ea2.jpg",
+    "color": "verde"
  },
  {
   "id": 4,
-  "product-name": "Mouse Redragon",
+  "product-name": "auriculares",
   "price": 100,
   "discount": 50,
-  "category": "....",
-  "description": "....",
-      "image": "img/m4.jpg",
-"color": "...."
+  "category": "ofertas",
+  "description": "te permiten sumergirte al instante en tu universo sonoro gracias a que se conectan con tu dispositivo en cuanto los sacas del estuche. Dual Connect te permite usar ambos auriculares o solo uno, como prefieras. El increíble sonido de tus artistas favoritos resulta aún más espectacular con JBL Pure Bass. Con hasta 32 horas de batería y un ajuste muy cómodo, puedes disfrutar de tu música día y noche. Elige entre los preciosos colores disponibles para disfrutar de unos auriculares True Wireless que se adaptan a la perfección a tu estilo.",
+  "image": "img/ea2.jpg",
+    "color": "verde"
  },
  {
-  "id": 5,
-   "product-name": "PC Lenovo",
+     "id": 5,
+  "product-name": "auriculares",
   "price": 100,
   "discount": 50,
-  "category": "visited",
-  "description": "....",
-   "image": "img/pc3.jpg",
-       "color": "...."
+  "category": "ofertas",
+  "description": "te permiten sumergirte al instante en tu universo sonoro gracias a que se conectan con tu dispositivo en cuanto los sacas del estuche. Dual Connect te permite usar ambos auriculares o solo uno, como prefieras. El increíble sonido de tus artistas favoritos resulta aún más espectacular con JBL Pure Bass. Con hasta 32 horas de batería y un ajuste muy cómodo, puedes disfrutar de tu música día y noche. Elige entre los preciosos colores disponibles para disfrutar de unos auriculares True Wireless que se adaptan a la perfección a tu estilo.",
+  "image": "img/ea2.jpg",
+    "color": "verde"
  },
  {
   "id": 6,
-  "product-name": "Samsung Galaxy",
+  "product-name": "auriculares",
   "price": 100,
   "discount": 50,
-  "category": "visited",
-  "description": "...",
-  "image": "img/i3.jpg",
-       "color": "...."
+  "category": "ofertas",
+  "description": "te permiten sumergirte al instante en tu universo sonoro gracias a que se conectan con tu dispositivo en cuanto los sacas del estuche. Dual Connect te permite usar ambos auriculares o solo uno, como prefieras. El increíble sonido de tus artistas favoritos resulta aún más espectacular con JBL Pure Bass. Con hasta 32 horas de batería y un ajuste muy cómodo, puedes disfrutar de tu música día y noche. Elige entre los preciosos colores disponibles para disfrutar de unos auriculares True Wireless que se adaptan a la perfección a tu estilo.",
+  "image": "img/ea2.jpg",
+    "color": "verde"
  },
  {
   "id": 7,
-  "product-name": "Smartchwatch Samsung",
+  "product-name": "auriculares",
   "price": 100,
   "discount": 50,
-  "category": "visited",
-  "description": "....",
-  "image": "img/sw2.jpg",
-       "color": "...."
+  "category": "ofertas",
+  "description": "te permiten sumergirte al instante en tu universo sonoro gracias a que se conectan con tu dispositivo en cuanto los sacas del estuche. Dual Connect te permite usar ambos auriculares o solo uno, como prefieras. El increíble sonido de tus artistas favoritos resulta aún más espectacular con JBL Pure Bass. Con hasta 32 horas de batería y un ajuste muy cómodo, puedes disfrutar de tu música día y noche. Elige entre los preciosos colores disponibles para disfrutar de unos auriculares True Wireless que se adaptan a la perfección a tu estilo.",
+  "image": "img/ea2.jpg",
+    "color": "verde"
  },
  {
   "id": 8,
-  "product-name": "",
+  "product-name": "auriculares",
   "price": 100,
   "discount": 50,
-  "category": "visited",
-  "description": ".....",
-  "image": "...",
-       "color": "...."
+  "category": "ofertas",
+  "description": "te permiten sumergirte al instante en tu universo sonoro gracias a que se conectan con tu dispositivo en cuanto los sacas del estuche. Dual Connect te permite usar ambos auriculares o solo uno, como prefieras. El increíble sonido de tus artistas favoritos resulta aún más espectacular con JBL Pure Bass. Con hasta 32 horas de batería y un ajuste muy cómodo, puedes disfrutar de tu música día y noche. Elige entre los preciosos colores disponibles para disfrutar de unos auriculares True Wireless que se adaptan a la perfección a tu estilo.",
+  "image": "img/ea2.jpg",
+    "color": "verde"
  },
  {
   "id": 9,
- "product-name": "",
+  "product-name": "auriculares",
   "price": 100,
   "discount": 50,
-  "category": "visited",
-  "description": ".....",
-  "image": "...",
-       "color": "...."
+  "category": "ofertas",
+  "description": "te permiten sumergirte al instante en tu universo sonoro gracias a que se conectan con tu dispositivo en cuanto los sacas del estuche. Dual Connect te permite usar ambos auriculares o solo uno, como prefieras. El increíble sonido de tus artistas favoritos resulta aún más espectacular con JBL Pure Bass. Con hasta 32 horas de batería y un ajuste muy cómodo, puedes disfrutar de tu música día y noche. Elige entre los preciosos colores disponibles para disfrutar de unos auriculares True Wireless que se adaptan a la perfección a tu estilo.",
+  "image": "img/ea2.jpg",
+    "color": "verde"
  },
  {
   "id": 10,
- "product-name": "",
+  "product-name": "auriculares",
   "price": 100,
   "discount": 50,
-  "category": "visited",
-  "description": ".....",
-  "image": "...",
-"color": "...."
+  "category": "ofertas",
+  "description": "te permiten sumergirte al instante en tu universo sonoro gracias a que se conectan con tu dispositivo en cuanto los sacas del estuche. Dual Connect te permite usar ambos auriculares o solo uno, como prefieras. El increíble sonido de tus artistas favoritos resulta aún más espectacular con JBL Pure Bass. Con hasta 32 horas de batería y un ajuste muy cómodo, puedes disfrutar de tu música día y noche. Elige entre los preciosos colores disponibles para disfrutar de unos auriculares True Wireless que se adaptan a la perfección a tu estilo.",
+  "image": "img/ea2.jpg",
+    "color": "verde"
  },
  {
   "id": 11,
- "product-name": "",
+  "product-name": "auriculares",
   "price": 100,
   "discount": 50,
-  "category": "visited",
-  "description": ".....",
-  "image": "...",
-"color": "...."
+  "category": "ofertas",
+  "description": "te permiten sumergirte al instante en tu universo sonoro gracias a que se conectan con tu dispositivo en cuanto los sacas del estuche. Dual Connect te permite usar ambos auriculares o solo uno, como prefieras. El increíble sonido de tus artistas favoritos resulta aún más espectacular con JBL Pure Bass. Con hasta 32 horas de batería y un ajuste muy cómodo, puedes disfrutar de tu música día y noche. Elige entre los preciosos colores disponibles para disfrutar de unos auriculares True Wireless que se adaptan a la perfección a tu estilo.",
+  "image": "img/ea2.jpg",
+    "color": "verde"
  },
  {
   "id": 12,
- "product-name": "",
+  "product-name": "auriculares",
   "price": 100,
   "discount": 50,
-  "category": "visited",
-  "description": ".....",
-  "image": "...",
-"color": "...."
+  "category": "ofertas",
+  "description": "te permiten sumergirte al instante en tu universo sonoro gracias a que se conectan con tu dispositivo en cuanto los sacas del estuche. Dual Connect te permite usar ambos auriculares o solo uno, como prefieras. El increíble sonido de tus artistas favoritos resulta aún más espectacular con JBL Pure Bass. Con hasta 32 horas de batería y un ajuste muy cómodo, puedes disfrutar de tu música día y noche. Elige entre los preciosos colores disponibles para disfrutar de unos auriculares True Wireless que se adaptan a la perfección a tu estilo.",
+  "image": "img/ea2.jpg",
+    "color": "verde"
  },
  {
   "id": 13,
- "product-name": "",
+  "product-name": "auriculares",
   "price": 100,
   "discount": 50,
-  "category": "visited",
-  "description": ".....",
-  "image": "...",
-"color": "...."
+  "category": "ofertas",
+  "description": "te permiten sumergirte al instante en tu universo sonoro gracias a que se conectan con tu dispositivo en cuanto los sacas del estuche. Dual Connect te permite usar ambos auriculares o solo uno, como prefieras. El increíble sonido de tus artistas favoritos resulta aún más espectacular con JBL Pure Bass. Con hasta 32 horas de batería y un ajuste muy cómodo, puedes disfrutar de tu música día y noche. Elige entre los preciosos colores disponibles para disfrutar de unos auriculares True Wireless que se adaptan a la perfección a tu estilo.",
+  "image": "img/ea2.jpg",
+    "color": "verde"
  },
  {
   "id": 14,
- "product-name": "",
+  "product-name": "auriculares",
   "price": 100,
   "discount": 50,
-  "category": "visited",
-  "description": ".....",
-  "image": "...",
-"color": "...."
+  "category": "ofertas",
+  "description": "te permiten sumergirte al instante en tu universo sonoro gracias a que se conectan con tu dispositivo en cuanto los sacas del estuche. Dual Connect te permite usar ambos auriculares o solo uno, como prefieras. El increíble sonido de tus artistas favoritos resulta aún más espectacular con JBL Pure Bass. Con hasta 32 horas de batería y un ajuste muy cómodo, puedes disfrutar de tu música día y noche. Elige entre los preciosos colores disponibles para disfrutar de unos auriculares True Wireless que se adaptan a la perfección a tu estilo.",
+  "image": "img/ea2.jpg",
+    "color": "verde"
  },
  {
   "id": 15,
- "product-name": "",
+  "product-name": "auriculares",
   "price": 100,
   "discount": 50,
-  "category": "visited",
-  "description": ".....",
-  "image": "...",
-"color": "...."
+  "category": "ofertas",
+  "description": "te permiten sumergirte al instante en tu universo sonoro gracias a que se conectan con tu dispositivo en cuanto los sacas del estuche. Dual Connect te permite usar ambos auriculares o solo uno, como prefieras. El increíble sonido de tus artistas favoritos resulta aún más espectacular con JBL Pure Bass. Con hasta 32 horas de batería y un ajuste muy cómodo, puedes disfrutar de tu música día y noche. Elige entre los preciosos colores disponibles para disfrutar de unos auriculares True Wireless que se adaptan a la perfección a tu estilo.",
+  "image": "img/ea2.jpg",
+    "color": "verde"
  },
  {
   "id": 16,
- "product-name": "",
+  "product-name": "auriculares",
   "price": 100,
   "discount": 50,
-  "category": "visited",
-  "description": ".....",
-  "image": "...",
-"color": "...."
+  "category": "ofertas",
+  "description": "te permiten sumergirte al instante en tu universo sonoro gracias a que se conectan con tu dispositivo en cuanto los sacas del estuche. Dual Connect te permite usar ambos auriculares o solo uno, como prefieras. El increíble sonido de tus artistas favoritos resulta aún más espectacular con JBL Pure Bass. Con hasta 32 horas de batería y un ajuste muy cómodo, puedes disfrutar de tu música día y noche. Elige entre los preciosos colores disponibles para disfrutar de unos auriculares True Wireless que se adaptan a la perfección a tu estilo.",
+  "image": "img/ea2.jpg",
+    "color": "verde"
  }
 ]
