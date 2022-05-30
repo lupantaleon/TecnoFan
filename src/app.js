@@ -17,8 +17,8 @@ app.use(express.static('public'));
 app.use("/", mainRouter);
 
 app.listen(3002, () => { console.log('Servidor arriba en el puerto 3002 🤓👌');})
-app.use((req, res, next )=> {res.status (404).render ("not found")});
-
+/* app.use((req, res, next )=> {res.status (404).render ("not found")});
+ */
 
 const methodOverride = require('method-override');
 app.use ( methodOverride ('_method') );
