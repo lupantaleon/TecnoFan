@@ -220,33 +220,9 @@ body {
 
 
 
-
-
-
-
-
-
-
 /* MOBILE */
 @media (min-width: 361px) {
     
-
-
-    .form {
-        border: rgb(132, 0, 255);
-        border-style: dashed;
-        border-radius: 2px;
-        border-width: 2px;
-
-    }
-
-    .compra {
-        border: rgb(255, 0, 149);
-        border-style: dashed;
-        border-radius: 2px;
-        border-width: 2px;
-
-    }
 
     .cart-trash{
         bottom: 15px;
@@ -276,55 +252,9 @@ body {
 
 
 
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* TABLET */
 
 @media (min-width: 768px) {
-
-   
-
-    main section div.products article {
-        width: 23%;
-    }
-
-    main section article:hover .description {
-        opacity: 1;
-        transition: 300ms;
-    }
-
-
-
-    main section article:hover .fas {
-        transform: rotate(-90deg);
-        transition: 300ms;
-    }
-
-    main section article {
-        box-shadow: 0px 0px 0px rgb(255, 255, 255);
-    }
-
-
-    main section article:hover {
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
-
-        transition: 300ms;
-    }
-
    
 
     .cart{

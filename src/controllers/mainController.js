@@ -41,6 +41,9 @@ const controller = {
     quienessomos: (req, res) => {
         res.render("quienessomos");
     },
+    productAdmin: (req, res) => {
+        res.render("productAdmin")
+    },
 }
 
 module.exports = controller;
