@@ -1,5 +1,4 @@
 
-
 Restrospectiva de estrella de mar:
 
 Consideramos que el equipo funciono desde los inicios / Start Doing: Como equipo intentamos innovar nuevas ideas en el Index, en el CarritoDeCompras, DetalleDeProducto, FormularioDeRegistro y en login. Siempre intentamos implementar un buen manejo CSS para que nuestra página sea vea innovadora y sencilla al mismo tiempo.

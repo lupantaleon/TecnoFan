@@ -18,8 +18,11 @@ body {
     width: 100%;
 }
 
-
-
+/* Telêfono  */
+#Teléfono{
+    margin-right: 5px;
+    /* border: red solid 1px; */
+}
 
 
 .logo {
@@ -173,7 +176,7 @@ header div {
     border-radius: 5px;
     width: 60%;
     border: none;
-    border-radius:
+    border-radius:5px;
 }
 
 #birth_date{
