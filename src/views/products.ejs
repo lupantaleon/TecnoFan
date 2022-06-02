@@ -42,28 +42,29 @@
         <h3>Nuevo Producto</h3>
        <div class="admin-product-form-container">
         
-      <form action="" method="post" >
+      <form action="/products" method="POST" enctype="multipart/form-data">
         
-         <input type="text" placeholder="Nombre de producto" name="product_name" class="box">
-         <input type="number" placeholder="Precio" name="product_price" class="box">
-         <input type="number" placeholder="Descuento" name="product_discount" class="box">
-                    <select class="box" id="category">
+         <input type="text" placeholder="Nombre de producto" name="name" id="name" class="box">
+         <input type="number" placeholder="Precio" name="price" id="price" class="box">
+         <input type="number" placeholder="Descuento" name="discount" id="discount" class="box">
+                    <select class="box" id="category" name="category">
                       <option selected>Seleccionar Categoría</option>
-                      <option value="1">Auriculares</option>
-                      <option value="2">Monitores</option>
-                      <option value="3">Mouses</option>
-                      <option value="4">PCs</option>
-                      <option value="5">Audífonos</option>
-                      <option value="6">Tablets</option>
-                      <option value="7">Smartwatches</option>
+                      <option value="auriculares">Auriculares</option>
+                      <option value="monitores">Monitores</option>
+                      <option value="mouses">Mouses</option>
+                      <option value="PCs">PCs</option>
+                      <option value="audifonos">Audífonos</option>
+                      <option value="tablets">Tablets</option>
+                      <option value="smartwatches">Smartwatches</option>
                     </select>
-      </form>
-      <form class="form-right" action="" method="post" >
-        <input type="text" placeholder="Descripción" name="product_description" class="box">
-        <input type="text" placeholder="Marca" name="product_brand" class="box">
-        <input type="file" accept="image/png, image/jpeg, image/jpg" name="product_image" class="box">
-        <input type="submit" class="btn" name="add_product" value="Añadir Producto">
-      </form>
+
+      <div class="form-right">
+        <input type="text" placeholder="Descripción" name="description" id="description" class="box">
+        <input type="text" placeholder="Marca" name="brand" id="brand" class="box">
+        <input type="file" accept="image/png, image/jpeg, image/jpg" name="image" id="image" class="box">
+        <button type="submit" class="btn">Añadir Producto</button>
+      </div>
+    </form>
 
        </div>
    <div class="product-display">

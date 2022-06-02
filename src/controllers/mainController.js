@@ -1,6 +1,27 @@
+const fs = require('fs');
+const path = require('path');
+
+const productsFilePath = path.join(__dirname, '../data/products.json');
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const auriculares = products.filter(product => product.category === 'monitores');
+const monitores = products.filter(product => product.category === 'auriculares');
+const mouses = products.filter(product => product.category === 'mouses');
+const pcs = products.filter(product => product.category === 'PCs');
+const audifonos = products.filter(product => product.category === 'audifonos');
+const tablets = products.filter(product => product.category === 'tablets');
+const smartwatches = products.filter(product => product.category === 'smartwatches');
+
+/* value="auriculares">
+value="monitores">Mo
+value="mouses">Mouse
+value="PCs">PCs</opt
+value="audifonos">Au
+value="tablets">Tabl
+value="smartwatches" */
+
 const controller = {
     index: (req, res) => {
-        res.render("index");
+        res.render("index", {monitores, auriculares, mouses, pcs, audifonos, tablets, smartwatches});
     },
     login: (req, res) => {
         res.render("login");
@@ -41,9 +62,9 @@ const controller = {
     quienessomos: (req, res) => {
         res.render("quienessomos");
     },
-    productAdmin: (req, res) => {
+    /* productAdmin: (req, res) => {
         res.render("productAdmin")
-    },
+    }, */
 }
 
 module.exports = controller;

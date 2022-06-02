@@ -9,7 +9,7 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const controller = {
 	// Root - Show all products
 	index: (req, res) => {
-		// Do the magic
+		res.render('products');
 	},
 
 	// Detail - Detail from one product
@@ -24,7 +24,21 @@ const controller = {
 	
 	// Create -  Method to store
 	store: (req, res) => {
-		// Do the magic
+		console.log(req.file);
+		let image = 'default-image.png';
+		if (req.file){
+			image = req.file.filename;
+		};
+		const newProduct = {
+			id: products[products.length - 1].id + 1,
+			...req.body,
+			price: parseInt(req.body.price),
+			discount: parseInt(req.body.discount),
+			image
+		};
+		products.push(newProduct);
+		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
+		res.redirect('/');
 	},
 
 	// Update - Form to edit

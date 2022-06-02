@@ -2,23 +2,26 @@
 const express = require('express');
 const path = require('path');
 const mainRouter = require("./routes/mainRouter");
+const productsRouter = require("./routes/productsRouter");
+const methodOverride = require('method-override');
 
+// ************ express() ************
 const app = express();
-// Acá falta uno... 😇
+
+// ************ Template Engine - ************
 app.set("view engine", "ejs");
 app.set('views', path.resolve(__dirname, './views'));
-// Configuración
+
+// ************ Middlewares ************
 app.use(express.static('public'));
-// Acá falta el template engine
+app.use ( methodOverride ('_method') );
 
-// Rutas
-// Acá falta el archivo de rutas y después las vistas de EJS
-
+// ************ Route System require and use() ************
 app.use("/", mainRouter);
+app.use('/products', productsRouter);
 
 app.listen(3002, () => { console.log('Servidor arriba en el puerto 3002 🤓👌');})
-/* app.use((req, res, next )=> {res.status (404).render ("not found")});
- */
+app.use((req, res, next )=> {res.status (404).render ("not-found")});
 
-const methodOverride = require('method-override');
-app.use ( methodOverride ('_method') );
+
+
