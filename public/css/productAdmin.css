@@ -11,7 +11,7 @@ body {
 }
 
 @media (max-width: 361px) {
-  
+
    .main-navbar {
       flex-direction: column;
       text-align: center;
@@ -31,7 +31,7 @@ body {
 
 .logo {
   width: 70px;
- 
+
 }
 
 .main-navbar {
@@ -52,7 +52,7 @@ body {
   color: white;
   display: inline-block;
   padding: 5px 10px;
- 
+
 }
 
 .admin-user{
@@ -164,10 +164,6 @@ html{
    text-transform: none;
 }
 
-.admin-product-form-container .form-right{
-  margin-top: -15px;
-}
-
 .product-display{
    margin:10px 0;
 }
@@ -265,19 +261,32 @@ html{
    margin:0 auto;
    }
 
-  .admin-product-form-container{
+  /* .admin-product-form-container{
    display: flex;
    flex-direction: row;
-   }
+   } */
 
    .admin-product-form-container form{
-      max-width: 45%;
-      margin:0 auto;
-      padding:2rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      max-width: 100%;
+      margin:0;
+      padding:2rem 0;
    }
 
+   .admin-product-form-container .form-left{
+      display: flex;
+      flex-direction: column;
+      width: 45%;
+      margin-top: -10px;
+    }
+
    .admin-product-form-container .form-right{
-      margin-top: 0;
+      display: flex;
+      flex-direction: column;
+      width: 45%;
+      margin-top: -10px;
     }
 
     .btn-edit{
