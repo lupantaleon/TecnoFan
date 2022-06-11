@@ -1,0 +1,21 @@
+
+.col-12-titulo{
+    background: #ebebeb;
+    display: flex;
+    justify-content: center;
+    color: red solid 1000px;
+}
+
+.col-12-Agregar{
+    display: flex;
+    justify-content: center;
+    background-color: #ebebeb;
+}
+
+
+.col-12-table{
+    display: flex;
+    justify-content: center;
+    background-color: #ebebeb;
+    /* margin: 10px; */
+}
