@@ -1,6 +1,6 @@
 * {
-    /* margin: 0px; */
-    /* padding: 0px; */
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
 }
 
@@ -66,9 +66,9 @@ justify-content: flex-start;
 
 }
 .parrafo {
-align-items: center;
+  align-items: center;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   color: #333;
 
 }

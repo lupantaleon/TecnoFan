@@ -1,10 +1,12 @@
 [
   {
     "name": "auriculares",
-    "description": "te permiten sumergirte al instante en tu universo sonoro gracias a que se conectan con tu dispositivo en cuanto los sacas del estuche. Dual Connect te permite usar ambos auriculares o solo uno, como prefieras. El increíble sonido de tus artistas favoritos resulta aún más espectacular con JBL Pure Bass. Con hasta 32 horas de batería y un ajuste muy cómodo, puedes disfrutar de tu música día y noche. Elige entre los preciosos colores disponibles para disfrutar de unos auriculares True Wireless que se adaptan a la perfección a tu estilo.",
-    "price": "3000",
+    "category": "mouses",
+    "price": "30000",
     "discount": "30",
+    "brand": "Hyundai",
     "oldImage": "ea2.jpg",
+    "description": "te permiten sumergirte al instante en tu universo sonoro gracias a que se conectan con tu dispositivo en cuanto los sacas del estuche. Dual Connect te permite usar ambos auriculares o solo uno, como prefieras. El increíble sonido de tus artistas favoritos resulta aún más espectacular con JBL Pure Bass. Con hasta 32 horas de batería y un ajuste muy cómodo, puedes disfrutar de tu música día y noche. Elige entre los preciosos colores disponibles para disfrutar de unos auriculares True Wireless que se adaptan a la perfección a tu estilo.",
     "id": "3",
     "image": "ea2.jpg"
   },
@@ -99,12 +101,13 @@
     "image": "ea2.jpg"
   },
   {
-    "id": 15,
     "name": "auriculares",
-    "price": 100,
-    "discount": 50,
-    "category": "ofertas",
-    "description": "te permiten sumergirte al instante en tu universo sonoro gracias a que se conectan con tu dispositivo en cuanto los sacas del estuche. Dual Connect te permite usar ambos auriculares o solo uno, como prefieras. El increíble sonido de tus artistas favoritos resulta aún más espectacular con JBL Pure Bass. Con hasta 32 horas de batería y un ajuste muy cómodo, puedes disfrutar de tu música día y noche. Elige entre los preciosos colores disponibles para disfrutar de unos auriculares True Wireless que se adaptan a la perfección a tu estilo.",
+    "price": "100",
+    "category": "Seleccionar Categoría",
+    "discount": "0",
+    "oldImage": "ea2.jpg",
+    "description": "vxcvxcv",
+    "id": "15",
     "image": "ea2.jpg"
   },
   {
@@ -118,50 +121,22 @@
   },
   {
     "id": 17,
-    "description": "que pasa aca",
-    "brand": "auxilio",
-    "price": null,
-    "discount": null,
-    "image": "default-image.png"
+    "name": "bicicleta",
+    "price": "4535",
+    "discount": "0",
+    "category": "monitores",
+    "description": "sdfsdfgsdf",
+    "brand": "Honda",
+    "image": "products-1655057572242.jfif"
   },
   {
     "id": 18,
-    "name": "un producto",
-    "price": 6000,
-    "discount": 10,
-    "category": "mouses",
-    "description": "a ver",
-    "brand": "pirulo",
-    "image": "default-image.png"
-  },
-  {
-    "id": 19,
-    "name": "otra vez",
-    "price": 60000,
-    "discount": 10,
-    "category": "PCs",
-    "description": "otra",
-    "brand": "que se yo",
-    "image": "image-1654136631714.jpg"
-  },
-  {
-    "id": 20,
-    "name": "otro",
-    "price": 4000,
-    "discount": 10,
-    "category": "tablets",
-    "description": "a ver",
-    "brand": "otra",
-    "image": "image-1654136695170.png"
-  },
-  {
-    "id": 21,
-    "name": "uno mas",
-    "price": 5000,
-    "discount": 10,
-    "category": "audifonos",
-    "description": "a ver",
-    "brand": "otra vez",
-    "image": "image-1654136855045.jpg"
+    "name": "bicicleta",
+    "price": "46",
+    "discount": "20",
+    "category": "monitores",
+    "description": "A ver que pasa",
+    "brand": "Xiaomi",
+    "image": "products-1655081613116.jfif"
   }
 ]
