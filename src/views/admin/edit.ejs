@@ -1,65 +1,72 @@
-<!doctype html>
-<html lang="es">
-  <%- include('../partials/head') %>
+<%- include('../partials/head') %>
+<link rel="stylesheet" href="/css/productCreate.css"> 
+</head>
   <body>
-    <main class="container-fluid">
-      <%- include('../partials/header') %>  
+    <%- include('../partials/header') %>
+    <main class="container">
+        
         
         <!-- Cuerpo principal -->
         <section class="row">
-          <article class="col-12  card" >
-                  <div class="card-body">
-                    <h2 class="display-4 text-white bg-info text-center pt-2">Actualizar un Producto</h2>
-                  </div>
-          </article>
-      </section>
+          <div class="card-body">
+            <h2 class="display-4 text-white bg-info text-center pt-2">Actualizar un Producto</h2>
+          </div>
+        </section>
 
         <section class="bg-home pt-4">
-            <div class="container">
-                <div class="row" >
-                    <div class="col-8 mx-auto bg-light ">
-                        <div class="create-form">
-                            <form action="/administrar/edit/<%= productEditar.id%>?_method=PUT
-                            " method="POST" enctype="multipart/form-data" >
-                                <div class="form-group">
-                                    <input type="text" class="form-control" name="name" placeholder="Name" required="required" value="<%= productEditar.name%>">
-                                </div>	
-                                <div class="form-group">
-                                    <input type="text" class="form-control" name="description" placeholder="description" required="required" value="<%= productEditar.description%>">
-                                </div>
-                                <div class="form-group">
-                                    <input type="number" class="form-control" name="price" placeholder="Indique el precio" required="required" value="<%= productEditar.price%>">
-                                </div>
-                                <div class="form-group">
-                                    <select  name="discount" class="custom-select" id="validationCustom04" required>
-                                      <option disabled value="#">Seleccione un descuento"</option>
-                                      <option value="0" <%= productEditar.discount == 0 ? "selected" : null %>
-                                        >Sin discount</option>
-                                      <option value="15" <%= productEditar.discount == 15 ? "selected" : null %>>15%</option>
-                                      <option value="30" <%= productEditar.discount == 30 ? "selected" : null %>>30%</option>
-                                    </select>
-                                </div>
-                                <!--Aquí solicito la imagen-->
-                                <div class="custom-file">
-                                    <figure class="form-group">
-                                        <img  class="w-100" src="/img/<%= productEditar.image%>" alt="product <%= productEditar.name%>">
-                                    </figure>
-                                    <input type="hidden"  name="oldImage"  value="<%= productEditar.image%>">
-                                    <!--De esta forma logro conservar y que viaje la imagen anterior de esta forma evito que el usuario seleccione una imagen nuevamente, ( si no lo desea) -->
-                                    <input type="file" name="image" >
-                                    <!--<input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" name="imagen" required value=""> 
-
-                                    <label class="custom-file-label" for="inputGroupFile01">Seleccione una imagen...</label>-->
-                                  </div>
-                                <div class="form-group">
-                                    <button type="submit" class="btn btn btn-info">Actualizar</button>
-                                    <a href="/administrar" class="btn btn-danger">Volver</a>
-                                </div>
-                                
-                            </form>
-                    </div>                        
+            <div class="admin-product-form-container">
+              <form action="/administrar/edit/<%= productEditar.id%>?_method=PUT" method="POST" enctype="multipart/form-data" >
+                <div class="form-fields" >
+                    <div class="form-column">
+                      <div class="form-group">
+                          <input type="text" class="box" name="name" placeholder="Name" required="required" value="<%= productEditar.name%>">
+                      </div>
+                      <div class="form-group">
+                        <select class="box" id="category" name="category" required="required" value="">
+                            <option selected disabled value>Seleccionar Categoría</option>
+                            <option value="auriculares" <%= productEditar.category == 'auriculares' ? "selected" : null %>>Auriculares</option>
+                            <option value="monitores" <%= productEditar.category == 'monitores' ? "selected" : null %>>Monitores</option>
+                            <option value="mouses" <%= productEditar.category == 'mouses' ? "selected" : null %>>Mouses</option>
+                            <option value="PCs" <%= productEditar.category == 'PCs' ? "selected" : null %>>PCs</option>
+                            <option value="audifonos" <%= productEditar.category == 'audifonos' ? "selected" : null %>>Audífonos</option>
+                            <option value="tablets" <%= productEditar.category == 'tablets'? "selected" : null %>>Tablets</option>
+                            <option value="smartwatches" <%= productEditar.category == 'smartwatches' ? "selected" : null %>>Smartwatches</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <input type="number" class="box" name="price" placeholder="Indique el precio" required="required" value="<%= productEditar.price%>">
+                      </div>
                     </div>
+                    <div class="form-column">
+                      <div class="form-group">
+                        <input type="number" class="box" name="discount" placeholder="0" required="required" value="<%=productEditar.discount%>" min="0" max="50" step="5">
+                       </div>
+                        
+                        <div class="">
+                          <input type="text" class="box" name="brand" placeholder="Marca" required="required" value="<%= productEditar.brand%>">
+                        </div>
+                        
+                    </div>
+                  </div>
+                  <!--Aquí solicito la imagen-->
+                  <div class="custom-file">
+                    <figure>
+                        <img  class="img-figure" src="/img/<%= productEditar.image%>" alt="product <%= productEditar.name%>">
+                    </figure>
+                    <input type="hidden"  name="oldImage"   value="<%= productEditar.image%>">
+                    <!--De esta forma logro conservar y que viaje la imagen anterior de esta forma evito que el usuario seleccione una imagen nuevamente, ( si no lo desea) -->
+                    <input type="file" name="image" class="box" accept="image/png, image/jpeg, image/jpg" >
                 </div>
+                    <div class="form-group">
+                      <textarea type="text" class="box" name="description" placeholder="description" required="required"><%= productEditar.description%></textarea>
+                  </div>
+                        <div class="btn">
+                            <button type="submit" class="btn-save">Actualizar</button>
+                            <a href="/administrar">
+                            <input type="button"  class="btn-back" value="Volver"></a>
+                        </div>
+                
+                </form>
             </div>
         </section>
      </main>  

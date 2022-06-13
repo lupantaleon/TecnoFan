@@ -32,8 +32,10 @@ const controller = {
 		const newProduct = {
 			id: products[products.length - 1].id + 1,
 			...req.body,
+			category: parseInt(req.body.category),
 			price: parseInt(req.body.price),
 			discount: parseInt(req.body.discount),
+			brand: parseInt(req.body.brand),
 			image
 		};
 		products.push(newProduct);

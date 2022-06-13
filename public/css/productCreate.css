@@ -1,0 +1,121 @@
+* {
+   margin: 0px;
+   padding: 0px;
+   box-sizing: border-box;
+}
+
+body {
+   font-family: 'Roboto', sans-serif;
+   background-color: #ebebeb;
+   margin: 0 auto;
+}
+
+.container{
+   padding:16px;
+}
+
+.container h2{
+   margin-bottom: 16px;
+   text-transform: uppercase;
+   text-align: center;
+}
+
+.admin-product-form-container{
+   display: flex;
+   flex-direction: column;
+}
+
+.admin-product-form-container form .box{
+   font-family: sans-serif;
+   width: 100%;
+   border-radius: 6px;
+   padding:8px 8px;
+   font-size: 12px;
+   margin: 5px;
+   border: none;
+   background-color: white;
+}
+
+.img-figure{
+   width: 100px;
+   margin: 5px 0 0 5px;
+}
+
+.btn{
+   display: flex;
+   flex-direction: row;
+   align-items: center
+}
+
+.btn-save{
+   display: block;
+   width: 75px;
+   cursor: pointer;
+   border-radius: 6px;
+   border: none;
+   margin: 5px;
+   font-size: 12px;
+   padding:8px 8px;
+   background-color: red;
+   text-align: center;
+}
+
+.btn-back{
+   display: block;
+   width: 75px;
+   cursor: pointer;
+   border-radius: 6px;
+   border: none;
+   margin: 5px;
+   font-size: 12px;
+   padding:8px 8px;
+   background-color: rgb(95, 95, 95);
+   text-align: center;
+}
+
+.btn-save:hover{
+   background-color: rgb(231, 99, 99)
+}
+
+.btn-back:hover{
+   background-color: rgb(161, 161, 161);
+}
+
+@media (min-width: 768px) {
+
+   .container{
+    max-width: 1200px;
+    margin:0 auto;
+    }
+
+    .container h2{
+       margin-bottom: 0px;
+    }
+
+    .admin-product-form-container{
+      width: 100%;
+      padding: 0px;
+   }
+
+   .admin-product-form-container form{
+      justify-content: space-around;
+      max-width: 100%;
+      margin:0;
+      padding:16px 0;
+   }
+
+   .form-fields{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      
+   }
+
+   .form-column{
+      display: flex;
+      flex-direction: column;
+      width: 49%;
+   }
+
+   
+ }

@@ -20,7 +20,7 @@ module.exports = {
             name : req.body.name,
             price: req.body.price,
             discount: req.body.discount,
-            category: req.file.category,
+            category: req.body.category,
             description: req.body.description,
             brand: req.body.brand, 
             image: req.file.filename,
