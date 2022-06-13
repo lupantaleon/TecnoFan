@@ -5,9 +5,8 @@ const multer = require('multer');
 const { get } = require('express/lib/response');
 
 
-const controllersAdmin = require(path.resolve(__dirname,'../controllers/controllersAdmin'));
+const usersController = require(path.resolve(__dirname,'../controllers/usersController'));
 
-//Como podemos indicar para subir el archivo nombre y donde guardarlo
 
 
 const storage = multer.diskStorage({
@@ -19,15 +18,13 @@ const storage = multer.diskStorage({
     }
   })
 
-  const upload = multer({ storage })
-
-  router.get('/administrar',controllersAdmin.index);
-  router.get('/administrar/create',controllersAdmin.create); 
-  router.post('/administrar/create', upload.single('image') ,controllersAdmin.save); 
-  router.get('/administrar/detail/:id', controllersAdmin.show);
-  router.get('/administrar/edit/:id', controllersAdmin.edit);
-  router.put('/administrar/edit/:id',upload.single('image') , controllersAdmin.update);
-  router.get('/administrar/delete/:id', controllersAdmin.destroy);
+  router.get('/users',usersController.index);
+  router.get('/users/create',usersController.create); 
+  router.post('/users/create', usersController.save); 
+  router.get('/users/detail/:id', usersController.show);
+  router.get('/users/edit/:id', usersController.edit);
+  router.put('/users/edit/:id', usersController.update);
+  router.get('/users/delete/:id', usersController.destroy);
 
 
 module.exports = router;

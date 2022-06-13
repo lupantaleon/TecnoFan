@@ -5,18 +5,16 @@
 <body>
     <main class="container-fluid">
       <%- include('../partials/header.ejs') %>
-      <!--Administrador de productos-->
+     
       <br>
       <section class="row">
-        <!-- <article class="col-12-titulo"> -->
-          <h2 class="Administrador-Productos">Administrador de Productos<i class="fa-brands fa-product-hunt"></i></h2>
-        <!-- </article> -->
-        <!-- <article class="col-12-Agregar"> -->
+        
+          <h2 class="Administrador-Productos">Administrador de Usuarios<i class="fa-brands fa-product-hunt"></i></h2>
+        
          <div>
-          <a href="/administrar/create" class="col-12-Agregar"><ion-icon name="add-circle-outline"></ion-icon>Agregar producto</a> 
+          <a href="/users/create" class="col-12-Agregar"><ion-icon name="add-circle-outline"></ion-icon>Agregar usuario</a> 
           </div>
-       <!--  </article> -->
-        <!-- <article class="col-12-table" > -->
+     
         <div class="contenedor-table">
         <table class="table">
             <thead>
@@ -29,19 +27,19 @@
               </tr>
             </thead>
             <tbody>
-              <% products.forEach(products => { %>
+              <% users.forEach(users => { %>
               <tr>
-                <td><%= products.id%> </td>
-                <td><%= products.name%> </td>
-                <td><a href="/administrar/detail/<%= products.id%> "> <ion-icon name="eye-outline"></ion-icon></a></td>
-                <td><a href="/administrar/edit/<%= products.id%> "> <ion-icon name="pencil-outline"></ion-icon></a></td>
-                <td><a href="/administrar/delete/<%= products.id%>"><ion-icon name="trash-outline"></ion-icon></a></td>
+                <td><%= users.id%> </td>
+                <td><%= users.name%> </td>
+                <td><a href="/users/detail/<%= users.id%> "> <ion-icon name="eye-outline"></ion-icon></a></td>
+                <td><a href="/users/edit/<%= users.id%> "> <ion-icon name="pencil-outline"></ion-icon></a></td>
+                <td><a href="/users/delete/<%= users.id%>"><ion-icon name="trash-outline"></ion-icon></a></td>
               </tr>
               <% }); %>
             </tbody>
           </table> 
         </div>
-        <!-- </article>    -->    
+      
       </section>
       <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
     </main>
