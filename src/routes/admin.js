@@ -9,7 +9,7 @@ const controllersAdmin = require(path.resolve(__dirname,'../controllers/controll
 
 //Como podemos indicar para subir el archivo nombre y donde guardarlo
 
-var storage = multer.diskStorage({
+const storage = multer.diskStorage({
     destination: function (req, file, cb) {
       cb(null, path.resolve(__dirname, '../../public/img'));
     },
