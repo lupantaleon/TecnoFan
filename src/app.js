@@ -2,7 +2,6 @@
 const express = require('express');
 const path = require('path');
 const mainRouter = require("./routes/mainRouter");
-const productsRouter = require("./routes/productsRouter");
 const methodOverride = require('method-override');
 const adminRouter = require('./routes/admin');
 
@@ -19,7 +18,6 @@ app.use ( methodOverride ('_method') );
 
 // ************ Route System require and use() ************
 app.use("/", mainRouter);
-app.use('/products', productsRouter);
 app.use(adminRouter);
 
 app.listen(3002, () => { console.log('Servidor arriba en el puerto 3002 🤓👌');})
