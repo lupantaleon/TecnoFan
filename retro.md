@@ -15,3 +15,21 @@ less of:
 En la reunión semanal antes nos juntabamos y capaz no habíamos avanzado sobre nuestros temas. Ahora, como equipo, decidimos que para la reunión semanal cada intengrante ,por lo menos, tiene que avanzar con algunas tareas de acuerdo a sus consignas.
 
 Stop doing: Decidimos, eliminar la organización tardía de las tareas que realiza cada integrante del equipo, para poder llegar de la mejor forma al Sprint. Ahora como equipo, nos enfocamos en delegar las diferentes tareas de la mejor manera y tiempo.
+
+Restrospectiva de estrella de mar:  SPRINT 4
+Start Doing: Con respecto a lo innovador elegimos modificar cosas tales como la creación de una opcion en el header para mostrar a los usuarios de las páginas quienes somos. Para ellos elegimos hacer un ejs nuevo con su respectivo css. 
+Además agregamos un carrusel para la parte de ofertas así colocamos algo más dinámico a la parte del login sin perder la orientación minimalista del diseño. 
+
+More of: Con respecto al sprint anterior hemos elegido organizarnos de mejor manera optimizando los tiempos. Algunos de los integrantes del grupo han hecho zooms con la finalidad de ayudarse a resolver los problemas en conjunto. 
+Algunas de las actividades las hemos echo de a grupo en reuniones semanales, ej: dos reuniones para el CRUD. 
+
+Keep Doing :  El valor principal del grupo es el verdadero trabajo en equipo y la división de tareas. Creo que debemos seguir dejando esto como nuestra principal fortaleza. 
+
+Less of: En este punto ponemos aquello que tal vez en una retrospectiva fue [Start Doing] pero no nos genero el valor que queriamos. Aquello que intentamos pero no nos dan tanto beneficio como se esperaba. Está bien, démosle como una segunda oportunidad, pero no esta en nuestras prioridades. 
+
+
+Stop Doing: Decidimos modificar la idea de colocar demasiadas tareas en un solo participante y dividir así los temas mas dificiles. 
+
+
+
+
