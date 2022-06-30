@@ -6,10 +6,7 @@
         "age": 26,
         "email": "lucasperez@gmail.com",
         "password": "2G5uqVm",
-        "document": {
-            "tipo": "DNI",
-            "numero": "34505855"
-        }
+        "document":"31094624"
     },
     {
         "id": 2,
@@ -18,9 +15,6 @@
         "age": 29,
         "email": "juanaiglesias29@gmail.com",
         "password": "$2a$10i",
-        "document": {
-            "tipo": "DNI",
-            "numero": "36894624"
-        }
+        "document":"36894624"
     }
 ]

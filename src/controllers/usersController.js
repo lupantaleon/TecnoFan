@@ -6,68 +6,68 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 module.exports = {
     index: (req,res) =>{
-        let products = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/users.json')));
-        res.render(path.resolve(__dirname, '../views/users//administrar'), {products});
+        let users = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/users.json')));
+        res.render(path.resolve(__dirname, '../views/users/administrar'), {users});
     },
     create: (req,res) =>{
-        let products = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/users.json')));
-        res.render(path.resolve(__dirname, '../views/users/create'), {products});
+        let users = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/users.json')));
+        res.render(path.resolve(__dirname, '../views/users/create'), {users});
     },
     save: (req,res) => {
-        let products = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/users.json')));
-        let ultimoProducto = products.pop();
-        products.push(ultimoProducto);
-        let nuevoProducto = {
-            id: ultimoProducto.id +1,
-            name : req.body.name,
-            price: req.body.price,
-            discount: req.body.discount,
-            category: req.body.category,
-            description: req.body.description,
-            brand: req.body.brand, 
-            image: req.file.filename,
+        let users = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/users.json')));
+        let ultimoCliente = users.pop();
+        users.push(ultimoCliente);
+        let nuevoCliente = {
+            id: ultimoCliente.id +1,
+            first_name : req.body.first_name,
+            last_name: req.body.last_name,
+            age: req.body.age,
+            email: req.body.email,
+            password: req.body.password,
+            document: req.body.document, 
+            
         }
-        products.push(nuevoProducto);
-        let nuevoProductoGuardar = JSON.stringify(products,null,2);
-        fs.writeFileSync(path.resolve(__dirname,'../data/users.json'), nuevoProductoGuardar);
+        users.push(nuevoCliente);
+        let nuevouserCliente = JSON.stringify(users,null,2);
+        fs.writeFileSync(path.resolve(__dirname,'../data/users.json'), nuevouserCliente);
         res.redirect('/administrar');
     },
     show: (req,res) =>{
-        let products = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/users.json')));
-        let miProduct;
-        products.forEach(product => {
-            if(product.id == req.params.id){
-                miProduct = product;
+        let users = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/users.json')));
+        let miUser;
+        users.forEach(user => {
+            if(user.id == req.params.id){
+                miUser = user;
             }
         });
-        res.render(path.resolve(__dirname, '../views/users/detail'), {miProduct})
+        res.render(path.resolve(__dirname, '../views/users/detail'), {miUser})
     },
     edit: (req,res)=>{
-        let products = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/users.json')));
-        const productId = req.params.id;
-        let productEditar = products.find(product=> product.id == productId);
-        res.render(path.resolve(__dirname,'../views/users/edit'), {productEditar});
+        let users = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/users.json')));
+        const userId = req.params.id;
+        let userEditar = users.find(user=> user.id == userId);
+        res.render(path.resolve(__dirname,'../views/users/edit'), {userEditar});
     },  
     update: (req,res) =>{
-        let products = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/users.json')));
+        let users = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/users.json')));
         req.body.id = req.params.id;
         req.body.image = req.file ? req.file.filename : req.body.oldImage;
-        let productsUpdate = products.map(product =>{
-            if(product.id == req.body.id){
-                return product = req.body;
+        let usersUpdate = users.map(user =>{
+            if(user.id == req.body.id){
+                return user = req.body;
             }
-            return product;
+            return user;
         })
-        let productActualizar = JSON.stringify(productsUpdate,null,2);
-        fs.writeFileSync(path.resolve(__dirname,'../data/users.json'),productActualizar)
+        let userActualizar = JSON.stringify(usersUpdate,null,2);
+        fs.writeFileSync(path.resolve(__dirname,'../data/users.json'),userActualizar)
         res.redirect('/administrar');
 },
 destroy: (req,res) =>{
-    let products = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/users.json')));
-    const productDeleteId = req.params.id;
-    const productsFinal = products.filter(product => product.id != productDeleteId);
-    let productsGuardar = JSON.stringify(productsFinal,null,2)
-    fs.writeFileSync(path.resolve(__dirname, '../data/users.json'),productsGuardar);
+    let users = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/users.json')));
+    const userDeleteId = req.params.id;
+    const usersFinal = users.filter(user => user.id != userDeleteId);
+    let usersGuardar = JSON.stringify(usersFinal,null,2)
+    fs.writeFileSync(path.resolve(__dirname, '../data/users.json'),usersGuardar);
     res.redirect('/administrar');
 },
 }

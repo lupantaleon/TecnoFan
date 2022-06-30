@@ -13,7 +13,7 @@
         <!-- </article> -->
         <!-- <article class="col-12-Agregar"> -->
          <div>
-          <a href="/administrar/create" class="col-12-Agregar"><ion-icon name="add-circle-outline"></ion-icon>Agregar producto</a> 
+          <a href="/users/create" class="col-12-Agregar"><ion-icon name="add-circle-outline"></ion-icon>Agregar usuario</a> 
           </div>
        <!--  </article> -->
         <!-- <article class="col-12-table" > -->
@@ -29,13 +29,13 @@
               </tr>
             </thead>
             <tbody>
-              <% products.forEach(products => { %>
+              <% users.forEach(users => { %>
               <tr>
-                <td><%= products.id%> </td>
-                <td><%= products.name%> </td>
-                <td><a href="/administrar/detail/<%= products.id%> "> <ion-icon name="eye-outline"></ion-icon></a></td>
-                <td><a href="/administrar/edit/<%= products.id%> "> <ion-icon name="pencil-outline"></ion-icon></a></td>
-                <td><a href="/administrar/delete/<%= products.id%>"><ion-icon name="trash-outline"></ion-icon></a></td>
+                <td><%= users.id%> </td>
+                <td><%= users.name%> </td>
+                <td><a href="/users/detail/<%= users.id%> "> <ion-icon name="eye-outline"></ion-icon></a></td>
+                <td><a href="/users/edit/<%= users.id%> "> <ion-icon name="pencil-outline"></ion-icon></a></td>
+                <td><a href="/users/delete/<%= users.id%>"><ion-icon name="trash-outline"></ion-icon></a></td>
               </tr>
               <% }); %>
             </tbody>
