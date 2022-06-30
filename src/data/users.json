@@ -1,20 +1,92 @@
 [
-    {
-        "id": 1,
-        "first_name": "Lucas",
-        "last_name": "Perez",
-        "age": 26,
-        "email": "lucasperez@gmail.com",
-        "password": "2G5uqVm",
-        "document":"31094624"
-    },
-    {
-        "id": 2,
-        "first_name": "Juana",
-        "last_name": "Iglesias",
-        "age": 29,
-        "email": "juanaiglesias29@gmail.com",
-        "password": "$2a$10i",
-        "document":"36894624"
-    }
+  {
+    "id": 1,
+    "first_name": "Lucas",
+    "last_name": "Perez",
+    "age": 26,
+    "email": "lucasperez@gmail.com",
+    "password": "2G5uqVm",
+    "document": "31094624"
+  },
+  {
+    "id": 2,
+    "first_name": "Juana",
+    "last_name": "Iglesias",
+    "age": 29,
+    "email": "juanaiglesias29@gmail.com",
+    "password": "$2a$10i",
+    "document": "36894624"
+  },
+  {
+    "id": 3,
+    "first_name": "",
+    "last_name": "",
+    "age": "",
+    "email": "",
+    "password": "",
+    "document": ""
+  },
+  {
+    "id": 4,
+    "first_name": "",
+    "last_name": "",
+    "age": "",
+    "email": "",
+    "password": "",
+    "document": ""
+  },
+  {
+    "id": 5,
+    "first_name": "",
+    "last_name": "",
+    "age": "",
+    "email": "",
+    "password": "",
+    "document": ""
+  },
+  {
+    "id": 6,
+    "first_name": "",
+    "last_name": "",
+    "age": "",
+    "email": "",
+    "password": "",
+    "document": ""
+  },
+  {
+    "id": 7,
+    "first_name": "",
+    "last_name": "",
+    "age": "",
+    "email": "",
+    "password": "",
+    "document": ""
+  },
+  {
+    "id": 8,
+    "first_name": "",
+    "last_name": "",
+    "age": "",
+    "email": "",
+    "password": "",
+    "document": ""
+  },
+  {
+    "id": 9,
+    "first_name": "",
+    "last_name": "",
+    "age": "",
+    "email": "",
+    "password": "",
+    "document": ""
+  },
+  {
+    "id": 10,
+    "first_name": "",
+    "last_name": "",
+    "age": "",
+    "email": "",
+    "password": "",
+    "document": ""
+  }
 ]
