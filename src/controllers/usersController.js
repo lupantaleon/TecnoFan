@@ -14,13 +14,16 @@ module.exports = {
         res.render(path.resolve(__dirname, '../views/users/create'), {users});
     },
     save: (req,res) => {
+        console.log(req.body);
         let users = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/users.json')));
         let ultimoCliente = users.pop();
         users.push(ultimoCliente);
         let nuevoCliente = {
             id: ultimoCliente.id +1,
-            first_name : req.body.first_name,
+            first_name : "",
+            
             last_name: req.body.last_name,
+
             age: req.body.age,
             email: req.body.email,
             password: req.body.password,
