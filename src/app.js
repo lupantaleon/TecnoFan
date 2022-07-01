@@ -1,4 +1,5 @@
 // Módulos
+const bp = require('body-parser')
 const express = require('express');
 const path = require('path');
 const mainRouter = require("./routes/mainRouter");
@@ -16,6 +17,8 @@ app.set('views', path.resolve(__dirname, './views'));
 // ************ Middlewares ************
 app.use(express.static('public'));
 app.use ( methodOverride ('_method') );
+app.use(bp.json())
+app.use(bp.urlencoded({ extended: true }))
 
 // ************ Route System require and use() ************
 app.use("/", mainRouter);
