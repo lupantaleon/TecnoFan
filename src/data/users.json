@@ -1,26 +1,31 @@
 [
-    {
-        "id": 1,
-        "first_name": "Lucas",
-        "last_name": "Perez",
-        "age": 26,
-        "email": "lucasperez@gmail.com",
-        "password": "2G5uqVm",
-        "document": {
-            "tipo": "DNI",
-            "numero": "34505855"
-        }
-    },
-    {
-        "id": 2,
-        "first_name": "Juana",
-        "last_name": "Iglesias",
-        "age": 29,
-        "email": "juanaiglesias29@gmail.com",
-        "password": "$2a$10i",
-        "document": {
-            "tipo": "DNI",
-            "numero": "36894624"
-        }
-    }
+ {
+  "id": 1,
+  "first_name": "Lucas",
+  "last_name": "Perez",
+  "age": 26,
+  "email": "lucasperez@gmail.com",
+  "password": "2G5uqVm",
+  "document": {
+   "tipo": "DNI",
+   "numero": "34505855"
+  }
+ },
+ {
+  "id": 2,
+  "first_name": "Juana",
+  "last_name": "Iglesias",
+  "age": 29,
+  "email": "juanaiglesias29@gmail.com",
+  "password": "$2a$10i",
+  "document": {
+   "tipo": "DNI",
+   "numero": "36894624"
+  }
+ },
+ {
+  "id": 4,
+  "name": "Jose",
+  "email": "Jose@dh.com"
+ }
 ]

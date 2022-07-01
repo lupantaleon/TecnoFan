@@ -7,15 +7,26 @@
 
     <!-- Formulario -->
     <div class="contenedor-general">
-    <form action="/index" method="get" class="create-form">
+        <form action="/register" method="post" class="create-form" enctype="multipart/form-data">
         <div class="control-formulario">
-            <input type="text" name="name" placeholder="Nombre y Apellido" class="control" ><i class="fa-solid fa-user"></i>
+            <input type="text" name="name" placeholder="Nombre y Apellido" class="control"  value="<%= locals.oldData ? oldData.name : null%>"><i class="fa-solid fa-user"></i>
+         <% if (locals.errors && errors.name ) { %>
+            <div class="text-danger" >
+                <%= errors.name.msg %>
+            </div>
+         <% } %>
         </div>
-        <div class="control-formulario">
+
+        <!-- <div class="control-formulario">
             <input type="text" name="user" placeholder="Nombre de usuario" class="control"><i class="fa-solid fa-user"></i>
-        </div>
-        <div class="control-formulario">
-            <input type="email" name="email" placeholder="E-mail" class="control"><i class="fa-solid fa-envelope"></i>
+        </div> -->
+        <div class="control-formulario ">
+            <input type="email" name="email" placeholder="E-mail" class="control"  value="<%= locals.oldData ? oldData.email : null%>"><i class="fa-solid fa-envelope"></i>
+            <% if (locals.errors && errors.email ) { %>
+                <div class="text-danger" >
+                    <%= errors.email.msg %>
+                </div>
+             <% } %>
         </div>
 
        
@@ -29,17 +40,44 @@
         </div> -->
 
         <div class="control-formulario">
-        <input type="text" name="addres" placeholder="Domicilio" class="control"><i class="fa-solid fa-map-location-dot"></i>
+        <input type="text" name="address" placeholder="Domicilio" class="control" value="<%= locals.oldData ? oldData.addres : null%>"> <i class="fa-solid fa-map-location-dot"></i>
+        <% if (locals.errors && errors.address ) { %>
+            <div class="text-danger" >
+                <%= errors.address.msg %>
+            </div>
+         <% } %>
         </div>
         
         <div class="control-formulario">
-        <input type="tel" name="telefono" placeholder="Teléfono" id="Teléfono"class="control"><i class="fa-solid fa-mobile-screen"></i>
+        <input type="tel" name="telefono" placeholder="Teléfono" id="Teléfono"class="control" value="<%= locals.oldData ? oldData.telefono : null%>"><i class="fa-solid fa-mobile-screen"></i>
+        <% if (locals.errors && errors.telefono ) { %>
+            <div class="text-danger" >
+                <%= errors.telefono.msg %>
+            </div>
+         <% } %>
         </div>
-
+        <div></div>
+        </div class= "contenedor-final">
         <div class="control-formulario">
-        <p>Fecha de nacimiento :</p>  
-        <input type="date" name="birth_date" id="birth_date" class="control" placeholder= "Fecha de nacimiento" >
+        <select name="country" class="control-pais" value="<%= locals.oldData ? oldData.country : null%>">
+            <option value="">Elegí un país</option>
+            <%
+                 let countries = ['Argentina', 'Bolivia','Brasil', 'Colombia', 'Chile', 'Ecuador', 'Paraguay', 'Perú', 'Uruguay','Venezuela'];
+            %>
+            <% for (const oneCountry of countries) { %>
+                <option value="<%= oneCountry%>"><%= oneCountry %> </option>
+             <% } %>
+        </select>
+        <% if (locals.errors && errors.country ) { %>
+            <div class="text-danger" >
+                <%= errors.country.msg %>
+            </div>
+         <% } %>
         </div>
+        <div class="control-formulario">
+        <!-- <p>Fecha de nacimiento :</p>  
+        <input type="date" name="birth_date" id="birth_date" class="control" placeholder= "Fecha de nacimiento" >
+        </div> -->
 
 
         <!-- <h4>Perfil del usuario</h4>
@@ -50,7 +88,7 @@
             <label for="sell">Vendedor</label>
         </div> -->
 
-        <h4>Intereses :</h4>
+       <!--  <h4>Intereses :</h4>
         <div class="interests">
             <div>
                 <input type="checkbox" name="interests" value="a" id="a" class="interes-diseño">
@@ -72,14 +110,19 @@
                 <input type="checkbox" name="interests" value="e" id="e"class="interes-diseño">
                 <label for="e">Relojes smartwatch</label>
             </div>
-        </div>
+        </div> -->
 
         <h4>Elegí tu foto de usuario :</h4>
         <input type="file" name="avatar">
         <br>
         <br>
-        <input type="password" name="pass" placeholder="Elegí tu contraseña" class="password">
-        <input type="password" name="pass_confirm" placeholder="Confirmá tu contraseña" class="password">
+        <input type="password" name="password" placeholder="Elegí tu contraseña" class="password" value="<%= locals.oldData ? oldData.password : null%>">
+        <input type="password" name="password" placeholder="Confirmá tu contraseña" class="password" value="<%= locals.oldData ? oldData.password : null%>">
+        <% if (locals.errors && errors.password ) { %>
+            <div class="text-danger" >
+                <%= errors.password.msg %>
+            </div>
+         <% } %>
         <br>
         <br>
         <button type="submit" value="Enviar" class="Enviar">Enviar</button> 
@@ -87,6 +130,7 @@
         <br>
         <br>
     </form>
+</div>
 </div>
 <%- include('./partials/footer') %>
       <!-- </div> --

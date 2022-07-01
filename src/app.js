@@ -4,6 +4,7 @@ const path = require('path');
 const mainRouter = require("./routes/mainRouter");
 const methodOverride = require('method-override');
 const adminRouter = require('./routes/admin');
+const session = require('express-session')
 
 // ************ express() ************
 const app = express();
@@ -13,6 +14,9 @@ app.set("view engine", "ejs");
 app.set('views', path.resolve(__dirname, './views'));
 
 // ************ Middlewares ************
+app.use(express.urlencoded({ extended: false}));
+
+app.use(session({secret: 'Nuestro mensaje secreto'}));
 app.use(express.static('public'));
 app.use ( methodOverride ('_method') );
 

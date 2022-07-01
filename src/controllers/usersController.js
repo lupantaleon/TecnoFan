@@ -1,10 +1,28 @@
+const { validationResult } = require('express-validator');
 const fs = require('fs');
 const path = require('path');
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+/* const User = require('../src/models/User') */
+
 
 
 module.exports = {
+   /*  register: (req,res) => {
+        return res.render('userRegisterForm');
+    },
+    processRegister: (req,res) => {
+        const resultValidation = validationResult(req);
+
+        if (resultValidation.errors.lenfht > 0) {
+            return res.render('UserRegisterForm', {
+                errors : resultValidation.mapped(),
+                oldData: req.body
+            });
+        }
+        User.create(req.body);
+        return res.send('Ok, se guardó al usuario');
+    }, */
     index: (req,res) =>{
         let products = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/products.json')));
         res.render(path.resolve(__dirname, '../views/admin/administrar'), {products});

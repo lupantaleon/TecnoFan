@@ -10,6 +10,7 @@ body {
     margin: 0 auto;
 }
 
+
 .main-header {
     background-color: black;
     padding: 20px;
@@ -171,13 +172,18 @@ header div {
     justify-content: space-evenly;
 }
 
+
 .control{
     border: none;
     border-radius: 5px;
     width: 60%;
-    border: none;
-    border-radius:5px;
 }
+
+.control-pais{
+    border: none;
+    border-radius: 5px;
+}
+
 
 #birth_date{
     width: 35%;
@@ -187,6 +193,16 @@ header div {
     color: gray;
     position: relative;
     left: -8px;
+}
+
+/* contenedor final */
+.control-formulario{
+    text-align: center;
+}
+
+/* text-danger */
+.text-danger{
+    color: red;
 }
 
 /* .crontol-formulario.control{
@@ -243,7 +259,7 @@ header div {
 /* password */
 
 .password{
-    border: solid red 2px;
+    border: solid black 2px;
 }
 
 .Enviar{

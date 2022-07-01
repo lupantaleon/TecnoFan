@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { validationResult } = require('express-validator')
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -23,6 +24,7 @@ const controller = {
     index: (req, res) => {
         res.render("index", {monitores, auriculares, mouses, pcs, audifonos, tablets, smartwatches});
     },
+    /* login: session */
     login: (req, res) => {
         res.render("login");
     },
@@ -32,8 +34,22 @@ const controller = {
     productDetail: (req, res) => {
         res.render("productDetail");
     },
-    register: (req, res) => {
-        res.render("register");
+    // formulario de registro
+     register: (req,res) => {
+        return res.render('Register');
+    },
+    // processRegister
+    processRegister: (req,res) => {
+        const resultValidation = validationResult(req);
+
+        if (resultValidation.errors.length > 0){
+            return res.render('Register', {
+                errors: resultValidation.mapped(),
+                oldData: req.body
+            });
+        }
+        return res.send('Ok, las validaciones están de forma correcta y no tienes errores')
+
     },
     smartwatchs: (req, res) => {
         res.render("smartwatchs");
@@ -65,6 +81,7 @@ const controller = {
     /* productAdmin: (req, res) => {
         res.render("productAdmin")
     }, */
+    /* login:session */
 }
 
 module.exports = controller;
