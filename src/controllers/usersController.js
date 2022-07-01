@@ -20,12 +20,12 @@ module.exports = {
         users.push(ultimoCliente);
         let nuevoCliente = {
             id: ultimoCliente.id + 1,
-            first_name: '',
-            last_name: '',
-            age: '',
-            email: '',
-            password: '',
-            document: '',
+            first_name: req.body.first_name,
+            last_name: req.body.last_name,
+            age: req.body.age,
+            email: req.body.email,
+            password: req.body.password,
+            document: req.body.document,
 
         }
         users.push(nuevoCliente);
