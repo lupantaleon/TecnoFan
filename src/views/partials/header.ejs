@@ -33,22 +33,22 @@
         <li><a href="#">Ayuda</a></li>
       <!-- </button> -->
       <li><a href="/administrar">Administrar</a></li>
-      <li><a href="/users">Users</a></li>
+      <li><a href="/user/administrar">Users</a></li>
     </ul>
 
     <ul class="right-navbar">
-      <!-- <button> -->
+     
         <li><a href="/productCart">Carrito <i class="fa fa-shopping-basket"></i></a></li>
-      <!-- </button> -->
-      <!-- <button onclick="document.getElementById('id01').style.display='block'">
-        <li>Login <i class="fas fa-sign-in-alt	"></i></li>
-      <!-</button> -->
-      <!-- <button> -->
-        <li><a href="/login">Login <i class="fas fa-sign-in-alt	"></i></a></li>
-      <!-- </button> -->
-      <!-- <button> -->
-        <li><a href="/register">Registro <i class="far fa-credit-card"></i></a></li>
-      <!-- </button> -->
+        <% if (locals.isLogged) { %>
+        <li><a href="/user/profile">Mi Perfil</a></li>
+      
+        <li><a href="/user/logout">Cerrar Sesión<i class="fas fa-sign-in-alt	"></i></a></li>
+        <% } else { %>
+        <li><a href="/user/login">Login <i class="fas fa-sign-in-alt	"></i></a></li>
+  
+        <li><a href="/user/register">Registro <i class="far fa-credit-card"></i></a></li>
+        <% } %>
+      
     </ul>
   </nav>
 

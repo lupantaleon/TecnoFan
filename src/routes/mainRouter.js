@@ -5,8 +5,9 @@ const req = require("express/lib/request");
 const router = express.Router();
 const multer = require('multer');
 const path  = require('path');
+const validations = require('../middlewares/validateRegisterMiddleware')
 
-const {body} = require('express-validator');
+/* const {body} = require('express-validator'); */
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -20,7 +21,7 @@ const storage = multer.diskStorage({
 
 const uploadFile = multer({storage});
 
-const validations = [
+/* const validations = [
     body('name').notEmpty().withMessage('Tienes que escribir un nombre y apellido'),
     body('email')
     .notEmpty().withMessage('Tienes que escribir un E-mail').bail()
@@ -44,7 +45,7 @@ const validations = [
         }
         return true;
     })
-]
+] */
 
 // Aća nos falta traer el controller
 const mainController = require("../controllers/mainController");
@@ -53,14 +54,8 @@ const { error } = require("console");
 const { accepts } = require("express/lib/request");
 // Acá definimos las rutas
 router.get("/", mainController.index);
-// gormulario de login
-router.get("/login", mainController.login);
 router.get("/productCart", mainController.productCart);
 router.get("/productDetail", mainController.productDetail);
-// formulario de registro 
-router.get("/register", mainController.register);
-// procesar el registro 
-router.post("/register",uploadFile.single('avatar'),validations, mainController.processRegister);
 
 router.get("/smartwatchs", mainController.smartwatchs);
 router.get("/mouses", mainController.mouses);

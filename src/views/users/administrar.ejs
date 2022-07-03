@@ -10,10 +10,6 @@
       <section class="row">
         
           <h2 class="Administrador-Productos">Administrador de Usuarios<i class="fa-brands fa-product-hunt"></i></h2>
-        
-         <div>
-          <a href="/users/create" class="col-12-Agregar"><ion-icon name="add-circle-outline"></ion-icon>Agregar usuario</a> 
-          </div>
      
         <div class="contenedor-table">
         <table class="table">
@@ -21,19 +17,16 @@
               <tr class="Barra-nombres">
                 <th scope="col">Id</th>
                 <th scope="col">Nombre</th>
-                <th scope="col">Ver</th>
-                <th scope="col">Editar</th>
+                
                 <th scope="col">Borrar</th>
               </tr>
-            </thead>
-            <tbody>
+              <tbody>
               <% users.forEach(users => { %>
               <tr>
                 <td><%= users.id%> </td>
                 <td><%= users.name%> </td>
-                <td><a href="/users/detail/<%= users.id%> "> <ion-icon name="eye-outline"></ion-icon></a></td>
-                <td><a href="/users/edit/<%= users.id%> "> <ion-icon name="pencil-outline"></ion-icon></a></td>
-                <td><a href="/users/delete/<%= users.id%>"><ion-icon name="trash-outline"></ion-icon></a></td>
+                
+                <td><a href="/user/delete/<%= users.id%>"><ion-icon name="trash-outline"></ion-icon></a></td>
               </tr>
               <% }); %>
             </tbody>

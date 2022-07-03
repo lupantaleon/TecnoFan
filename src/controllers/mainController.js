@@ -12,44 +12,15 @@ const audifonos = products.filter(product => product.category === 'audifonos');
 const tablets = products.filter(product => product.category === 'tablets');
 const smartwatches = products.filter(product => product.category === 'smartwatches');
 
-/* value="auriculares">
-value="monitores">Mo
-value="mouses">Mouse
-value="PCs">PCs</opt
-value="audifonos">Au
-value="tablets">Tabl
-value="smartwatches" */
-
 const controller = {
     index: (req, res) => {
         res.render("index", {monitores, auriculares, mouses, pcs, audifonos, tablets, smartwatches});
-    },
-    /* login: session */
-    login: (req, res) => {
-        res.render("login");
     },
     productCart: (req, res) => {
         res.render("productCart");
     },
     productDetail: (req, res) => {
         res.render("productDetail");
-    },
-    // formulario de registro
-     register: (req,res) => {
-        return res.render('Register');
-    },
-    // processRegister
-    processRegister: (req,res) => {
-        const resultValidation = validationResult(req);
-
-        if (resultValidation.errors.length > 0){
-            return res.render('Register', {
-                errors: resultValidation.mapped(),
-                oldData: req.body
-            });
-        }
-        return res.send('Ok, las validaciones están de forma correcta y no tienes errores')
-
     },
     smartwatchs: (req, res) => {
         res.render("smartwatchs");
@@ -78,10 +49,6 @@ const controller = {
     quienessomos: (req, res) => {
         res.render("quienessomos");
     },
-    /* productAdmin: (req, res) => {
-        res.render("productAdmin")
-    }, */
-    /* login:session */
 }
 
 module.exports = controller;

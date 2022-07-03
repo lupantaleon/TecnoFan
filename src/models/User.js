@@ -1,7 +1,9 @@
 
-const { name } = require('ejs');
+/* const { name } = require('ejs');
+
+const { use } = require('../routes/mainRouter'); */
+
 const fs = require('fs');
-const { use } = require('../routes/mainRouter');
 
 const User = {
     fileName : './src/data/users.json',
