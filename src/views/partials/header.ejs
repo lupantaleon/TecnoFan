@@ -21,34 +21,42 @@
   <nav class="main-navbar">
     <ul class="left-navbar">
       <!-- <button> -->
-        <li><a href="/">Inicio</a></li>
+      <li><a href="/">Inicio</a></li>
       <!-- </button> -->
       <!-- <button> -->
-        <li><a href="#">Novedades</a></li>
+      <li><a href="#">Novedades</a></li>
       <!-- </button> -->
       <!-- <button> -->
-        <li class="dsnone"><a href="/quienessomos">¿Quienes somos?</a></li>
+      <li class="dsnone"><a href="/quienessomos">¿Quienes somos?</a></li>
       <!-- </button> -->
       <!-- <button> -->
-        <li><a href="#">Ayuda</a></li>
+      <li><a href="#">Ayuda</a></li>
       <!-- </button> -->
       <li><a href="/administrar">Administrar</a></li>
       <li><a href="/user/administrar">Users</a></li>
     </ul>
 
     <ul class="right-navbar">
-     
-        <li><a href="/productCart">Carrito <i class="fa fa-shopping-basket"></i></a></li>
-        <% if (locals.isLogged) { %>
-        <li><a href="/user/profile">Mi Perfil</a></li>
-      
-        <li><a href="/user/logout">Cerrar Sesión<i class="fas fa-sign-in-alt	"></i></a></li>
-        <% } else { %>
-        <li><a href="/user/login">Login <i class="fas fa-sign-in-alt	"></i></a></li>
-  
-        <li><a href="/user/register">Registro <i class="far fa-credit-card"></i></a></li>
-        <% } %>
-      
+
+      <li><a href="/productCart">Carrito <i class="fa fa-shopping-basket"></i></a></li>
+      <% if (locals.isLogged) { %>
+        <!--   <li><a href="/user/profile">Mi Perfil</a></li>
+        <li class="nav-item dropdown"> --->
+        <a class="nav-link dropdown-toggle" href="#" id="dropUser" role="button" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          <img src="/img/avatars/<%= locals.userLogged.avatar %>" height="30" style="border-radius: 100%;">
+
+          <li><a href="/user/profile">
+              <%= locals.userLogged.name %> <i class="fas fa-sign-in-alt	"></i>
+            </a></li>
+
+          <li><a href="/user/logout">Cerrar Sesión<i class="fas fa-sign-in-alt	"></i></a></li>
+          <% } else { %>
+            <li><a href="/user/login">Login <i class="fas fa-sign-in-alt	"></i></a></li>
+
+            <li><a href="/user/register">Registro <i class="far fa-credit-card"></i></a></li>
+            <% } %>
+
     </ul>
   </nav>
 

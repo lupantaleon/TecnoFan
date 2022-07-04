@@ -25,12 +25,14 @@ app.use(session({
 	resave: false,
 	saveUninitialized: false,
 }));
+
 app.use(express.static('public'));
 app.use ( methodOverride ('_method') );
 app.use(bp.json())
 /* app.use(bp.urlencoded({ extended: true })) */
 app.use(express.urlencoded({ extended: false }));
 app.use(cookies());
+
 app.use(userLoggedMiddleware);
 
 // ************ Route System require and use() ************

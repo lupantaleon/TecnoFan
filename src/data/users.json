@@ -1,168 +1,178 @@
 [
-  {
-    "id": 1,
-    "first_name": "Lucas",
-    "last_name": "Perez",
-    "age": 26,
-    "email": "lucasperez@gmail.com",
-    "password": "2G5uqVm",
-    "document": {
-      "tipo": "DNI",
-      "numero": "34505855"
-    }
-  },
-  {
-    "id": 2,
-    "first_name": "Juana",
-    "last_name": "Iglesias",
-    "age": 29,
-    "email": "juanaiglesias29@gmail.com",
-    "password": "$2a$10i",
-    "document": {
-      "tipo": "DNI",
-      "numero": "36894624"
-    }
-  },
-  {
-    "id": 4,
-    "name": "Jose",
-    "email": "Jose@dh.com"
-  },
-  {
-    "id": 1,
-    "first_name": "Lucas",
-    "last_name": "Perez",
-    "age": 26,
-    "email": "lucasperez@gmail.com",
-    "password": "2G5uqVm",
-    "document": "31094624"
-  },
-  {
-    "id": 2,
-    "first_name": "Juana",
-    "last_name": "Iglesias",
-    "age": 29,
-    "email": "juanaiglesias29@gmail.com",
-    "password": "$2a$10i",
-    "document": "36894624"
-  },
-  {
-    "id": 3,
-    "first_name": "",
-    "last_name": "",
-    "age": "",
-    "email": "",
-    "password": "",
-    "document": ""
-  },
-  {
-    "id": 4,
-    "first_name": "",
-    "last_name": "",
-    "age": "",
-    "email": "",
-    "password": "",
-    "document": ""
-  },
-  {
-    "id": 5,
-    "first_name": "",
-    "last_name": "",
-    "age": "",
-    "email": "",
-    "password": "",
-    "document": ""
-  },
-  {
-    "id": 6,
-    "first_name": "",
-    "last_name": "",
-    "age": "",
-    "email": "",
-    "password": "",
-    "document": ""
-  },
-  {
-    "id": 7,
-    "first_name": "",
-    "last_name": "",
-    "age": "",
-    "email": "",
-    "password": "",
-    "document": ""
-  },
-  {
-    "id": 8,
-    "first_name": "",
-    "last_name": "",
-    "age": "",
-    "email": "",
-    "password": "",
-    "document": ""
-  },
-  {
-    "id": 9,
-    "first_name": "",
-    "last_name": "",
-    "age": "",
-    "email": "",
-    "password": "",
-    "document": ""
-  },
-  {
-    "id": 10,
-    "first_name": "",
-    "last_name": "",
-    "age": "",
-    "email": "",
-    "password": "",
-    "document": ""
-  },
-  {
-    "id": 11,
-    "first_name": "",
-    "last_name": "",
-    "age": "",
-    "email": "",
-    "password": "",
-    "document": ""
-  },
-  {
-    "id": 12,
-    "first_name": "nombre",
-    "last_name": "",
-    "age": "",
-    "email": "",
-    "password": "",
-    "document": ""
-  },
-  {
-    "id": 13,
-    "first_name": "nombre",
-    "last_name": "apellido",
-    "age": "30",
-    "email": "alkjewrg@gmail.com",
-    "password": "aerhaaerh",
-    "document": "30456849"
-  },
-  {
-    "id": 14,
-    "name": "cosme",
-    "email": "cosme@fulanito.com",
-    "address": "calle 123",
-    "telefono": "123",
-    "country": "Argentina",
-    "password": "hola123",
-    "avatar": "products-1656879363904.png"
-  },
-  {
-    "id": 15,
-    "name": "cosme",
-    "email": "cosme2@dh.com",
-    "address": "calle123",
-    "telefono": "123",
-    "country": "Argentina",
-    "password": "$2a$10$RdBcufvVpK7scZKJ3Rq8juGBptHAWt.Iz2sZDv9FJYA4XwGtDEXHW",
-    "avatar": "1656884787275_img.png"
+ {
+  "id": 1,
+  "first_name": "Lucas",
+  "last_name": "Perez",
+  "age": 26,
+  "email": "lucasperez@gmail.com",
+  "password": "2G5uqVm",
+  "document": {
+   "tipo": "DNI",
+   "numero": "34505855"
   }
+ },
+ {
+  "id": 2,
+  "first_name": "Juana",
+  "last_name": "Iglesias",
+  "age": 29,
+  "email": "juanaiglesias29@gmail.com",
+  "password": "$2a$10i",
+  "document": {
+   "tipo": "DNI",
+   "numero": "36894624"
+  }
+ },
+ {
+  "id": 4,
+  "name": "Jose",
+  "email": "Jose@dh.com"
+ },
+ {
+  "id": 1,
+  "first_name": "Lucas",
+  "last_name": "Perez",
+  "age": 26,
+  "email": "lucasperez@gmail.com",
+  "password": "2G5uqVm",
+  "document": "31094624"
+ },
+ {
+  "id": 2,
+  "first_name": "Juana",
+  "last_name": "Iglesias",
+  "age": 29,
+  "email": "juanaiglesias29@gmail.com",
+  "password": "$2a$10i",
+  "document": "36894624"
+ },
+ {
+  "id": 3,
+  "first_name": "",
+  "last_name": "",
+  "age": "",
+  "email": "",
+  "password": "",
+  "document": ""
+ },
+ {
+  "id": 4,
+  "first_name": "",
+  "last_name": "",
+  "age": "",
+  "email": "",
+  "password": "",
+  "document": ""
+ },
+ {
+  "id": 5,
+  "first_name": "",
+  "last_name": "",
+  "age": "",
+  "email": "",
+  "password": "",
+  "document": ""
+ },
+ {
+  "id": 6,
+  "first_name": "",
+  "last_name": "",
+  "age": "",
+  "email": "",
+  "password": "",
+  "document": ""
+ },
+ {
+  "id": 7,
+  "first_name": "",
+  "last_name": "",
+  "age": "",
+  "email": "",
+  "password": "",
+  "document": ""
+ },
+ {
+  "id": 8,
+  "first_name": "",
+  "last_name": "",
+  "age": "",
+  "email": "",
+  "password": "",
+  "document": ""
+ },
+ {
+  "id": 9,
+  "first_name": "",
+  "last_name": "",
+  "age": "",
+  "email": "",
+  "password": "",
+  "document": ""
+ },
+ {
+  "id": 10,
+  "first_name": "",
+  "last_name": "",
+  "age": "",
+  "email": "",
+  "password": "",
+  "document": ""
+ },
+ {
+  "id": 11,
+  "first_name": "",
+  "last_name": "",
+  "age": "",
+  "email": "",
+  "password": "",
+  "document": ""
+ },
+ {
+  "id": 12,
+  "first_name": "nombre",
+  "last_name": "",
+  "age": "",
+  "email": "",
+  "password": "",
+  "document": ""
+ },
+ {
+  "id": 13,
+  "first_name": "nombre",
+  "last_name": "apellido",
+  "age": "30",
+  "email": "alkjewrg@gmail.com",
+  "password": "aerhaaerh",
+  "document": "30456849"
+ },
+ {
+  "id": 14,
+  "name": "cosme",
+  "email": "cosme@fulanito.com",
+  "address": "calle 123",
+  "telefono": "123",
+  "country": "Argentina",
+  "password": "hola123",
+  "avatar": "products-1656879363904.png"
+ },
+ {
+  "id": 15,
+  "name": "cosme",
+  "email": "cosme2@dh.com",
+  "address": "calle123",
+  "telefono": "123",
+  "country": "Argentina",
+  "password": "$2a$10$RdBcufvVpK7scZKJ3Rq8juGBptHAWt.Iz2sZDv9FJYA4XwGtDEXHW",
+  "avatar": "1656884787275_img.png"
+ },
+ {
+  "id": 16,
+  "name": "luciana Pantaleon",
+  "email": "lucianapantaleon@gmail.com",
+  "address": "lavalle 3667",
+  "telefono": "03794574425",
+  "country": "Argentina",
+  "password": "$2a$10$cwKWaUyvkwQw/Gg3zA.pIezlYPNzis4/90MwcTJyZQJ4Q8s8HC2.a",
+  "avatar": "1656950195470_img.jpg"
+ }
 ]
