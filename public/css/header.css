@@ -2,12 +2,13 @@
     display: none;
 }
 
+
+
 @media (max-width: 361px) {
     .main-navbar {
         flex-direction: column;
         text-align: center;
         margin-top: 10px;
-        
     }
 }
 
