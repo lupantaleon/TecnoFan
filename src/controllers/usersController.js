@@ -20,6 +20,8 @@ const controller = {
         res.render(path.resolve(__dirname, '../views/users/administrar'), {users});
     },
 	register: (req, res) => {
+ /*   res.cookie ("testing", "Hola Mundo" ,  { maxAge: 1000 * 60 })*/
+ 
 		return res.render('register');
 	},
 	processRegister: (req, res) => {
@@ -56,6 +58,7 @@ const controller = {
 		return res.redirect('/user/login'); 
 	},
 	login: (req, res) => {
+
 		return res.render('login');
 	},
 	loginProcess: (req, res) => {
@@ -68,7 +71,9 @@ const controller = {
 				req.session.userLogged = userToLogin;
 
 				if(req.body.remember_user) {
-					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
+					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 2})
+                console.log(req.cookies.userEmail)
+  
 				}
 
 				return res.redirect('/user/profile');
@@ -91,6 +96,7 @@ const controller = {
 		});
 	},
 	profile: (req, res) => {
+    console.log (req.cookies.userEmail);
 		return res.render('userProfile', {
 			user: req.session.userLogged
 		});

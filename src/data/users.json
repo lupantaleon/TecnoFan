@@ -174,5 +174,25 @@
   "country": "Argentina",
   "password": "$2a$10$cwKWaUyvkwQw/Gg3zA.pIezlYPNzis4/90MwcTJyZQJ4Q8s8HC2.a",
   "avatar": "1656950195470_img.jpg"
+ },
+ {
+  "id": 17,
+  "name": "lucas",
+  "email": "fulanito@gmail.com",
+  "address": "lavalle 545",
+  "telefono": "465612485",
+  "country": "Argentina",
+  "password": "$2a$10$IBgr2L6aeP49dZjDFeYuvetrtRV2GfUM8qONuQd/44BjaEsSOnwKK",
+  "avatar": "1657031387157_img.jpg"
+ },
+ {
+  "id": 18,
+  "name": "pepito",
+  "email": "juana@gmail.com",
+  "address": "juana 14",
+  "telefono": "14141414",
+  "country": "Perú",
+  "password": "$2a$10$wPngFajgWTYXwdJ3t1CEdePPPC3qxlUip2jyclFY3T2ntMxNo8lsS",
+  "avatar": "1657032696878_img.jpg"
  }
 ]
