@@ -70,9 +70,9 @@ const controller = {
 				delete userToLogin.password;
 				req.session.userLogged = userToLogin;
 
-				if(req.body.remember_user) {
+				if(req.body.remember) {
 					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 2})
-                console.log(req.cookies.userEmail)
+        
   
 				}
 
@@ -96,7 +96,7 @@ const controller = {
 		});
 	},
 	profile: (req, res) => {
-    console.log (req.cookies.userEmail);
+
 		return res.render('userProfile', {
 			user: req.session.userLogged
 		});
