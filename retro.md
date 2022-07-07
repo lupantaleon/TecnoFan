@@ -31,5 +31,22 @@ Less of: En este punto ponemos aquello que tal vez en una retrospectiva fue [Sta
 Stop Doing: Decidimos modificar la idea de colocar demasiadas tareas en un solo participante y dividir así los temas mas dificiles. 
 
 
+Restrospectiva de estrella de mar: 6/julio SPRINT 5
+
+Start Doing: Con respecto a lo innovador nos coordinamos para agregar una imagen cuando el usuario se encuentra logueado. También coordinamos en hacer un css especifico para que el usuario vea más armoniso su perfil. 
+
+
+
+More of: Con respecto al sprint anterior hemos elegido dividir tareas de una manera distinta y más individualizada optimizando así los conocimineot sde cada uno en este sprint
+
+Keep Doing :  El valor principal del grupo es el verdadero trabajo en equipo y la división de tareas. Creo que debemos seguir dejando esto como nuestra principal fortaleza. 
+
+Less of: Esperamos crecer como equipo y poder coordinar mejor las tareas para el próximo sprint para así, llegar más rapido con el resultado. 
+
+
+Stop Doing: Decidimos dejar de juntarnos tan pocas veces y hacerlo una vez por semana. 
+
+
+
 
 

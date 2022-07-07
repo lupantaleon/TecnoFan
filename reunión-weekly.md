@@ -17,3 +17,14 @@ Juntada con la finalidad de modificar y realizar tareas del CRUD.
 
 Lunes 13/junio:
 Reunion en clase para dar los ultimos retoques del  sprint 4
+
+
+jueves 23/junio: 
+Reunion para division de tareas
+
+jueves 30/junio:
+Reunion para modificacion de tareas
+
+sabado 2/julio:
+Reunion Final Sprint 5 . 
+
