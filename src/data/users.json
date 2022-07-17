@@ -194,5 +194,15 @@
   "country": "Perú",
   "password": "$2a$10$wPngFajgWTYXwdJ3t1CEdePPPC3qxlUip2jyclFY3T2ntMxNo8lsS",
   "avatar": "1657032696878_img.jpg"
+ },
+ {
+  "id": 19,
+  "name": "Esteban Vouk",
+  "email": "estebanvouk@gmail.com",
+  "address": "caba",
+  "telefono": "2944627053",
+  "country": "Argentina",
+  "password": "$2a$10$xtbT8xV7RAKw.0apl8WmnuwaDv2bPE9RFX3QokF/lWeytvxxHWg.e",
+  "avatar": "1657205125863_img.png"
  }
 ]
