@@ -15,6 +15,14 @@ if (config.use_env_variable) {
   sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
 
+sequelize.authenticate()
+  .then(() => {
+    console.log('Conectado 123 probando')
+  })
+  .catch(err => {
+    console.log('No se conectó, algo rompiste', err)
+  })
+
 fs
   .readdirSync(__dirname)
   .filter(file => {

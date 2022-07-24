@@ -35,7 +35,7 @@ module.exports = (sequelize,dataTypes) => {
             allowNull: false
           },
           role_id: {
-            type: dataTypes.INT(),
+            type: dataTypes.INTEGER,
             allowNull: false
           },
     };
@@ -43,7 +43,7 @@ module.exports = (sequelize,dataTypes) => {
         tableName: 'users',
         timestamps: false
     };
-    const Role = sequelize.define(alias,cols, config)
+    const User = sequelize.define(alias,cols, config)
 
-    return Role
+    return User
 }

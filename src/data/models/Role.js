@@ -17,5 +17,17 @@ module.exports = (sequelize,dataTypes) => {
     };
     const Role = sequelize.define(alias,cols, config)
 
+    sequelize.query(
+      'SELECT * FROM roles WHERE id = ?',
+      {
+        replacements: [1],
+        type: sequelize.QueryTypes.SELECT
+      }
+  ).then(result => {
+      console.log(result);
+  }).catch((error) => {
+      console.error('Failed to insert data : ', error);
+  });
+
     return Role
 }

@@ -7,11 +7,11 @@ module.exports = (sequelize,dataTypes) => {
             primaryKey: true
           },
           product_id: {
-            type: dataTypes.INT(),
+            type: dataTypes.INTEGER,
             allowNull: false
           },
           user_id: {
-            type: dataTypes.INT(),
+            type: dataTypes.INTEGER,
             allowNull: false
           },
     };
@@ -19,7 +19,7 @@ module.exports = (sequelize,dataTypes) => {
         tableName: 'products_cart',
         timestamps: false
     };
-    const Role = sequelize.define(alias,cols, config)
+    const Product_cart = sequelize.define(alias,cols, config)
 
-    return Role
+    return Product_cart
 }

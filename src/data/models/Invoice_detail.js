@@ -7,7 +7,7 @@ module.exports = (sequelize,dataTypes) => {
             primaryKey: true
           },
           invoice_id: {
-            type: dataTypes.INT(),
+            type: dataTypes.INTEGER,
             allowNull:false,
           },
           number_of_installments: {
@@ -19,7 +19,7 @@ module.exports = (sequelize,dataTypes) => {
             allowNull: false
           },
           products_id: {
-            type: dataTypes.INT(),
+            type: dataTypes.INTEGER,
             allowNull: false
           },
 
@@ -28,7 +28,7 @@ module.exports = (sequelize,dataTypes) => {
         tableName: 'invoice_detail',
         timestamps: false
     };
-    const Role = sequelize.define(alias,cols, config)
+    const Invoice_detail = sequelize.define(alias,cols, config)
 
-    return Role
+    return Invoice_detail
 }

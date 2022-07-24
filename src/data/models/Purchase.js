@@ -11,7 +11,7 @@ module.exports = (sequelize,dataTypes) => {
             allowNull: false
           },
           user_id: {
-            type: dataTypes.INT(),
+            type: dataTypes.INTEGER,
             allowNull: false
           },
     };
@@ -19,7 +19,7 @@ module.exports = (sequelize,dataTypes) => {
         tableName: 'purchases',
         timestamps: false
     };
-    const Role = sequelize.define(alias,cols, config)
+    const Purchase = sequelize.define(alias,cols, config)
 
-    return Role
+    return Purchase
 }

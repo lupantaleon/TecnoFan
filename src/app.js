@@ -5,9 +5,10 @@ const path = require('path');
 const mainRouter = require("./routes/mainRouter");
 const methodOverride = require('method-override');
 const adminRouter = require('./routes/admin');
-const session = require('express-session')
+const session = require('express-session');
 const usersRoutes = require('./routes/userRoutes');
-const cookies = require('cookie-parser')
+const cookies = require('cookie-parser');
+const db = require('./data/models/index')
 
 // ************ express() ************
 const app = express();

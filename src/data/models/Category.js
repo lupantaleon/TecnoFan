@@ -15,7 +15,7 @@ module.exports = (sequelize,dataTypes) => {
         tableName: 'categories',
         timestamps: false
     };
-    const Role = sequelize.define(alias,cols, config)
+    const Category = sequelize.define(alias,cols, config)
 
-    return Role
+    return Category
 }

@@ -11,15 +11,15 @@ module.exports = (sequelize,dataTypes) => {
             allowNull: false
           },
           user_id: {
-            type: dataTypes.INT(),
+            type: dataTypes.INTEGER,
             allowNull: false
           },
           value: {
-            type: dataTypes.INT(),
+            type: dataTypes.INTEGER,
             allowNull: false
           },
           purchase_id: {
-            type: dataTypes.INT(),
+            type: dataTypes.INTEGER,
             allowNull: false
           },
     };
@@ -27,7 +27,7 @@ module.exports = (sequelize,dataTypes) => {
         tableName: 'invoice',
         timestamps: false
     };
-    const Role = sequelize.define(alias,cols, config)
+    const Invoice = sequelize.define(alias,cols, config)
 
-    return Role
+    return Invoice
 }
