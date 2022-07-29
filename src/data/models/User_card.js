@@ -21,5 +21,12 @@ module.exports = (sequelize,dataTypes) => {
     };
     const User_card = sequelize.define(alias,cols, config)
 
+    User_card.associate = function (models) {
+      User_card.belongsTo(models.User, {
+        as: "users",
+        foreignKey: "user_id"
+      })
+    }
+
     return User_card
 }

@@ -26,5 +26,12 @@ module.exports = (sequelize,dataTypes) => {
     };
     const Product_financing = sequelize.define(alias,cols, config)
 
+    Product_financing.associate = function (models) {
+      Product_financing.belongsTo(models.Product, {
+        as: "products",
+        foreignKey: "product_id"
+      })
+    }
+
     return Product_financing
 }

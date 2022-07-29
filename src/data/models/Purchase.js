@@ -21,5 +21,18 @@ module.exports = (sequelize,dataTypes) => {
     };
     const Purchase = sequelize.define(alias,cols, config)
 
+    Purchase.associate = function (models) {
+      Purchase.belongsTo(models.User, {
+        as: "users",
+        foreignKey: "user_id"
+      })
+
+      Purchase.hasOne(models.Invoice, {
+        as: "invoices",
+        foreignKey: "purchase_id"
+      })
+
+    }
+
     return Purchase
 }

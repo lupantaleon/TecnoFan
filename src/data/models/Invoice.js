@@ -18,7 +18,7 @@ module.exports = (sequelize,dataTypes) => {
             type: dataTypes.INTEGER,
             allowNull: false
           },
-          purchase_id: {
+          Invoice_id: {
             type: dataTypes.INTEGER,
             allowNull: false
           },
@@ -28,6 +28,19 @@ module.exports = (sequelize,dataTypes) => {
         timestamps: false
     };
     const Invoice = sequelize.define(alias,cols, config)
+
+    Invoice.associate = function (models) {
+      Invoice.belongsTo(models.User, {
+        as: "users",
+        foreignKey: "user_id"
+      })
+
+      Invoice.belongsTo(models.Purchase, {
+        as: "purchases",
+        foreignKey: "purchase_id"
+      })
+
+    }
 
     return Invoice
 }
