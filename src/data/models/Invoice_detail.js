@@ -35,6 +35,11 @@ module.exports = (sequelize, dataTypes) => {
       as: "products",
       foreignKey: "product_id"
     })
+
+    Invoice_detail.belongsTo(models.Invoice, {
+      as: "invoice",
+      foreignKey: "invoice_id"
+    })
   }
 
   return Invoice_detail

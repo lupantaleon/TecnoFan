@@ -34,8 +34,8 @@ module.exports = (sequelize, dataTypes) => {
       type: dataTypes.STRING(100),
       allowNull: false
     },
-    role_id: {
-      type: dataTypes.INTEGER,
+    admin: {
+      type: dataTypes.TINYINT(1),
       allowNull: false
     },
   };
@@ -46,10 +46,6 @@ module.exports = (sequelize, dataTypes) => {
   const User = sequelize.define(alias, cols, config)
 
   User.associate = function (models) {
-    User.belongsTo(models.Role, {
-      as: "roles",
-      foreignKey: "role_id"
-    })
 
     User.hasMany(models.Invoice, {
       as: "invoices",
