@@ -15,7 +15,7 @@ module.exports = (sequelize, dataTypes) => {
       allowNull: false
     },
     installment_amount: {
-      type: dataTypes.MEDIUMINT(),
+      type: dataTypes.SMALLINT(),
       allowNull: false
     },
     products_id: {
