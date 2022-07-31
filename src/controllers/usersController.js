@@ -3,119 +3,131 @@
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8')); */
 /* const User = require('../src/models/User') */
-
-
 const fs = require('fs');
 const path = require('path');
 const bcryptjs = require('bcryptjs');
-const {
-	validationResult
-} = require('express-validator');
-
-const User = require('../models/User');
+const { validationResult } = require('express-validator');
+const db = require("../database/models");
 
 const controller = {
-    index: (req,res) =>{
-        let users = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/users.json')));
-        res.render(path.resolve(__dirname, '../views/users/administrar'), {users});
-    },
-	register: (req, res) => {
- /*   res.cookie ("testing", "Hola Mundo" ,  { maxAge: 1000 * 60 })*/
- 
-		return res.render('register');
-	},
-	processRegister: (req, res) => {
-		const resultValidation = validationResult(req);
+  index: (req, res) => {
+    db.User.findAll().then((users) => {
+      res.render(path.resolve(__dirname, '../views/users/administrar'), { users })
+    });
+  },
+  register: (req, res) => {
 
-		if (resultValidation.errors.length > 0) {
-			return res.render('register', {
-				errors: resultValidation.mapped(),
-				oldData: req.body
-			});
-		}
+    return res.render('register');
+  },
+  processRegister: async (req, res) => {
+    try {
+      const resultValidation = validationResult(req);
+      if (resultValidation.errors.length > 0) {
+        return res.render('register', {
+          errors: resultValidation.mapped(),
+          oldData: req.body
+        });
+      }
 
-		let userInDB = User.findByField('email', req.body.email);
+      let userInDB = await db.User.findOne({
+        where: {
+          email: req.body.email
+        }
+      })
+      /* await db.User.findByField('email', req.body.email); */
 
-		if (userInDB) {
-			return res.render('register', {
-				errors: {
-					email: {
-						msg: 'Este email ya está registrado'
-					}
-				},
-				oldData: req.body
-			});
-		}
+      if (userInDB) {
+        return res.render('register', {
+          errors: {
+            email: {
+              msg: 'Este email ya está registrado'
+            }
+          },
+          oldData: req.body
+        });
+      }
 
-		let userToCreate = {
-			...req.body,
-			password: bcryptjs.hashSync(req.body.password, 10),
-			avatar: req.file.filename
-		}
+      let userToCreate = {
+        ...req.body,
+        password: bcryptjs.hashSync(req.body.password, 10),
+        image: req.file.filename,
+        role_id: "1"
+      }
 
-		let userCreated = User.create(userToCreate);
+      let userCreated = await db.User.create(userToCreate)
 
-		return res.redirect('/user/login'); 
-	},
-	login: (req, res) => {
+      return res.redirect('/user/login');
+    } catch (error) {
+      console.log(error)
+    }
 
-		return res.render('login');
-	},
-	loginProcess: (req, res) => {
-		let userToLogin = User.findByField('email', req.body.email);
-		
-		if(userToLogin) {
-			let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
-			if (isOkThePassword) {
-				delete userToLogin.password;
-				req.session.userLogged = userToLogin;
+  },
+  login: (req, res) => {
 
-				if(req.body.remember) {
-					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 2})
-        
-  
-				}
+    return res.render('login');
+  },
+  loginProcess: async (req, res) => {
+    try {
 
-				return res.redirect('/user/profile');
-			} 
-			return res.render('login', {
-				errors: {
-					email: {
-						msg: 'Las credenciales son inválidas'
-					}
-				}
-			});
-		}
+      let userToLogin = await db.User.findOne({
+        where: {
+          email: req.body.email
+        }
+      })
 
-		return res.render('login', {
-			errors: {
-				email: {
-					msg: 'No se encuentra este email en nuestra base de datos'
-				}
-			}
-		});
-	},
-	profile: (req, res) => {
 
-		return res.render('userProfile', {
-			user: req.session.userLogged
-		});
-	},
 
-	logout: (req, res) => {
-		res.clearCookie('userEmail');
-		req.session.destroy();
-		return res.redirect('/');
-	},
+      if (userToLogin) {
+        let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+        if (isOkThePassword) {
+          delete userToLogin.password;
+          req.session.userLogged = userToLogin;
 
-    destroy: (req, res) => {
-        let users = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/users.json')));
-        const userDeleteId = req.params.id;
-        const usersFinal = users.filter(user => user.id != userDeleteId);
-        let usersGuardar = JSON.stringify(usersFinal, null, 2)
-        fs.writeFileSync(path.resolve(__dirname, '../data/users.json'), usersGuardar);
-        res.redirect('/user/administrar');
-    },
+          if (req.body.remember) {
+            res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 2 })
+
+
+          }
+
+          return res.redirect('/user/profile');
+        }
+        return res.render('login', {
+          errors: {
+            email: {
+              msg: 'Las credenciales son inválidas'
+            }
+          }
+        });
+      }
+
+      return res.render('login', {
+        errors: {
+          email: {
+            msg: 'No se encuentra este email en nuestra base de datos'
+          }
+        }
+      });
+    } catch (error) {
+      console.log(error)
+    }
+  },
+  profile: (req, res) => {
+
+    return res.render('userProfile', {
+      user: req.session.userLogged
+    });
+  },
+
+  logout: (req, res) => {
+    res.clearCookie('userEmail');
+    req.session.destroy();
+    return res.redirect('/');
+  },
+
+  destroy: (req, res) => {
+    //hacer el destroy con base de datos //
+
+  },
 
 }
 

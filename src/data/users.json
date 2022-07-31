@@ -204,5 +204,25 @@
   "country": "Argentina",
   "password": "$2a$10$xtbT8xV7RAKw.0apl8WmnuwaDv2bPE9RFX3QokF/lWeytvxxHWg.e",
   "avatar": "1657205125863_img.png"
+ },
+ {
+  "id": 20,
+  "name": "pan manteca",
+  "email": "panmanteca@gmail.com",
+  "address": "lacalle 1789",
+  "telefono": "2154785545",
+  "country": "Colombia",
+  "password": "$2a$10$RqoQmaJgJCdirOr6YL6Kh.fNQenTI3dznGDGNWL9RbWb2m0WmT.9a",
+  "avatar": "1659287357131_img.jpg"
+ },
+ {
+  "id": 21,
+  "name": "carlos baute",
+  "email": "carlosbaute@gmail.com",
+  "address": "lavalle 789",
+  "telefono": "123456678",
+  "country": "Argentina",
+  "password": "$2a$10$ujxKHXabR875mgQ1isPFaOcLikkhQncmez9mgeH1BkyHsdA.K9Ede",
+  "avatar": "1659287562371_img.jpg"
  }
 ]

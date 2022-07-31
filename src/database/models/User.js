@@ -6,7 +6,7 @@ module.exports = (sequelize, dataTypes) => {
       autoIncrement: true,
       primaryKey: true
     },
-    name_and_surename: {
+    name_and_surname: {
       type: dataTypes.STRING(100),
       allowNull: false
     },
@@ -32,10 +32,6 @@ module.exports = (sequelize, dataTypes) => {
     },
     image: {
       type: dataTypes.STRING(100),
-      allowNull: false
-    },
-    admin: {
-      type: dataTypes.TINYINT(1),
       allowNull: false
     },
   };

@@ -64,3 +64,9 @@
         transition: 1000ms;
     }
 }
+
+.user-avatar {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}

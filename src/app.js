@@ -8,8 +8,6 @@ const adminRouter = require('./routes/admin');
 const session = require('express-session');
 const usersRoutes = require('./routes/userRoutes');
 const cookies = require('cookie-parser');
-const db = require('./data/models/index')
-
 // ************ express() ************
 const app = express();
 
@@ -20,15 +18,15 @@ app.set("view engine", "ejs");
 app.set('views', path.resolve(__dirname, './views'));
 
 // ************ Middlewares ************
-app.use(express.urlencoded({ extended: false}));
+app.use(express.urlencoded({ extended: false }));
 app.use(session({
-	secret: "Shhh, It's a secret",
-	resave: false,
-	saveUninitialized: false,
+  secret: "Shhh, It's a secret",
+  resave: false,
+  saveUninitialized: false,
 }));
 
 app.use(express.static('public'));
-app.use ( methodOverride ('_method') );
+app.use(methodOverride('_method'));
 app.use(bp.json())
 /* app.use(bp.urlencoded({ extended: true })) */
 app.use(express.urlencoded({ extended: false }));
@@ -42,8 +40,8 @@ app.use(adminRouter);
 const userRoutes = require('./routes/userRoutes');
 app.use('/user', userRoutes);
 
-app.listen(3002, () => { console.log('Servidor arriba en el puerto 3002 🤓👌');})
-app.use((req, res, next )=> {res.status (404).render ('not-found')});
+app.listen(3002, () => { console.log('Servidor arriba en el puerto 3002 🤓👌'); })
+app.use((req, res, next) => { res.status(404).render('not-found') });
 
 
 
