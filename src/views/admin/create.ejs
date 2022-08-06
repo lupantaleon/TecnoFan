@@ -1,5 +1,5 @@
 <%- include('../partials/head.ejs') %> 
-<link rel="stylesheet" href="../css/productCreate.css">    
+<link rel="stylesheet" href="/css/productCreate.css">    
 </head>
 <body>
     <%- include('../partials/header.ejs') %>
@@ -12,22 +12,21 @@
 
         <section class="bg-home pt-4">
             <div class="admin-product-form-container">
-                <form action="/administrar/create" method="POST" enctype="multipart/form-data" >
+                <form action="/administrar/product/create" method="POST" enctype="multipart/form-data" >
                     <div class="form-fields">
                         <div class="form-column">
                             <div class="form-group">
                                 <input type="text" class="box" name="name" placeholder="Nombre" required="required" value="">
                             </div>	
                             <div class="form-group">
+                                <input type="number" class="box" name="stock" placeholder="stock" required="required" value="1">
+                            </div>	
+                            <div class="form-group">
                                 <select class="box" id="category" name="category" required="required" value="">
                                     <option selected disabled value>Seleccionar Categoría</option>
-                                    <option value="auriculares">Auriculares</option>
-                                    <option value="monitores">Monitores</option>
-                                    <option value="mouses">Mouses</option>
-                                    <option value="PCs">PCs</option>
-                                    <option value="audifonos">Audífonos</option>
-                                    <option value="tablets">Tablets</option>
-                                    <option value="smartwatches">Smartwatches</option>
+                                    <% categories.forEach(category => { %>
+                                    <option value="<%= category.id %> "><%= category.category_name %> </option>
+                                    <% }) %> 
                                 </select>
                             </div>
                             <div class="form-group">

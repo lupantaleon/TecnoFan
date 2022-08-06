@@ -1,60 +1,69 @@
 <!doctype html>
 <link rel="stylesheet" href="/css/productdetail.css">
 <html lang="en">
-  <%- include('../partials/head.ejs') %> 
+<%- include('../partials/head.ejs') %>
+
   <body>
     <%- include('../partials/header') %>
 
-  <!-- -----------------------------------------------PRODUCTO---------------------- -->
-  <div class="product-detail">
-    <div class="product-photos">
-      <div class="primary-photo">
+      <!-- -----------------------------------------------PRODUCTO---------------------- -->
+      <div class="product-detail">
+        <div class="product-photos">
+          <div class="primary-photo">
+            <% product.product_images?.forEach(image =>{ %> 
+            <img src="/img/<%= image.name %>" alt="Auriculares">
+            <% }) %> 
+          </div>
+       <!--    <div class="secondary-photos">
+            <div class="thumbnail">
 
-        <img src="/img/<%= miProduct.image%>" alt="Auriculares">
-      </div>
-        <div class="secondary-photos">
-          <div class="thumbnail">
-
-          <a><img src="/img/<%= miProduct.image%>" alt="Auriculares"></a>
+              <a><img src="/img/<%= //product.image%>" alt="Auriculares"></a>
+            </div>
+            <div class="thumbnail">
+              <a> <img src="/img/<%= //product.image%>" alt="Auriculares"> </a>
+            </div>
+            <div class="thumbnail">
+              <a> <img src="/img/<%= //product.image%>" alt="Auriculares"> </a>
+            </div>
+            <div class="thumbnail">
+              <a> <img src="/img/<%= //product.image%>" alt="Auriculares"> </a>
+            </div>
+          </div> -->
         </div>
-        <div class="thumbnail">
-          <a> <img src="/img/<%= miProduct.image%>" alt="Auriculares"> </a>
-        </div>
-        <div class="thumbnail">
-          <a> <img src="/img/<%= miProduct.image%>" alt="Auriculares"> </a>
-        </div>
-        <div class="thumbnail">
-          <a> <img src="/img/<%= miProduct.image%>" alt="Auriculares"> </a>
-        </div>
-      </div>
-    </div>
 
-    <div class="product-info">
-      <div class="title">
-        <p style="font-size: 35px"><%= miProduct.name%></p>
-      </div>
-      <div class="description">
-        <p class="price">$ <%= miProduct.price %></p>
-        <p>12 cuotas sin interés de $ <%= (miProduct.price/12).toFixed(2) %></p>
-        <p class="discount">Descuento: <%= miProduct.discount%>%</p>
-        <p class="">Marca: <%= miProduct.brand %></p>
-        <br>
-        <p class="parrafo"><%= miProduct.description %></p>
-      </div>
-      <br>
-      <br>
-      <div class="button-row">
-        <a class="cart-link" href="/administrar">
-          <button class="boton-personalizado">
-            Volver al listado
-          </button>
-        </a>
-      </div>
-    </div>
+        <div class="product-info">
+          <div class="title">
+            <p style="font-size: 35px">
+              <%= product.name%>
+            </p>
+          </div>
+          <div class="description">
+            <p class="price">$ <%= product.price %>
+            </p>
+            <p>12 cuotas sin interés de $ <%= (product.price/12).toFixed(2) %>
+            </p>
+            <p class="discount">Descuento: <%= product.discount%>%</p>
+            <p class="">Marca: <%= product.brand %>
+            </p>
+            <br>
+            <p class="parrafo">
+              <%= product.description %>
+            </p>
+          </div>
+          <br>
+          <br>
+          <div class="button-row">
+            <a class="cart-link" href="/administrar">
+              <button class="boton-personalizado">
+                Volver al listado
+              </button>
+            </a>
+          </div>
+        </div>
 
-  </div>
+      </div>
 
-  <%- include('../partials/footer') %>
-</body>
+      <%- include('../partials/footer') %>
+  </body>
 
 </html>

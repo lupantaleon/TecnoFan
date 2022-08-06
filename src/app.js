@@ -36,9 +36,10 @@ app.use(userLoggedMiddleware);
 
 // ************ Route System require and use() ************
 app.use("/", mainRouter);
-app.use(adminRouter);
+app.use("/administrar", adminRouter);
 const userRoutes = require('./routes/userRoutes');
 app.use('/user', userRoutes);
+
 
 app.listen(3002, () => { console.log('Servidor arriba en el puerto 3002 🤓👌'); })
 app.use((req, res, next) => { res.status(404).render('not-found') });

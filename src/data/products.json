@@ -118,5 +118,15 @@
     "category": "ofertas",
     "description": "te permiten sumergirte al instante en tu universo sonoro gracias a que se conectan con tu dispositivo en cuanto los sacas del estuche. Dual Connect te permite usar ambos auriculares o solo uno, como prefieras. El increíble sonido de tus artistas favoritos resulta aún más espectacular con JBL Pure Bass. Con hasta 32 horas de batería y un ajuste muy cómodo, puedes disfrutar de tu música día y noche. Elige entre los preciosos colores disponibles para disfrutar de unos auriculares True Wireless que se adaptan a la perfección a tu estilo.",
     "image": "ea2.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Esteban Vouk",
+    "price": "2000",
+    "discount": "10",
+    "category": "mouses",
+    "description": "hoola",
+    "brand": "otro",
+    "image": "products-1659370248498.png"
   }
 ]

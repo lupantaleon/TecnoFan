@@ -4,29 +4,12 @@ const path = require('path');
 const multer = require('multer');
 const { get } = require('express/lib/response');
 
+const productController = require(path.resolve(__dirname,'../controllers/productController'));
 
-const controllersAdmin = require(path.resolve(__dirname,'../controllers/controllersAdmin'));
+const productRouter = require('./product');
 
-//Como podemos indicar para subir el archivo nombre y donde guardarlo
-
-const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-      cb(null, path.resolve(__dirname, '../../public/img'));
-    },
-    filename: function (req, file, cb) {
-      cb(null, 'products-'+Date.now()+path.extname(file.originalname))
-    }
-  })
-
-  const upload = multer({ storage })
-
-  router.get('/administrar',controllersAdmin.index);
-  router.get('/administrar/create',controllersAdmin.create); 
-  router.post('/administrar/create', upload.single('image') ,controllersAdmin.save); 
-  router.get('/administrar/detail/:id', controllersAdmin.show);
-  router.get('/administrar/edit/:id', controllersAdmin.edit);
-  router.put('/administrar/edit/:id',upload.single('image') , controllersAdmin.update);
-  router.get('/administrar/delete/:id', controllersAdmin.destroy);
+router.get('/',productController.index);
+router.use('/product',productRouter);
 
 
 module.exports = router;
