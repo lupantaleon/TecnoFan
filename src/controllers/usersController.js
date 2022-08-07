@@ -117,17 +117,22 @@ const controller = {
       user: req.session.userLogged
     });
   },
+  destroy: (req, res) => {
+    db.user.destroy({
+      where: {
+        id: req.params.id
+      }
+    })
+    res.redirect("/administrar");
 
+  },
   logout: (req, res) => {
     res.clearCookie('userEmail');
     req.session.destroy();
     return res.redirect('/');
   },
 
-  destroy: (req, res) => {
-    //hacer el destroy con base de datos //
 
-  },
 
 }
 
