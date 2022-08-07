@@ -5,13 +5,12 @@ async function userLoggedMiddleware(req, res, next) {
 
   let emailInCookie = req.cookies.userEmail;
 
-
-
   if (emailInCookie) {
     let userFromCookie = await db.User.findOne({
       where: {
         email: emailInCookie
-      }
+      },
+      include: 'role'
     })
     req.session.userLogged = userFromCookie;
   }
@@ -19,6 +18,7 @@ async function userLoggedMiddleware(req, res, next) {
   if (req.session.userLogged) {
     res.locals.isLogged = true;
     res.locals.userLogged = req.session.userLogged;
+    res.locals.isAdmin = res.locals.userLogged.role.role_name == 'admin';
   }
 
   next();

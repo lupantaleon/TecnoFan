@@ -1,6 +1,6 @@
 /* const { validationResult } = require('express-validator');
 
-const usersFilePath = path.join(__dirname, '../data/users.json');
+const usersFilePath = path.join(__dirname, '../data/users/.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8')); */
 /* const User = require('../src/models/User') */
 const fs = require('fs');
@@ -56,7 +56,7 @@ const controller = {
 
       let userCreated = await db.User.create(userToCreate)
 
-      return res.redirect('/user/login');
+      return res.redirect('/users/login');
     } catch (error) {
       console.log(error)
     }
@@ -89,7 +89,7 @@ const controller = {
 
           }
 
-          return res.redirect('/user/profile');
+          return res.redirect('/users/profile');
         }
         return res.render('login', {
           errors: {
@@ -117,14 +117,13 @@ const controller = {
       user: req.session.userLogged
     });
   },
-  destroy: (req, res) => {
-    db.user.destroy({
+  destroy: async (req, res) => {
+    await db.User.destroy({
       where: {
         id: req.params.id
       }
-    })
-    res.redirect("/administrar");
-
+    });
+    return res.redirect('/users/administrar');
   },
   logout: (req, res) => {
     res.clearCookie('userEmail');

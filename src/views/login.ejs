@@ -1,51 +1,51 @@
 <%- include('./partials/head') %>
-    <link rel="stylesheet" href="/css/login.css">
-    </head>
+  <link rel="stylesheet" href="/css/login.css">
+  </head>
 
-    <body>
-        <div id="fb-root"></div>
-        <script async defer crossorigin="anonymous"
-            src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v13.0" nonce="LVG3xZ5p"></script>
+  <body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v13.0"
+      nonce="LVG3xZ5p"></script>
 
-        <%- include('./partials/header') %>
+    <%- include('./partials/header') %>
 
-            <div class="divclass">
+      <div class="divclass">
 
-                <form method="POST" action="/user/login">
+        <form method="POST" action="/users/login">
 
 
-                    <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with"
-                        data-layout="default" data-auto-logout-link="false" data-use-continue-as="false"></div>
+          <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with"
+            data-layout="default" data-auto-logout-link="false" data-use-continue-as="false"></div>
 
-                    <div class="container">
-                        <label for="uname"><b>Email</b></label>
-                        <input type="text" placeholder="Nombre de usuario" name="email" id = 'email'>
-                        <% if (locals.errors && errors.email) { %>
-                            <div class="text-danger">
-                                <%= errors.email.msg %>
-                            </div>
-                        <% } %>
-                        <label for="password"><b>Contraseña</b></label>
-                        <input type="password" placeholder="Contraseña" name="password">
+          <div class="container">
+            <label for="uname"><b>Email</b></label>
+            <input type="text" placeholder="Nombre de usuario" name="email" id='email'>
+            <% if (locals.errors && errors.email) { %>
+              <div class="text-danger">
+                <%= errors.email.msg %>
+              </div>
+              <% } %>
+                <label for="password"><b>Contraseña</b></label>
+                <input type="password" placeholder="Contraseña" name="password">
 
-                        <button type="submit" >Ingresar</button>
-                        <label>
-                            <input type="checkbox" checked="checked" name="remember"> Recuerdame
-                        </label>
-                    </div>
+                <button type="submit">Ingresar</button>
+                <label>
+                  <input type="checkbox" checked="checked" name="remember"> Recuerdame
+                </label>
+          </div>
 
-                    <div class="container" style="background-color:#f1f1f1">
-                        <button type="button" class="cancelbtn">Cancelar</button>
-                        <span class="psw"><a href="#">Olvide mi password</a></span>
-                    </div>
-                </form>
+          <div class="container" style="background-color:#f1f1f1">
+            <button type="button" class="cancelbtn">Cancelar</button>
+            <span class="psw"><a href="#">Olvide mi password</a></span>
+          </div>
+        </form>
 
-            </div>
+      </div>
 
-            <!-- Button to open the modal login form -->
-            <!-- <button onclick="document.getElementById('id01').style.display='block'">Login</button> -->
+      <!-- Button to open the modal login form -->
+      <!-- <button onclick="document.getElementById('id01').style.display='block'">Login</button> -->
 
-    </body>
-    <%- include('./partials/footer') %>
+  </body>
+  <%- include('./partials/footer') %>
 
-        </html>
+    </html>

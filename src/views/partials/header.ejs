@@ -32,23 +32,25 @@
       <!-- <button> -->
       <li><a href="#">Ayuda</a></li>
       <!-- </button> -->
-      <li><a href="/administrar">Administrar</a></li>
-      <li><a href="/user/administrar">Users</a></li>
+      <% if (locals.isAdmin) { %>
+        <li><a href="/administrar">Administrar</a></li>
+        <li><a href="/users/administrar">Users</a></li>
+        <% } %>
     </ul>
 
     <ul class="right-navbar">
 
       <li><a href="/productCart">Carrito <i class="fa fa-shopping-basket"></i></a></li>
-      <% if (locals.isLogged) { %>
+      <% if (locals.userLogged) { %>
 
-        <li><a href="/user/profile"><img src="/img/avatars/<%= locals.userLogged.image %>" width="25"
+        <li><a href="/users/profile"><img src="/img/avatars/<%= locals.userLogged.image %>" width="25"
               style="border-radius: 30%;"> Mi Perfil</a></li>
 
-        <li><a href="/user/logout">Cerrar Sesión<i class="fas fa-sign-in-alt	"></i></a></li>
+        <li><a href="/users/logout">Cerrar Sesión<i class="fas fa-sign-in-alt	"></i></a></li>
         <% } else { %>
-          <li><a href="/user/login">Login <i class="fas fa-sign-in-alt	"></i></a></li>
+          <li><a href="/users/login">Login <i class="fas fa-sign-in-alt	"></i></a></li>
 
-          <li><a href="/user/register">Registro <i class="far fa-credit-card"></i></a></li>
+          <li><a href="/users/register">Registro <i class="far fa-credit-card"></i></a></li>
           <% } %>
 
     </ul>
