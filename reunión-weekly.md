@@ -28,3 +28,9 @@ Reunion para modificacion de tareas
 sabado 2/julio:
 Reunion Final Sprint 5 . 
 
+7/ julio - -División del sprint 6 
+13 / julio - reunión en conjunto para hacer la base de datos 
+22 / julio -- finalizacion de la base de datos
+1/8 -- division del crud
+2/8 -- solucion de conflicto con el crud
+5/8 -- reunión final para pulir contenidos sprint 6 

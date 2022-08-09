@@ -48,5 +48,18 @@ Stop Doing: Decidimos dejar de juntarnos tan pocas veces y hacerlo una vez por s
 
 
 
+Restrospectiva de estrella de mar:SPRINT 6
 
+Start Doing:Innovador - agregamos más css a los elementos de nuestra pagina y agregamos las imagenes de los productos. 
+
+
+
+More of: Con respecto al sprint anterior hemos elegido dividir tareas de una manera distinta, hicimos más cosas en grupo mientras que uno compartia pantalla 
+
+Keep Doing :  El valor principal del grupo es el verdadero trabajo en equipo y la división de tareas. Creo que debemos seguir dejando esto como nuestra principal fortaleza. 
+
+Less of: Esperamos poder entender mejor los temas para así no cometer tantos errores 
+
+
+Stop Doing: Exijimos una reunion cada cierta cantidad de tiempo, en la que pedimos que nadie falte. 
 
