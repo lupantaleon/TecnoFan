@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const path = require('path');
 const multer = require('multer');
-
+const authMiddleware = require('../middlewares/authMiddleware');
 
 
 
@@ -22,16 +22,16 @@ const storage = multer.diskStorage({
   const upload = multer({ storage })
 
   
-  router.get('/create',productController.create);
+  router.get('/create', authMiddleware ,productController.create);
   router.post('/create', upload.single('image') ,productController.save); 
   // lectura
   /* router.get('//deail', controllersAdmin.detail) */
 
-  router.get('/detail/:id', productController.detail);
-  router.get('/edit/:id', productController.edit);
+  router.get('/detail/:id', authMiddleware, productController.detail);
+  router.get('/edit/:id', authMiddleware ,productController.edit);
   /* router.put('/update/:id', productController.update); */
   router.put('/edit/:id',upload.single('image') , productController.update);
-  router.delete('/delete/:id', productController.destroy);  
+  router.delete('/delete/:id', authMiddleware ,productController.destroy);  
   
 
 
