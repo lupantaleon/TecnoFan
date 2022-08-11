@@ -33,7 +33,7 @@ router.delete('/:id', usersController.destroy);
 // Logout
 router.get('/logout/', usersController.logout);
 
-router.get('/administrar', usersController.index);
+router.get('/administrar', authMiddleware, usersController.index);
 
 /*   router.get('/users/',usersController.index);
   router.get('/users/create',usersController.create); 
