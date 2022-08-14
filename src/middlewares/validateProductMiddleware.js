@@ -32,15 +32,14 @@ const validations = [
   body('image')
     .custom((value, { req }) => {
       let file = req.file;
-      let acceptedExtensions = ['.jpg', '.png', '.gif', 'jpeg'];
+		  let acceptedExtensions = ['.jpg', '.png', '.gif', '.jpeg'];
 
-
-      if (!file) {
-        throw new error('Tienes que subir una imagen')
+    if (!file) {
+    throw new Error('Tienes que subir una imagen');
       } else {
         let fileExtension = path.extname(file.originalname);
         if (!acceptedExtensions.includes(fileExtension)) {
-          throw new error(`Las extensiones de archivos permitidos son ${acceptedExtensions.join(',')}`)
+          throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`);
         }
       }
       return true;

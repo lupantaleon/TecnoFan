@@ -18,12 +18,14 @@ module.exports = {
   save: async (req, res) => {
 
     try {
+      const categories = await db.Category.findAll()
 
       const resultValidation = validationResult(req);
       if (resultValidation.errors.length > 0) {
         return res.render('admin/create', {
           errors: resultValidation.mapped(),
-          // oldData: req.body
+          categories,
+          oldData: req.body
         });
       }
 
