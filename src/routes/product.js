@@ -3,6 +3,7 @@ const router = express.Router();
 const path = require('path');
 const multer = require('multer');
 const authMiddleware = require('../middlewares/authMiddleware');
+const validateProdMiddleware = require('../middlewares/validateProductMiddleware');
 
 
 
@@ -22,8 +23,8 @@ const storage = multer.diskStorage({
   const upload = multer({ storage })
 
   
-  router.get('/create', authMiddleware ,productController.create);
-  router.post('/create', upload.single('image') ,productController.save); 
+  router.get('/create', authMiddleware, productController.create);
+  router.post('/create', upload.single('image'), validateProdMiddleware, productController.save); 
   // lectura
   /* router.get('//deail', controllersAdmin.detail) */
 

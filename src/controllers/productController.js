@@ -1,6 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 const db = require("../database/models");
+const { validationResult } = require('express-validator');
 
 
 const Products = db.Product
@@ -15,22 +16,38 @@ module.exports = {
       })
   },
   save: async (req, res) => {
-    const productCreated = await db.Product.create({
-      name: req.body.name,
-      brand: req.body.brand,
-      price: req.body.price,
-      discount: req.body.discount,
-      description: req.body.description,
-      stock: req.body.stock,
-      category_id: req.body.category,
-    });
-    const images = [{
-      name: req.file.filename,
-      product_id: productCreated.id
-    }]
-    await db.Product_image.bulkCreate(images)
-    res.redirect('/administrar')
+
+    try {
+
+      const resultValidation = validationResult(req);
+      if (resultValidation.errors.length > 0) {
+        return res.render('admin/create', {
+          errors: resultValidation.mapped(),
+          // oldData: req.body
+        });
+      }
+
+      const productCreated = await db.Product.create({
+        name: req.body.name,
+        brand: req.body.brand,
+        price: req.body.price,
+        discount: req.body.discount,
+        description: req.body.description,
+        stock: req.body.stock,
+        category_id: req.body.category,
+      });
+      const images = [{
+        name: req.file.filename,
+        product_id: productCreated.id
+      }]
+      await db.Product_image.bulkCreate(images)
+      res.redirect('/administrar')
+
+    } catch (error) {
+      console.log(error)
+    }
   },
+
   index: async (req, res) => {
     let products = await db.Product.findAll()
     res.render('admin/administrar', {

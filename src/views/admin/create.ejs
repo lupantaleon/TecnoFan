@@ -1,5 +1,5 @@
-<%- include('../partials/head.ejs') %> 
-<link rel="stylesheet" href="/css/productCreate.css">    
+<%- include('../partials/head.ejs') %>
+<link rel="stylesheet" href="/css/productCreate.css">
 </head>
 <body>
     <%- include('../partials/header.ejs') %>
@@ -16,26 +16,55 @@
                     <div class="form-fields">
                         <div class="form-column">
                             <div class="form-group">
-                                <input type="text" class="box" name="name" placeholder="Nombre" required="required" value="">
-                            </div>	
+                                <input type="text" class="box" name="name" placeholder="Nombre" value="">
+                                <% if (locals.errors && errors.name ) { %>
+                                    <div class="text-danger">
+                                      <%= errors.name.msg %>
+                                    </div>
+                                    <% } %>
+                            </div>
                             <div class="form-group">
-                                <input type="number" class="box" name="stock" placeholder="stock" required="required" value="1">
-                            </div>	
+                                <input type="number" class="box" name="stock" placeholder="stock" value="1">
+                            </div>
                             <div class="form-group">
-                                <select class="box" id="category" name="category" required="required" value="">
+                                <!-- <select class="box" id="category" name="category" value="">
+                                    <option selected disabled value="">Seleccioná una categoría</option>
+                                    % let categories=['Smartwachs', 'Mouses' ,'Smartphones', 'Auriculares' , 'Tablets' , 'PCs' , 'Monitores' , 'Audífonos']; %>
+                                      % for (const category of categories) { %>
+                                        % let categoryId = categories.indexOf(category) + 1 %>
+                                        <option value="%= categoryId%>">
+                                          %= category %>
+                                        </option>
+                                        % } %> -->
+                                <select class="box" id="category" name="category" value="">
                                     <option selected disabled value>Seleccionar Categoría</option>
                                     <% categories.forEach(category => { %>
                                     <option value="<%= category.id %> "><%= category.category_name %> </option>
-                                    <% }) %> 
+                                    <% }) %>
                                 </select>
+                                <% if (locals.errors && errors.category ) { %>
+                                    <div class="text-danger">
+                                      <%= errors.category.msg %>
+                                    </div>
+                                    <% } %>
                             </div>
                             <div class="form-group">
-                                <input type="number" class="box" name="price" placeholder="Precio" required="required" value="">
+                                <input type="number" class="box" name="price" placeholder="Precio" value="">
+                                <% if (locals.errors && errors.price ) { %>
+                                    <div class="text-danger">
+                                      <%= errors.price.msg %>
+                                    </div>
+                                    <% } %>
                             </div>
                         </div>
                         <div class="form-column">
                             <div class="form-group">
-                                <input type="number" class="box" name="discount" placeholder="0" required="required" value="" min="0" max="50" step="5">
+                                <input type="number" class="box" name="discount" placeholder="0" value="" min="0" max="50" step="5">
+                                <% if (locals.errors && errors.discount ) { %>
+                                    <div class="text-danger">
+                                      <%= errors.discount.msg %>
+                                    </div>
+                                    <% } %>
                             </div>
                             <!-- <div class="form-group">
                                 <select  name="discount" class="box" required="required">
@@ -46,24 +75,39 @@
                                 </select>
                             </div> -->
                             <div class="">
-                                <input type="text" class="box" name="brand" placeholder="Marca" required="required" value="">
+                                <input type="text" class="box" name="brand" placeholder="Marca" value="">
+                                <% if (locals.errors && errors.brand ) { %>
+                                    <div class="text-danger">
+                                      <%= errors.brand.msg %>
+                                    </div>
+                                    <% } %>
                             </div>
                             <div >
-                                <input type="file" name="image" accept="image/png, image/jpeg, image/jpg" class="box" required="required">
+                                <input type="file" name="image" accept="image/png, image/jpeg, image/jpg" class="box">
+                                <% if (locals.errors && errors.image ) { %>
+                                    <div class="text-danger">
+                                      <%= errors.image.msg %>
+                                    </div>
+                                    <% } %>
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
-                        <textarea type="text" class="box" name="description" placeholder="Descripción" required="required" value=""></textarea>
+                        <textarea type="text" class="box" name="description" placeholder="Descripción" value=""></textarea>
+                        <% if (locals.errors && errors.description) { %>
+                            <div class="text-danger">
+                              <%= errors.description.msg %>
+                            </div>
+                            <% } %>
                     </div>
                     <div class="btn">
                         <button type="submit" class="btn-save">Guardar</button>
                         <a href="/administrar">
                         <input type="button"  class="btn-back" value="Volver"></a>
                     </div>
-                                
+
                 </form>
-            </div>                        
+            </div>
         </section>
     </main>
 </body>

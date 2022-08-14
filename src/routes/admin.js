@@ -4,6 +4,7 @@ const path = require('path');
 const multer = require('multer');
 const { get } = require('express/lib/response');
 const authMiddleware = require('../middlewares/authMiddleware');
+const validateProdMiddleware = require('../middlewares/validateProductMiddleware');
 
 const productController = require(path.resolve(__dirname,'../controllers/productController'));
 

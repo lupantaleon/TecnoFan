@@ -6,7 +6,7 @@ const mainRouter = require("./routes/mainRouter");
 const methodOverride = require('method-override');
 const adminRouter = require('./routes/admin');
 const session = require('express-session');
-const usersRoutes = require('./routes/userRoutes');
+const userRoutes = require('./routes/userRoutes');
 const cookies = require('cookie-parser');
 // ************ express() ************
 const app = express();
@@ -38,7 +38,6 @@ app.use(userLoggedMiddleware);
 // ************ Route System require and use() ************
 app.use("/", mainRouter);
 app.use("/administrar", adminRouter);
-const userRoutes = require('./routes/userRoutes');
 app.use('/users/', userRoutes);
 
 app.listen(3002, () => { console.log('Servidor arriba en el puerto 3002 🤓👌'); })
