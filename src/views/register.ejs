@@ -8,10 +8,11 @@
 
       <!-- Formulario -->
       <div class="contenedor-general">
-        <form action="/users/register" method="post" class="create-form" enctype="multipart/form-data">
+        <form action="/users/register" method="post" class="create-form" enctype="multipart/form-data" id="form">
           <div class="control-formulario">
-            <input type="text" name="name_and_surname" placeholder="Nombre y Apellido" class="control"
+            <input type="text" name="name_and_surname" placeholder="Nombre y Apellido" class="control" id="name"
               value="<%= locals.oldData ? oldData.name : null%>"><i class="fa-solid fa-user"></i>
+            <div id="nameError" class="alert-warning"></div>
             <% if (locals.errors && errors.name ) { %>
               <div class="text-danger">
                 <%= errors.name_and_surname.msg %>
@@ -23,8 +24,9 @@
             <input type="text" name="user" placeholder="Nombre de usuario" class="control"><i class="fa-solid fa-user"></i>
         </div> -->
           <div class="control-formulario ">
-            <input type="email" name="email" placeholder="E-mail" class="control"
+            <input type="email" name="email" placeholder="E-mail" class="control" id="email"
               value="<%= locals.oldData ? oldData.email : null%>"><i class="fa-solid fa-envelope"></i>
+            <div id="emailError" class="alert-warning"></div>
             <% if (locals.errors && errors.email ) { %>
               <div class="text-danger">
                 <%= errors.email.msg %>
@@ -43,8 +45,9 @@
         </div> -->
 
           <div class="control-formulario">
-            <input type="text" name="address" placeholder="Domicilio" class="control"
+            <input type="text" name="address" placeholder="Domicilio" class="control" id="address"
               value="<%= locals.oldData ? oldData.addres : null%>"> <i class="fa-solid fa-map-location-dot"></i>
+            <div id="addressError" class="alert-warning"></div>
             <% if (locals.errors && errors.address ) { %>
               <div class="text-danger">
                 <%= errors.address.msg %>
@@ -55,6 +58,7 @@
           <div class="control-formulario">
             <input type="tel" name="phone" placeholder="Teléfono" id="Teléfono" class="control"
               value="<%= locals.oldData ? oldData.telefono : null%>"><i class="fa-solid fa-mobile-screen"></i>
+            <div id="TeléfonoError" class="alert-warning"></div>
             <% if (locals.errors && errors.telefono ) { %>
               <div class="text-danger">
                 <%= errors.telefono.msg %>
@@ -64,7 +68,7 @@
           <div></div>
       </div class="contenedor-final">
       <div class="control-formulario">
-        <select name="country" class="control-pais" value="<%= locals.oldData ? oldData.country : null%>">
+        <select name="country" class="control-pais" id="country" value="<%= locals.oldData ? oldData.country : null%>">
           <option value="">Elegí un país</option>
           <% let countries=['Argentina', 'Bolivia' ,'Brasil', 'Colombia' , 'Chile' , 'Ecuador' , 'Paraguay' , 'Perú'
             , 'Uruguay' ,'Venezuela']; %>
@@ -74,6 +78,7 @@
               </option>
               <% } %>
         </select>
+        <div id="countryError" class="alert-warning"></div>
         <% if (locals.errors && errors.country ) { %>
           <div class="text-danger">
             <%= errors.country.msg %>
@@ -119,8 +124,9 @@
         </div> -->
 
         <h4>Elegí tu foto de usuario :</h4>
-        <input type="file" name="avatar"
+        <input type="file" name="avatar" id="image"
           class="form-control <%= locals.errors && errors.avatar ? 'is-invalid' : null %>">
+        <div id="imageError" class="alert-warning"></div>
         <% if (locals.errors && errors.avatar) { %>
           <div class="text-danger">
             <%= errors.avatar.msg %>
@@ -134,9 +140,9 @@
 
             <br>
             <br>
-            <input type="password" name="password" placeholder="Elegí tu contraseña" class="password"
+            <input type="password" name="password" id="password" placeholder="Elegí tu contraseña" class="password"
               value="<%= locals.oldData ? oldData.password : null%>">
-
+            <div id="passwordError" class="alert-warning"></div>
             <% if (locals.errors && errors.password ) { %>
               <div class="text-danger">
                 <%= errors.password.msg %>
@@ -152,6 +158,7 @@
       </div>
       </div>
       <%- include('./partials/footer') %>
+        <script src="/js/register.js"></script>
         <!-- </div> --
 
 </body>
