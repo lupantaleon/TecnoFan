@@ -56,9 +56,9 @@
           </div>
 
           <div class="control-formulario">
-            <input type="tel" name="phone" placeholder="Teléfono" id="Teléfono" class="control"
+            <input type="tel" name="phone" placeholder="Teléfono" id="phone" class="control"
               value="<%= locals.oldData ? oldData.telefono : null%>"><i class="fa-solid fa-mobile-screen"></i>
-            <div id="TeléfonoError" class="alert-warning"></div>
+            <div id="phoneError" class="alert-warning"></div>
             <% if (locals.errors && errors.telefono ) { %>
               <div class="text-danger">
                 <%= errors.telefono.msg %>
