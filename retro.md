@@ -48,7 +48,7 @@ Stop Doing: Decidimos dejar de juntarnos tan pocas veces y hacerlo una vez por s
 
 
 
-Restrospectiva de estrella de mar:SPRINT 6
+Restrospectiva de estrella de mar: SPRINT 6
 
 Start Doing:Innovador - agregamos más css a los elementos de nuestra pagina y agregamos las imagenes de los productos. 
 
@@ -62,4 +62,17 @@ Less of: Esperamos poder entender mejor los temas para así no cometer tantos er
 
 
 Stop Doing: Exijimos una reunion cada cierta cantidad de tiempo, en la que pedimos que nadie falte. 
+
+Restrospectiva de estrella de mar: SPRINT  7 
+
+Start Doing:Innovador - dividimos los temas de manera mucho más rapida de lo común, eso hizo más rapido el proceso 
+
+More of: Hemos tenido un crecimiento real como grupo debido a que conocimos nuestras debilidades y nos obligamos a modificarlo. Esto lo logramos juntandonos a debatir cómo solucionar los problemas de comunicación.
+
+Keep Doing :Tenemos como fortaleza la comunicación y el buen trato. 
+
+Less of: Dejar las cosas para ultimo momento. 
+
+
+Stop Doing:  Nos juntamos a dividir las tareas y soltamos al azar los roles, evitando enfrentamientos. 
 
