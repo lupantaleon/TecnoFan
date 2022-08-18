@@ -67,7 +67,7 @@ window.onload = function () {
         if (address.value == '') {
             errors.push('errorAddress');
             const liAddress = document.createElement('li');
-            liAddress.innerHTML = 'El campo Domicilio es requerido';
+            liAddress.innerHTML = 'El campo domicilio es requerido';
             addressWarning.appendChild(liAddress);
         }
         if (phone.value == '') {

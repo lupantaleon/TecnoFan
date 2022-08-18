@@ -10,7 +10,7 @@ const validations = [
     .withMessage('El nombre no puede tener menos de 5 caracteres'),
   body('stock')
     .notEmpty()
-    .withMessage('Debes asignar una cantidad'),
+    .withMessage('Debes asignar una cantidad al stock'),
   body('category')
     .notEmpty()
     .withMessage('Debes elegir una categoría'),
@@ -35,7 +35,7 @@ const validations = [
 		  let acceptedExtensions = ['.jpg', '.png', '.gif', '.jpeg'];
 
     if (!file) {
-    throw new Error('Tienes que subir una imagen');
+    throw new Error('Debes subir una imagen');
       } else {
         let fileExtension = path.extname(file.originalname);
         if (!acceptedExtensions.includes(fileExtension)) {

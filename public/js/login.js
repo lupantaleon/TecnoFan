@@ -28,6 +28,7 @@ window.onload = function () {
                 emailWarning.appendChild(liEmailType)
             };
         }
+
         if (password.value == '') {
             errors.push('errorPassword');
             const liPassword = document.createElement('li');
