@@ -13,7 +13,7 @@
             <input type="text" name="name_and_surname" placeholder="Nombre y Apellido" class="control" id="name"
               value="<%= locals.oldData ? oldData.name : null%>"><i class="fa-solid fa-user"></i>
             <div id="nameError" class="alert-warning"></div>
-            <% if (locals.errors && errors.name ) { %>
+            <% if (locals.errors && errors.name_and_surname ) { %>
               <div class="text-danger">
                 <%= errors.name_and_surname.msg %>
               </div>
@@ -34,16 +34,6 @@
               <% } %>
           </div>
 
-
-          <!-- <div class="control-formulario"> -->
-          <!--    <div class="fecha-de-nacimiento">    
-        <label for="birth_date" aria-placeholder="Fecha de nacimiento"><h4>Fecha de nacimiento :</h4> </label>
-        </div> -->
-
-          <!-- <div class="control-formulario">
-        <input type="date" name="birth_date" id="birth_date" class="control" placeholder= "Fecha de nacimiento" >
-        </div> -->
-
           <div class="control-formulario">
             <input type="text" name="address" placeholder="Domicilio" class="control" id="address"
               value="<%= locals.oldData ? oldData.addres : null%>"> <i class="fa-solid fa-map-location-dot"></i>
@@ -56,12 +46,12 @@
           </div>
 
           <div class="control-formulario">
-            <input type="tel" name="phone" placeholder="Teléfono" id="Teléfono" class="control"
-              value="<%= locals.oldData ? oldData.telefono : null%>"><i class="fa-solid fa-mobile-screen"></i>
-            <div id="TeléfonoError" class="alert-warning"></div>
-            <% if (locals.errors && errors.telefono ) { %>
+            <input type="tel" name="phone" placeholder="Teléfono" id="phone" class="control"
+              value="<%= locals.oldData ? oldData.phone : null%>"><i class="fa-solid fa-mobile-screen"></i>
+            <div id="phoneError" class="alert-warning"></div>
+            <% if (locals.errors && errors.phone ) { %>
               <div class="text-danger">
-                <%= errors.telefono.msg %>
+                <%= errors.phone.msg %>
               </div>
               <% } %>
           </div>
@@ -86,42 +76,6 @@
           <% } %>
       </div>
       <div class="control-formulario">
-        <!-- <p>Fecha de nacimiento :</p>  
-        <input type="date" name="birth_date" id="birth_date" class="control" placeholder= "Fecha de nacimiento" >
-        </div> -->
-
-
-        <!-- <h4>Perfil del usuario</h4>
-        <div class="profile">
-            <input type="radio" name="profile" value="buy" id="buy">
-            <label for="buy">Comprador</label>
-            <input type="radio" name="profile" value="sell" id="sell">
-            <label for="sell">Vendedor</label>
-        </div> -->
-
-        <!--  <h4>Intereses :</h4>
-        <div class="interests">
-            <div>
-                <input type="checkbox" name="interests" value="a" id="a" class="interes-diseño">
-                <label for="a">Gaming</label>
-            </div>
-            <div>
-                <input type="checkbox" name="interests" value="b" id="b"class="interes-diseño">
-                <label for="b">Celulares</label>
-            </div>
-            <div>
-                <input type="checkbox" name="interests" value="c" id="c"class="interes-diseño">
-                <label for="c">Computadoras</label>
-            </div>
-            <div>
-                <input type="checkbox" name="interests" value="d" id="d"class="interes-diseño">
-                <label for="d">Auriculares</label>
-            </div>
-            <div>
-                <input type="checkbox" name="interests" value="e" id="e"class="interes-diseño">
-                <label for="e">Relojes smartwatch</label>
-            </div>
-        </div> -->
 
         <h4>Elegí tu foto de usuario :</h4>
         <input type="file" name="avatar" id="image"
@@ -158,9 +112,8 @@
       </div>
       </div>
       <%- include('./partials/footer') %>
-        <!-- <script src="/js/register.js"></script> -->
-        <!-- </div> --
-
+        <script src="/js/register.js"></script>
+        </div>
 </body>
 
 </html>

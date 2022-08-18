@@ -75,7 +75,13 @@ const controller = {
         }
       })
 
-
+      const resultValidationLogin = validationResult(req);
+      if (resultValidationLogin.errors.length > 0) {
+        return res.render('login', {
+          errors: resultValidationLogin.mapped(),
+          oldData: req.body
+        });
+      }
 
       if (userToLogin) {
         let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);

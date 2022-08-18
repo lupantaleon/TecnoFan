@@ -18,6 +18,15 @@ window.onload = function () {
             const liEmail = document.createElement('li');
             liEmail.innerHTML = 'El campo email es requerido';
             emailWarning.appendChild(liEmail);
+        } else {
+            const emailFormat = /\S+@\S+\.\S+/
+            const validEmail = email.value.match(emailFormat)
+            if (!validEmail){
+                errors.push('errorEmailType');
+                const liEmailType = document.createElement('li');
+                liEmailType.innerHTML = 'Debes ingresar un formato válido de email';
+                emailWarning.appendChild(liEmailType)
+            };
         }
         if (password.value == '') {
             errors.push('errorPassword');

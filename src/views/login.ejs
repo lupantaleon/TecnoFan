@@ -19,7 +19,7 @@
 
           <div class="container">
             <label for="uname"><b>Email</b></label>
-            <input type="text" placeholder="Nombre de usuario" name="email" id='email'>
+            <input type="text" placeholder="Nombre de usuario" name="email" id='email' value="<%= locals.oldData ? oldData.email: null%>">
             <div id="emailError" class="alert-warning"></div>
             <% if (locals.errors && errors.email) { %>
               <div class="text-danger">
@@ -29,10 +29,15 @@
                 <label for="password"><b>Contraseña</b></label>
                 <input type="password" placeholder="Contraseña" name="password" id="password">
                 <div id="passwordError" class="alert-warning"></div>
-                <button type="submit">Ingresar</button>
-                <label>
-                  <input type="checkbox" checked="checked" name="remember"> Recuerdame
-                </label>
+                <% if (locals.errors && errors.password) { %>
+                  <div class="text-danger">
+                    <%= errors.password.msg %>
+                  </div>
+                  <% } %>
+                    <button type="submit">Ingresar</button>
+                    <label>
+                      <input type="checkbox" checked="checked" name="remember"> Recuerdame
+                    </label>
           </div>
 
           <div class="container" style="background-color:#f1f1f1">

@@ -8,13 +8,13 @@ window.onload = function () {
     const name = document.querySelector('#name');
     const email = document.querySelector('#email');
     const address = document.querySelector('#address');
-    const Teléfono = document.querySelector('#Teléfono');
+    const phone = document.querySelector('#phone');
     const country = document.querySelector('#country');
     const password = document.querySelector('#password');
     const nameWarning = document.querySelector('#nameError');
     const emailWarning = document.querySelector('#emailError');
     const addressWarning = document.querySelector('#addressError');
-    const TeléfonoWarning = document.querySelector('#TeléfonoError');
+    const phoneWarning = document.querySelector('#phoneError');
     const countryWarning = document.querySelector('#countryError');
     const imageWarning = document.querySelector('#imageError');
     const passwordWarning = document.querySelector('#passwordError');
@@ -28,7 +28,7 @@ window.onload = function () {
         nameWarning.innerHTML = '';
         emailWarning.innerHTML = '';
         addressWarning.innerHTML = '';
-        TeléfonoWarning.innerHTML = '';
+        phoneWarning.innerHTML = '';
         countryWarning.innerHTML = '';
         passwordWarning.innerHTML = '';
         imageWarning.innerHTML = '';
@@ -41,10 +41,10 @@ window.onload = function () {
             nameWarning.appendChild(liName);
         }
 
-        if (name.value != '' && name.value.length < 5) {
+        if (name.value != '' && name.value.length < 2) {
             errors.push('errorNameLength');
             const liNameLength = document.createElement('li');
-            liNameLength.innerHTML = 'El campo nombre debe tener al menos 5 caracteres';
+            liNameLength.innerHTML = 'El campo nombre debe tener al menos 2 caracteres';
             nameWarning.appendChild(liNameLength);
         }
 
@@ -53,6 +53,15 @@ window.onload = function () {
             const liEmail = document.createElement('li');
             liEmail.innerHTML = 'El campo email es requerido';
             emailWarning.appendChild(liEmail);
+        } else {
+            const emailFormat = /\S+@\S+\.\S+/
+            const validEmail = email.value.match(emailFormat)
+            if (!validEmail){
+                errors.push('errorEmailType');
+                const liEmailType = document.createElement('li');
+                liEmailType.innerHTML = 'Debes ingresar un formato válido de email';
+                emailWarning.appendChild(liEmailType)
+            };
         }
 
         if (address.value == '') {
@@ -61,11 +70,11 @@ window.onload = function () {
             liAddress.innerHTML = 'El campo Domicilio es requerido';
             addressWarning.appendChild(liAddress);
         }
-        if (Teléfono.value == '') {
-            errors.push('errorTeléfono');
-            const liTeléfono = document.createElement('li');
-            liTeléfono.innerHTML = 'El campo Teléfono es requerido';
-            TeléfonoWarning.appendChild(liTeléfono);
+        if (phone.value == '') {
+            errors.push('errorphone');
+            const liphone = document.createElement('li');
+            liphone.innerHTML = 'El campo Teléfono es requerido';
+            phoneWarning.appendChild(liphone);
         }
         if (country.value == '') {
             errors.push('errorCountry');
@@ -96,6 +105,11 @@ window.onload = function () {
             const liPassword = document.createElement('li');
             liPassword.innerHTML = 'El campo contraseña es requerido';
             passwordWarning.appendChild(liPassword);
+        } else if (password.value.length < 8) {
+            errors.push('errorPasswordLength');
+            const liPasswordLength = document.createElement('li');
+            liPasswordLength.innerHTML = 'El campo contraseña debe tener al menos 8 caracteres';
+            passwordWarning.appendChild(liPasswordLength);
         }
 
         if (errors.length > 0) {

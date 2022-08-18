@@ -7,7 +7,7 @@ const validations = [
     .withMessage('Tienes que escribir un nombre y apellido')
     .bail()
     .isLength({ min: 2 })
-    .withMessage('Minimo 2 caracteres'),
+    .withMessage('El nombre debe tener mínimo 2 caracteres'),
   body('email')
     .notEmpty()
     .withMessage('Tienes que escribir un E-mail')
@@ -28,7 +28,7 @@ const validations = [
     .withMessage('Tienes que escribir una contraseña')
     .bail()
     .isLength({ min: 8 })
-    .withMessage('Minimo 8 caracteres'),
+    .withMessage('La contraseña debe tener mínimo 8 caracteres'),
 
   body('avatar').custom((value, { req }) => {
     let file = req.file;
@@ -36,15 +36,15 @@ const validations = [
 
 
     if (!file) {
-      throw new error('Tienes que subir una imagen')
-    } else {
-      let fileExtension = path.extname(file.originalname);
-      if (!acceptedExtensions.includes(fileExtension)) {
-        throw new error(`Las extensiones de archivos permitidos son ${acceptedExtensions.join(',')}`)
-      }
-    }
-    return true;
-  })
+      throw new Error('Tienes que subir una imagen');
+        } else {
+          let fileExtension = path.extname(file.originalname);
+          if (!acceptedExtensions.includes(fileExtension)) {
+            throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`);
+          }
+        }
+        return true;
+      })
 ]
 
 module.exports = validations
