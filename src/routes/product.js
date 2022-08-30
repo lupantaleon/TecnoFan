@@ -9,16 +9,6 @@ const validateProdMiddleware = require('../middlewares/validateProductMiddleware
 
 const productController = require(path.resolve(__dirname, '../controllers/productController'));
 
-
-
-// APIs
-router.get("/", controller.list);
-router.get("/:id", controller.show);
-
-
-
-
-
 //Como podemos indicar para subir el archivo nombre y donde guardarlo
 
 const storage = multer.diskStorage({

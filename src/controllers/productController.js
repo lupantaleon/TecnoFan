@@ -7,37 +7,15 @@ const { validationResult } = require('express-validator');
 const Products = db.Product
 
 module.exports = {
-
-  /// Consulta para todos los productos 
-
-  list: (req, res) => module.exports = {
-    create: (req, res) => {
-      DB.Products.findAll()
-        .then(products => {
-          return res.status(200).json({
-            count: products.length,
-            countByCategory: category.length,
-            products: products.id,
-            status: 200,
-          })
+  create: (req, res) => {
+    db.Category.findAll()
+      .then(function (categories) {
+        return res.render("admin/create", {
+          categories
         })
-    }
+      })
   },
-  /// Consulta  un solo producto en particular 
-  list: (req, res) => module.exports = {
-    create: (req, res) => {
-      DB.Products.findbyPk(req.params.id)
-        .then(product => {
-          return res.status(200).json({
-            id: products.id,
-            name: name,
-            description: description,
-            category: category,
-            detail: detail,
-          })
-        })
-    }
-  },
+
   save: async (req, res) => {
 
     try {
