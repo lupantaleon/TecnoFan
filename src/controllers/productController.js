@@ -7,15 +7,6 @@ const { validationResult } = require('express-validator');
 const Products = db.Product
 
 module.exports = {
-  create: (req, res) => {
-    db.Category.findAll()
-      .then(function (categories) {
-        return res.render("admin/create", {
-          categories
-        })
-      })
-  },
-
   save: async (req, res) => {
 
     try {
