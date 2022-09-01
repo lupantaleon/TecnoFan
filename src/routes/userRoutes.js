@@ -30,19 +30,21 @@ router.post('/login', validationsLogin, usersController.loginProcess);
 router.get('/profile/', authMiddleware, usersController.profile);
 // eliminar un Usuario
 router.delete('/:id', usersController.destroy);
-
+  
 // Logout
 router.get('/logout/', usersController.logout);
 
 router.get('/administrar', authMiddleware, usersController.index);
 
-/*   router.get('/users/',usersController.index);
+
+
+ /*  router.get('/users/',usersController.index);
   router.get('/users/create',usersController.create); 
   router.post('/users/create', usersController.save); 
   router.get('/users/detail/:id', usersController.show);
   router.get('/users/edit/:id', usersController.edit);
   router.put('/users/edit/:id', usersController.update);
-   */
+ */
 
 
 module.exports = router;

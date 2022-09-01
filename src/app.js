@@ -12,6 +12,10 @@ const cookies = require('cookie-parser');
 const app = express();
 
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
+const usersAPIController = require('./controllers/api/usersAPIController');
+
+//Aquí llamo a la ruta de las api de users
+const apiUsersRouter = require('./routes/api/users')
 
 // ************ Template Engine - ************
 app.set("view engine", "ejs");
@@ -39,6 +43,10 @@ app.use(userLoggedMiddleware);
 app.use("/", mainRouter);
 app.use("/administrar", adminRouter);
 app.use('/users/', userRoutes);
+
+//Aquí creo la colección de mis recursos de users (APIs)
+app.use('/api/users',apiUsersRouter);
+
 
 
 app.listen(3002, () => { console.log('Servidor arriba en el puerto 3002 🤓👌'); })
