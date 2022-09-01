@@ -8,23 +8,40 @@ const Product = db.Product;
 const Category = db.Category;
 
 const ProductsAPIController = {
-  'list': (req, res) => {
-    Product.findAll({
-      include: ['product_images']
-    }).then(products => {
-      let respuesta = {
-        count: products.length,
-        countByCategory: {},
-        products: products.map(product => ({
-          id: product.id,
-          name: product.name,
-          description: product.description,
-          detail: '/api/products/' + product.id,
-          images: product.product_images
-        }))
+  'list': async (req, res) => {
+    const categories = await Category.findAll({
+      include: ['products'],
+      attributes: [
+        'category_name',
+        [sequelize.fn('COUNT', sequelize.col('products.id')), 'products_count'],
+      ],
+      group: 'category_name'
+    });
+
+    let countByCategory = categories.reduce((counts, currentCategory) => {
+      return {
+        ...counts,
+        [currentCategory.category_name]: currentCategory.dataValues.products_count
       }
-      res.json(respuesta);
+    }, {});
+
+    const count = await Product.count();
+    const products = await Product.findAll({
+      include: ['product_images']
     })
+
+    let respuesta = {
+      count,
+      countByCategory,
+      products: products.map(product => ({
+        id: product.id,
+        name: product.name,
+        description: product.description,
+        detail: '/api/products/' + product.id,
+        images: product.product_images
+      }))
+    }
+    res.json(respuesta);
   },
 
   'detail': (req, res) => {
