@@ -42,16 +42,13 @@ const categoriesAPIController = {
             include: ['products']
         })
             .then(category => {
-                const arrayUno = category.products.slice(1,3);
-                const arrayDos = category.products.slice(4);
-                const arrayUnidos = arrayUno.concat(arrayDos);
                 let respuesta = {
                     meta: {
                         status: 200,
                         total: category.length,
                         url: '/api/category/:id/products'
                     },
-                    data: arrayUnidos
+                    data: category
                 }
                 res.json(respuesta);
             });
