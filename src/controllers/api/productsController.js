@@ -44,19 +44,18 @@ const ProductsAPIController = {
     res.json(respuesta);
   },
 
-  'detail': (req, res) => {
-    db.User.findByPk(req.params.id, { attributes: { exclude: ["password"] } })
-      .then(user => {
-        let respuesta = {
-          meta: {
-            status: 200,
-            total: user.length,
-            url: '/api/users/' + user.id
-          },
-          data: user,
-        }
-        res.json(respuesta);
-      });
+  'detail': async (req, res) => {
+    const product = await Product.findByPk(req.params.id, {
+      include: ['product_images', 'categories', 'invoice_detail', 'product_financing', 'products_cart']
+    })
+
+    res.json({
+      ...product.dataValues,
+      product_images: product.product_images.map(image => ({
+        ...image.dataValues,
+        url: '/img/' + image.name
+      }))
+    });
   },
 }
 
