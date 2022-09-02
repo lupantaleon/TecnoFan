@@ -73,6 +73,16 @@ Keep Doing :Tenemos como fortaleza la comunicación y el buen trato.
 
 Less of: Dejar las cosas para ultimo momento. 
 
-
 Stop Doing:  Nos juntamos a dividir las tareas y soltamos al azar los roles, evitando enfrentamientos. 
+ -------- 
+Restrospectiva de estrella de mar: SPRINT  8 
 
+Start Doing: Nos pusimos a identificar cuales eran las debilidades del grupo para estre srpint 8 
+
+More of: Nos delegamos las tareas a tiempo, he intentamos ayudarnos entre nosotros para terminar a tiempo las tareas que de las cuales dependia el resto. 
+
+Keep Doing : la principal fortaleza en este sprint fue la divisón de tareas y la responsabilidad
+
+Less of: Fueron pocas las reunion grupales 
+
+Stop Doing:  A estas alturas del trabajo esperamos que salgan bien la demo y que todos estemos presentes ese dia. 

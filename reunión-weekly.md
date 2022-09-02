@@ -39,3 +39,9 @@ Reunion Final Sprint 5 .
 13/agosto -- Reunión para la División sprint 7
 14/8 --- reunion  en conjunto para hacer las validaciones
 15/8 --- solucion de conflicto con dos de los participantes del grupo. 
+
+26/ agosto -  Reunión para la División sprint 8
+ 29/agosto   --- Ayuda en conflicto 
+ 31/ agosto --- reunion de conflicto 
+ 1/Sept -- detales finales 
+  2 /SEPT--- Simulacro de Demo. 
