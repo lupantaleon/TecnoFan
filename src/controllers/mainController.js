@@ -52,6 +52,9 @@ const controller = {
     quienessomos: (req, res) => {
         res.render("quienessomos");
     },
+    ayuda: (req, res) => {
+        res.render("ayuda");
+    },
 }
 
 module.exports = controller;
