@@ -66,6 +66,7 @@ router.get("/monitores", mainController.monitores);
 router.get("/audifonos", mainController.audifonos);
 router.get("/quienessomos", mainController.quienessomos);
 router.get("/ayuda", mainController.ayuda);
+router.get("/novedades", mainController.novedades);
 /* router.get("/admin", productsController.index); */
 
 

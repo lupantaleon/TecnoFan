@@ -55,6 +55,9 @@ const controller = {
     ayuda: (req, res) => {
         res.render("ayuda");
     },
+    novedades: (req, res) => {
+        res.render("novedades");
+    },
 }
 
 module.exports = controller;
