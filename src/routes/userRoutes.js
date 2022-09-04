@@ -12,6 +12,7 @@ const validations = require('../middlewares/validateRegisterMiddleware');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
 const validationsLogin = require('../middlewares/validateLoginMiddleware');
+const roleMiddleware = require('../middlewares/roleMiddleware')
 
 // Formulario de registro
 router.get('/register', guestMiddleware, usersController.register);
@@ -34,7 +35,7 @@ router.delete('/:id', usersController.destroy);
 // Logout
 router.get('/logout/', usersController.logout);
 
-router.get('/administrar', authMiddleware, usersController.index);
+router.get('/administrar', [authMiddleware, roleMiddleware], usersController.index);
 
 
 

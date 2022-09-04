@@ -34,6 +34,4 @@ router.get('/edit/:id', authMiddleware, productController.edit);
 router.put('/edit/:id', upload.single('image'), productController.update);
 router.delete('/delete/:id', authMiddleware, productController.destroy);
 
-
-
 module.exports = router;

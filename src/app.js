@@ -2,12 +2,18 @@
 const bp = require('body-parser')
 const express = require('express');
 const path = require('path');
-const mainRouter = require("./routes/mainRouter");
-const methodOverride = require('method-override');
-const adminRouter = require('./routes/admin');
 const session = require('express-session');
-const userRoutes = require('./routes/userRoutes');
+const cors = require('cors');
+
+const methodOverride = require('method-override');
 const cookies = require('cookie-parser');
+
+const mainRouter = require("./routes/mainRouter");
+const adminRouter = require('./routes/admin');
+const userRoutes = require('./routes/userRoutes');
+const productAPIRouter = require("./routes/api/products")
+const apiCategoriesRouter = require('./routes/api/categoriesRouter')
+
 // ************ express() ************
 const app = express();
 
@@ -23,6 +29,7 @@ app.set('views', path.resolve(__dirname, './views'));
 
 // ************ Middlewares ************
 app.use(express.urlencoded({ extended: false }));
+app.use(cors());
 app.use(methodOverride('_method'));
 app.use(session({
   secret: "Shhh, It's a secret",
@@ -44,10 +51,10 @@ app.use("/", mainRouter);
 app.use("/administrar", adminRouter);
 app.use('/users/', userRoutes);
 
+app.use('/api/categories', apiCategoriesRouter);
 //Aquí creo la colección de mis recursos de users (APIs)
-app.use('/api/users',apiUsersRouter);
-
-
+app.use('/api/users', apiUsersRouter);
+app.use('/api/products/', productAPIRouter);
 
 app.listen(3002, () => { console.log('Servidor arriba en el puerto 3002 🤓👌'); })
 app.use((req, res, next) => { res.status(404).render('not-found') });

@@ -13,6 +13,8 @@ const audifonos = products.filter(product => product.category === 'audifonos');
 const tablets = products.filter(product => product.category === 'tablets');
 const smartwatches = products.filter(product => product.category === 'smartwatches');
 
+
+
 const controller = {
     index: (req, res) => {
         res.render("index", {monitores, auriculares, mouses, pcs, audifonos, tablets, smartwatches});
@@ -49,6 +51,12 @@ const controller = {
     },
     quienessomos: (req, res) => {
         res.render("quienessomos");
+    },
+    ayuda: (req, res) => {
+        res.render("ayuda");
+    },
+    novedades: (req, res) => {
+        res.render("novedades");
     },
 }
 
