@@ -29,6 +29,9 @@ body {
 
 .product-detail .product-photos .primary-photo img {
   width: 80%;
+  border-radius: 10px;
+  height: 400px;
+  border: solid black 1px;
 }
 
 .product-detail .product-photos .secondary-photos {
@@ -43,7 +46,13 @@ body {
   flex-grow: 1;
   display: flex;
   justify-content: center;
+  gap: 40px;
 }
+.product-detail .product-photos .secondary-photos .thumbnail .photo {
+  border: solid black 1px;
+  border-radius: 10px;
+}
+
 .product-detail .product-photos .secondary-photos img {
   width: 100px;
 }
