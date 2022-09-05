@@ -1,0 +1,41 @@
+<%- include('./partials/head') %>
+
+  <body>
+    <%- include('./partials/header') %>
+      <div class="container">
+        <div class="wrap">
+
+          <h1 class="titulo">
+            <%= category.category_name%>
+          </h1>
+          <div id='leaders' class="row text-center wow fadeIn" data-wow-delay="0.4s">
+            <div class="row">
+              <% products.forEach(product=> { %>
+                <div class="col-lg-3 col-md-6 mb-4">
+                  <div class="card">
+                    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                      <img src="../img/<%= product.product_images[0].name%>" class="img-fluid"/> <br> <br>
+                      <a href="/product/<%= product.id%>">
+                        <h5 class="card-title black-text">
+                          <%= product.name%>
+                        </h5>
+                        <h5 class="card-title black-text">
+                          $<%= product.price.toFixed(2)%>
+                        </h5>
+                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <% }); %>
+            </div>
+          </div>
+        </div>
+        <script src="js/carousel.js"></script>
+      </div>
+      </div>
+  </body>
+
+  <%- include('./partials/footer') %>
+
+    </html>

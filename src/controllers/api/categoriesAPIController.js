@@ -25,23 +25,33 @@ const categoriesAPIController = {
     
     'detail': (req, res) => {
         db.Category.findByPk(req.params.id)
-            .then(category => {
+        .then(category => {
+            if ( category != null ){
+            let respuesta = {
+                meta: {
+                    status: 200,
+                    total: category.length,
+                    url: '/api/category/:id/'
+                },
+                data: category
+            }
+            res.json(respuesta);}
+            else {
                 let respuesta = {
                     meta: {
-                        status: 200,
-                        total: category.length,
-                        url: '/api/category/:id'
-                    },
-                    data: category
-                }
+                        status: 404,
+                        total: 0
+                    }}
                 res.json(respuesta);
-            });
+            }
+        });
     },
     'categoryProducts': (req, res) => {
         db.Category.findByPk(req.params.id,{
             include: ['products']
         })
             .then(category => {
+                if (category != null){
                 let respuesta = {
                     meta: {
                         status: 200,
@@ -50,7 +60,15 @@ const categoriesAPIController = {
                     },
                     data: category
                 }
-                res.json(respuesta);
+                res.json(respuesta);}
+                else {
+                    let respuesta = {
+                        meta: {
+                            status: 404,
+                            total: 0
+                        }}
+                    res.json(respuesta);
+                }
             });
     }
 }

@@ -10,11 +10,11 @@ body {
    margin: 0 auto;
 }
 
-.container{
+.containerCreate{
    padding:16px;
 }
 
-.container h2{
+.containerCreate h2{
    margin-bottom: 16px;
    text-transform: uppercase;
    text-align: center;
@@ -41,7 +41,7 @@ body {
    margin: 5px 0 0 5px;
 }
 
-.btn{
+.btn-gral{
    display: flex;
    flex-direction: row;
    align-items: center

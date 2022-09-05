@@ -4,14 +4,12 @@
 
     <body>
         <%- include('../partials/header.ejs') %>
-            <main class="container">
+            <main class="containerCreate">
                 <section class="row">
-                    <div class="card-body">
-                        <h2 class="display-4 text-white bg-info text-center pt-2">Crear un Producto</h2>
-                    </div>
+                    <h2 class="">Crear un Producto</h2>
                 </section>
 
-                <section class="bg-home pt-4">
+                <section class="">
                     <div class="admin-product-form-container">
                         <form action="/administrar/product/create" method="POST" enctype="multipart/form-data" id="form">
                             <div class="form-fields">
@@ -79,14 +77,6 @@
                                             </div>
                                             <% } %>
                                     </div>
-                                    <!-- <div class="form-group">
-                                <select  name="discount" class="box" required="required">
-                                    <option selected disabled value="#">Elija su descuento</option>
-                                    <option value="0">Sin descuento</option>
-                                    <option value="15">15%</option>
-                                    <option value="30">30%</option>
-                                </select>
-                            </div> -->
                                     <div class="">
                                         <input type="text" class="box" name="brand" id="brand" placeholder="Marca"
                                             value="<%= locals.oldData ? oldData.brand : null%>">
@@ -119,7 +109,7 @@
                                     </div>
                                     <% } %>
                             </div>
-                            <div class="btn">
+                            <div class="btn-gral">
                                 <button type="submit" class="btn-save">Guardar</button>
                                 <a href="/administrar">
                                     <input type="button" class="btn-back" value="Volver"></a>

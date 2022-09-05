@@ -1,0 +1,70 @@
+<!doctype html>
+<link rel="stylesheet" href="/css/productdetail.css">
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+
+  <body>
+    <%- include('./partials/header') %>
+      <!-- -----------------------------------------------PRODUCTO---------------------- -->
+      <div class="product-detail">
+        <div class="product-photos">
+          <div class="primary-photo">
+            <% product.product_images?.slice(0, 1).forEach(image =>{ %> 
+            <img src="/img/<%= image.name %>" id="main-photo">
+            <% }) %> 
+          </div>
+          <div class="secondary-photos">
+            <div class="thumbnail" id="thumbnail">
+              <% product.product_images?.slice(1, 4).forEach(image =>{ %> 
+                <img src="/img/<%= image.name %>" onclick="selectMainPhoto(this.src)" class="photo">
+                <% }) %> 
+            </div>
+          </div>
+      
+        </div>
+
+        <div class="product-info">
+          <div class="title">
+            <p style="font-size: 35px">
+              <%= product.name%>
+            </p>
+          </div>
+          <div class="description">
+            <p class="price">$ <%= product.price %>
+            </p>
+            <p>12 cuotas sin interés de $ <%= (product.price/12).toFixed(2) %>
+            </p>
+            <p class="discount">Descuento: <%= product.discount%>%</p>
+            <p class="">Marca: <%= product.brand %>
+            </p>
+            <br>
+            <p class="parrafo">
+              <%= product.description %>
+            </p>
+          </div>
+          <br>
+          <br>
+          <div class="button-row">
+            <a class="cart-link" href="/productCart">
+              <button class="boton-personalizado">
+                Añadir a Carrito
+              </button>
+            </a>
+          </div>
+          <br>
+          <div class="button-row">
+            <a class="cart-link" href="/category/<%= product.category_id%>">
+              <button class="boton-personalizado">
+                Volver al listado
+              </button>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <%- include('./partials/footer') %>
+      <script src="/js/img.js"></script>
+  </body>
+
+</html>

@@ -31,27 +31,16 @@
                       <%= users.id%>
                     </td>
                     <td>
-                      <img class="user-avatar" src="<%= users.image %>" alt="">
+                      <img class="user-avatar" src="/img/avatars/<%= users.image %>" alt="">
                     </td>
                     <td>
                       <%= users.name_and_surname %>
                     </td>
                     <td>
-                      <form method="POST" action="/users/<%= users.id %>?_method=DELETE">
-                        <button type="submit">
-                          <ion-icon name="trash-outline"></ion-icon>
-                        </button>
-                      </form>
+                      <button onclick="alertDelete('<%= users.id %>')">
+                        <ion-icon name="trash-outline"></ion-icon>
+                      </button>
                     </td>
-
-
-
-                    <!--      <td><a href="/users/delete/<%= users.id%>">
-                        <botom>
-                          <ion-icon name="trash-outline"></ion-icon>
-                        </botom>
-                      </a></td>
-                  </tr> > -->
                     <% }); %>
               </tbody>
             </table>
@@ -60,7 +49,9 @@
         </section>
         <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
     </main>
-    
+
+    <script src="/js/alert-delete.js"></script>
+ 
   </body>
 
 </html>

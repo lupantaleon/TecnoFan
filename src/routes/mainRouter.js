@@ -21,34 +21,9 @@ const storage = multer.diskStorage({
 
 const uploadFile = multer({ storage });
 
-/* const validations = [
-    body('name').notEmpty().withMessage('Tienes que escribir un nombre y apellido'),
-    body('email')
-    .notEmpty().withMessage('Tienes que escribir un E-mail').bail()
-    .isEmail().withMessage('Debes escribir un formato de correo válido'),
-    body('address').notEmpty().withMessage('Tienes que escribir una dirección'),
-    body('telefono').notEmpty().withMessage('Tienes que escribir un teléfono'),
-    body('country').notEmpty().withMessage('Tienes que elegir un país'),
-    body('password').notEmpty().withMessage('Tienes que escribir una contraseña'),
-    body('avatar').custom((value, {req}) => {
-        let file = req.file;
-        let acceptedExtensions = ['.jpg','.png','.gif'];
-        
-
-        if(!file){
-            throw new error('Tienes que subir una imagen')
-        } else{
-            let fileExtension = path.extname(file.originalname);
-            if (!acceptedExtensions.includes(fileExtension)){
-                throw new error(`Las extensiones de archivos permitidos son ${acceptedExtensions.join(',')}`)
-            }
-        }
-        return true;
-    })
-] */
-
 // Aća nos falta traer el controller
 const mainController = require("../controllers/mainController");
+const productController = require("../controllers/productController");
 
 
 // Acá definimos las rutas
@@ -56,19 +31,12 @@ router.get("/", mainController.index);
 router.get("/productCart", mainController.productCart);
 router.get("/productDetail", mainController.productDetail);
 
-router.get("/smartwatchs", mainController.smartwatchs);
-router.get("/mouses", mainController.mouses);
-router.get("/smartphones", mainController.smartphones);
-router.get("/auriculares", mainController.auriculares);
-router.get("/tablets", mainController.tablets);
-router.get("/pcs", mainController.pcs);
-router.get("/monitores", mainController.monitores);
-router.get("/audifonos", mainController.audifonos);
 router.get("/quienessomos", mainController.quienessomos);
 router.get("/ayuda", mainController.ayuda);
 router.get("/novedades", mainController.novedades);
-/* router.get("/admin", productsController.index); */
 
+router.get("/category/:id", productController.getByCategory);
+router.get("/product/:id", productController.detailById);
 
 // Acá exportamos el resultado
 module.exports = router;

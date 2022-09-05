@@ -6,108 +6,52 @@
     <%- include('./partials/header') %>
       <div class="container">
         <Section>
+          <div class="wrap">
+            <h1 class="titulo">Categorias</h1>
+          </div>
           <div id='leaders' class="row text-center wow fadeIn" data-wow-delay="0.4s">
-            
-            <div class="row my-5">
+
+            <div class="row">
+              <% categories.forEach(category => { %>
               <div class="col-lg-3 col-md-6 mb-4">
+                
                 <div class="card">
                   <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                    <img src="img/producto1.jpeg" class="img-fluid " /> <br> <br>
-                    <a href="smartwatchs">
-                      <h5 class="card-title black-text">Smartwatchs</h5> 
+                    <img src="img/<%= category.category_image%>" class="img-fluid " /> <br> <br>
+                    <a href="category/<%= category.id%>">
+                      <h5 class="card-title black-text"><%= category.category_name%></h5>
                       <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                     </a>
                   </div>
-                  
                 </div>
+                
               </div>
-              <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card">
-                  <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                    <img src="img/producto4.jpeg" class="img-fluid " /> <br> <br>
-                    <a href="mouses">
-                      <h5 class="card-title black-text">Mouses</h5> 
-                      <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                    </a>
-                  </div>
-                  
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card">
-                  <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                    <img src="img/products-1661723807836.jpg" class="img-fluid " /> <br> <br>
-                    <a href="smartphones">
-                      <h5 class="card-title black-text">Smartphones</h5> 
-                      <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                    </a>
-                  </div>
-                  
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card">
-                  <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                    <img src="img/producto2.jpeg" class="img-fluid " /> <br> <br>
-                    <a href="auriculares">
-                      <h5 class="card-title black-text">Auriculares</h5> 
-                      <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                    </a>
-                  </div>
-                  
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card">
-                  <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                    <img src="img/products-1661811120786.jpg" class="img-fluid " /> 
-                    <a href="tablets">
-                      <h5 class="card-title black-text">Tablets</h5> 
-                      <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                    </a>
-                  </div>
-                  
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card">
-                  <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                    <img src="img/pc_lenovo.jpg" class="img-fluid " /> <br> <br>
-                    <a href="/pcs">
-                      <h5 class="card-title black-text">PCs</h5> 
-                      <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                    </a>
-                  </div>
-                  
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card">
-                  <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                    <img src="img/monitor_asus.jpg" class="img-fluid " /> <br> <br>
-                    <a href="/monitores">
-                      <h5 class="card-title black-text">Monitores</h5> 
-                      <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                    </a>
-                  </div>
-                  
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card">
-                  <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                    <img src="img/products-1661814467409.jpg" class="img-fluid " />  <br>
-                    <a href="/audifonos">
-                      <h5 class="card-title black-text">Audifonos</h5> 
-                      <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                    </a>
-                  </div>
-                  
-                </div>
-              </div>
+              <% }); %>
             </div>
           </div>
-        </Section>
+      </div>
+      </Section>
+      </div>
+
+
+      <div class="wrap pt-1">
+        <h1>Metodos de pago</h1>
+
+        <div class="gallery">
+          <div class="gallery-container">
+
+            <img class="gallery-item gallery-item-1 shadow" src="img/pagos/ahora12.png" data-index="1">
+            <img class="gallery-item gallery-item-2 shadow" src="img/pagos/ahora18.png" data-index="2">
+            <img class="gallery-item gallery-item-3 shadow" src="img/pagos/visa.png" data-index="3">
+            <img class="gallery-item gallery-item-4 shadow" src="img/pagos/mastercard.jpg" data-index="4">
+            <img class="gallery-item gallery-item-5 shadow" src="img/pagos/amex.png" data-index="5">
+
+          </div>
+          <div class="gallery-controls">
+          </div>
+
+        </div>
+        <script src="js/carousel.js"></script>
       </div>
   </body>
 

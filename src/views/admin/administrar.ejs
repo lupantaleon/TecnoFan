@@ -36,9 +36,12 @@
                 <td><a href="/administrar/product/detail/<%= product.id%> "> <ion-icon name="eye-outline"></ion-icon></a></td>
                 <td><a href="/administrar/product/edit/<%= product.id%> "> <ion-icon name="pencil-outline"></ion-icon></a></td>
                 <td>
-                  <form action="/administrar/product/delete/<%= product.id%>?_method=DELETE" method="POST">
+                  <button onclick="alertDelete('<%= product.id %>')">
+                    <ion-icon name="trash-outline"></ion-icon>
+                  </button>
+                  <!-- <form action="/administrar/product/delete/<%= product.id%>?_method=DELETE" method="POST">
                   <button type="submit"><ion-icon name="trash-outline"></ion-icon></button>
-                  </form>
+                  </form> -->
                 </td>
               </tr>
               <% }); %>
@@ -49,6 +52,6 @@
       </section>
       <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
     </main>
-    
+    <script src="/js/alert-product-delete.js"></script>
   </body>
 </html>
