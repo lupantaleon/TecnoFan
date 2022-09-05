@@ -5,17 +5,18 @@
 <html lang="es">
 <%- include('../partials/head.ejs') %>
 <%- include('../partials/header.ejs') %>
-  <body>
-    <main class="container-fluid">
+  <body style="background: #ebebeb">
+    <main class="container-fluid" style="background: #ebebeb">
 
         <br>
         <section class="row">
 
-          <h2 class="Administrador-Productos admin-users">Administrador de Usuarios<i ></i></i></h2>
+          <h2 class="Administrador-Productos admin-users p-4">Administrador de Usuarios<i ></i></i></h2>
 
-          <div class="contenedor-table">
-            <table class="table">
-              <thead>
+          <div class="row mb-4">
+            <div class="contenedor-table col-sm-12 col-xl-8 m-auto rounded-3 border border-3">
+              <table class="table">
+                <thead>
                 <tr class="Barra-nombres">
                   <th scope="col">Id</th>
                   <th scope="col">Avatar</th>
@@ -23,28 +24,30 @@
                   <th scope="col">Borrar</th>
 
                 </tr>
-              <tbody>
+                <tbody>
                 <% users.forEach(users=> { %>
 
-                  <tr>
-                    <td>
-                      <%= users.id%>
-                    </td>
-                    <td>
-                      <img class="user-avatar" src="/img/avatars/<%= users.image %>" alt="">
-                    </td>
-                    <td>
-                      <%= users.name_and_surname %>
-                    </td>
-                    <td>
-                      <button onclick="alertDelete('<%= users.id %>')">
-                        <ion-icon name="trash-outline"></ion-icon>
-                      </button>
-                    </td>
-                    <% }); %>
-              </tbody>
-            </table>
+                <tr>
+                  <td>
+                    <%= users.id%>
+                  </td>
+                  <td>
+                    <img class="user-avatar" src="/img/avatars/<%= users.image %>" alt="">
+                  </td>
+                  <td>
+                    <%= users.name_and_surname %>
+                  </td>
+                  <td>
+                    <button class="border-0 text-danger bg-transparent" onclick="alertDelete('<%= users.id %>')">
+                      <ion-icon name="trash-outline"></ion-icon>
+                    </button>
+                  </td>
+                  <% }); %>
+                </tbody>
+              </table>
+            </div>
           </div>
+
 
         </section>
         <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>

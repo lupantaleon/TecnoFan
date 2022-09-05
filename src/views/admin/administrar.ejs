@@ -4,50 +4,54 @@
   <%- include('../partials/head.ejs') %>    
   <%- include('../partials/header.ejs') %>
 <body>
-    <main class="container-fluid">
+    <main class="container-fluid" style="background: #ebebeb">
       <!--Administrador de productos-->
       <br>
       <section class="row">
         <!-- <article class="col-12-titulo"> -->
-          <h2 class="Administrador-Productos">Administrador de Productos<i class="fa-brands fa-product-hunt"></i></h2>
+          <h2 class="Administrador-Productos p-4">Administrador de Productos<i class="fa-brands fa-product-hunt"></i></h2>
         <!-- </article> -->
         <!-- <article class="col-12-Agregar"> -->
-         <div>
-          <a href="/administrar/product/create" class="col-12-Agregar"><ion-icon name="add-circle-outline"></ion-icon>Agregar producto</a> 
+         <div class="col-sm-12 m-auto">
+          <a href="/administrar/product/create" class="col-12-Agregar p-4 fs-5 text "><ion-icon name="add-circle-outline" class="pt-1"></ion-icon>Agregar producto</a>
           </div>
        <!--  </article> -->
         <!-- <article class="col-12-table" > -->
-        <div class="contenedor-table">
-        <table class="table">
-            <thead>
-              <tr class="Barra-nombres">
-                <th scope="col">Id</th>
-                <th scope="col">Nombre</th>
-                <th scope="col">Ver</th>
-                <th scope="col">Editar</th> 
-                <th scope="col">Borrar</th>
-              </tr>
-            </thead>
-            <tbody>
-              <% products.forEach(product => { %>
-              <tr>
-                <td><%= product.id%> </td>
-                <td><%= product.name%> </td>
-                <td><a href="/administrar/product/detail/<%= product.id%> "> <ion-icon name="eye-outline"></ion-icon></a></td>
-                <td><a href="/administrar/product/edit/<%= product.id%> "> <ion-icon name="pencil-outline"></ion-icon></a></td>
-                <td>
-                  <button onclick="alertDelete('<%= product.id %>')">
-                    <ion-icon name="trash-outline"></ion-icon>
-                  </button>
-                  <!-- <form action="/administrar/product/delete/<%= product.id%>?_method=DELETE" method="POST">
+          <div class="row mb-4">
+              <div class="contenedor-table col-sm-12 col-xl-8 m-auto rounded-3 border border-3">
+                  <table class="table">
+                      <thead>
+                      <tr class="Barra-nombres">
+                          <th scope="col">Id</th>
+                          <th scope="col">Nombre</th>
+                          <th scope="col">Ver</th>
+                          <th scope="col">Editar</th>
+                          <th scope="col">Borrar</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <% products.forEach(product => { %>
+                          <tr>
+                              <td><%= product.id%> </td>
+                              <td><%= product.name%> </td>
+                              <td><a href="/administrar/product/detail/<%= product.id%> "> <ion-icon name="eye-outline"></ion-icon></a></td>
+                              <td><a href="/administrar/product/edit/<%= product.id%> "> <ion-icon name="pencil-outline"></ion-icon></a></td>
+                              <td>
+                                  <button class="border-0 text-danger bg-transparent" onclick="alertDelete('<%= product.id %>')">
+                                      <ion-icon name="trash-outline"></ion-icon>
+                                  </button>
+
+                                  <!-- <form action="/administrar/product/delete/<%= product.id%>?_method=DELETE" method="POST">
                   <button type="submit"><ion-icon name="trash-outline"></ion-icon></button>
                   </form> -->
-                </td>
-              </tr>
-              <% }); %>
-            </tbody>
-          </table> 
-        </div>
+                              </td>
+                          </tr>
+                      <% }); %>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+
         <!-- </article>    -->    
       </section>
       <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
