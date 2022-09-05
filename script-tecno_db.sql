@@ -112,6 +112,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `tecno_db`.`categories` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `category_name` VARCHAR(100) NOT NULL,
+  `category_image` varchar(200) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -175,7 +176,7 @@ CREATE TABLE IF NOT EXISTS `tecno_db`.`product_images` (
   CONSTRAINT `fk_Imagenes_del_Producto_Productos1`
     FOREIGN KEY (`product_id`)
     REFERENCES `tecno_db`.`products` (`id`)
-    ON DELETE NO ACTION
+    ON DELETE CASCADE
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
