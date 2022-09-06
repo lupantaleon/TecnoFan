@@ -11,13 +11,13 @@
         <div class="product-photos">
           <div class="primary-photo">
             <% product.product_images.slice(0, 1).forEach(image =>{ %>
-            <img src="/img/<%= image.name %>" id="main-photo">
+            <img src="/img/<%= image.name %>" class="shadow" id="main-photo">
             <% }) %> 
           </div>
           <div class="secondary-photos">
             <div class="thumbnail" id="thumbnail">
               <% product.product_images.forEach(image =>{ %>
-                <img src="/img/<%= image.name %>" onclick="selectMainPhoto(this.src)" class="photo">
+                <img src="/img/<%= image.name %>" onclick="selectMainPhoto(this.src)" class="photo shadow">
                 <% }) %> 
             </div>
           </div>

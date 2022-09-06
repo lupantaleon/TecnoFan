@@ -48,14 +48,22 @@ const ProductsAPIController = {
     const product = await Product.findByPk(req.params.id, {
       include: ['product_images', 'categories', 'invoice_detail', 'product_financing', 'products_cart']
     })
-
+    if ( product != null ){
     res.json({
       ...product.dataValues,
       product_images: product.product_images.map(image => ({
         ...image.dataValues,
         url: '/img/' + image.name
       }))
-    });
+    });}
+    else{
+      let respuesta = {
+        meta: {
+            status: 404,
+            total: 0
+        }}
+    res.json(respuesta);
+    }
   },
 }
 

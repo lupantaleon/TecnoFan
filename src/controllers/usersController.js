@@ -51,7 +51,7 @@ const controller = {
         ...req.body,
         password: bcryptjs.hashSync(req.body.password, 10),
         image: req.file.filename,
-        role_id: "1"
+        role_id: "2"
       }
 
       let userCreated = await db.User.create(userToCreate)
